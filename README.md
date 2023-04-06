@@ -1,6 +1,8 @@
 # grupo_12_nombrePrendiente
 Ni idea jajaja
+
 Nuestro grupo esta integrado por: 
+
 Soy Cielo y tengo 23 años. Vivo en Rosario, estudio Relaciones Internacionales y programacion en Digital House.  
 
 Mi nombre es Renzo Magrassi, tengo 22 años, vivo en La Plata, pero nací en General Belgrano, vine a esta ciudad para estudiar Lic en sistemas. Mis hobbys son, escuchar música y jugar al basquet. Y mi idea es terminar el curso, para conseguir un laburo e irme a trabajar al exterior.
