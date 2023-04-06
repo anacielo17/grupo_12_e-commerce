@@ -1,5 +1,5 @@
 # grupo_12_MaquinariasAgricolas
-Ni idea jajaja
+El sitio web  va estar destinado, a la comercialización de máquinas y productos agricolas
 
 Nuestro grupo esta integrado por: 
 
