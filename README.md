@@ -1,4 +1,4 @@
-# grupo_12_nombrePrendiente
+# grupo_12_MaquinariasAgricolas
 Ni idea jajaja
 
 Nuestro grupo esta integrado por: 
