@@ -1,22 +1,8 @@
 # grupo_12_MaquinariasAgricolas
-El sitio web  va estar destinado, a la comercialización de máquinas y productos agricolas.
+El sitio web diseñado esta orientado a la comercializacion de maquinas y productos agricolas. El proyecto se dirije a pequeños y grandes productores, pero tambien a familias campesinas y urbanas interesada en adquirir herramientas de trabajo agrícola y paisaje.
 
-La pagina va a estar derigida a los trabajadores rurales o pequeñas empresas destinados a lo mismo. 
+Nuestro grupo está integrado por estudiantes de Digital House: Ana Cielo Seidel de 23 años, quien vive en Rosario, estudia Relaciones Internacionales y trabaja a distancia con una Distribuidora; Renzo Magrassi de 22 años, quien vive en La Plata y estudia Lic. en Sistemas; Gonzalo Simonetti de 25 años, quien vive en Villa Urquiza y trabaja como vendedor hace mas de cinco años; Kevin Williams de 26 años, es de Trelew, Chubut y estudiante de ingeniería industrial en la universidad nacional de La Plata; por ultimo, Paula Iturra, psicóloga social y venezolana pero vive en Buenos Aires desde hace 7 años.
 
-Nuestro grupo esta integrado por: 
+Se utilizaron tres sitios de referencias propias del rubro con el objetivo de tener mayores herramenitas sobre este comercio como ser las clasificaciones, precision conceptual, requerimientos para la venta como ser politicas y convenios nacionales, entre otras cosas. Dentro de estas paginas, podemos citar a : https://www.apache.com.ar, https://www.agronline.com.ar/, https://www.agromec.com.ar.
 
-Soy Cielo y tengo 23 años. Vivo en Rosario, estudio Relaciones Internacionales y programacion en Digital House.  
-
-Mi nombre es Renzo Magrassi, tengo 22 años, vivo en La Plata, pero nací en General Belgrano, vine a esta ciudad para estudiar Lic en sistemas. Mis hobbys son, escuchar música y jugar al basquet. Y mi idea es terminar el curso, para conseguir un laburo e irme a trabajar al exterior.
-
-Soy Gonzalo tengo 25 años y trabajo de vendedor hace mas de cinco años, mi idea con este curso es tener mi propio negocio y poder armar un sitio web.
-
-Soy Kevin Williams. Soy de Trelew, Chubut, Argentina. Tengo 26 años y soy estudiante de ingenieria industrial en la universidad nacional de La Plata.
-
-
-Paula Iturra. Soy Psicologa Social. Mi experiencia laboral es el área de levantamiento de procesos para automatización de Centros de Atención Telefónicos. Venezolana, vivo en Buenos Aires hace 7 años
-
-
-Paginas utilizadas de referencia:
-
-https://apache.com.ar/
+También se busco referencias en sitios más genéricos, que resentan una estructura abarcativa de todas las posibles utilidades y necesidades de los usuarios, dichos sitios sirvieron como ejemplo para recrear un bosquejo general en base a las funcionalidades que utilizan y la estética que presentan. Dentro de ellas : https://www.mercadolibre.com.ar,  https://www.fravega.com.
