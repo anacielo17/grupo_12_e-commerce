@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam&family=Satisfy&display=swap');
+* {
+    box-sizing: border-box;  
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+    margin :0px;
+    padding: 0px;
+    background-color: whitesmoke;
+
+}
+
+.main-header {
+    background-color: #214566 /* #9c4f0536 */; 
+    padding: 10px;
+    color : black; 
+   /*  position: fixed;
+    top: 0 */
+   /*  font-family: 'Roboto', sans-serif; */
+    
+}
+
+/* header img */
+.marca{
+   
+   color: white;
+   margin-top: 10px;
+   margin-left: 8px;
+   padding: 0px;
+   /* width: 140px;  */
+   height: 36px;
+   align-items: center;
+   font-family: 'Kalam', cursive;
+   font-family: 'Satisfy', cursive;
+    } 
+a {
+    color: white; 
+    display: inline-block;
+    padding: 5px 0;
+    display: none;
+    text-decoration: none;
+   /*  font-style: italic; */
+    font-family:'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: normal;
+ }
+  .burger-menu i{
+    margin-top:10px ;
+    color: black;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10%;
+    transition: 1000ms;
+}
+ .barra-busqueda{ 
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 15px;
+    /* display: flex; */
+    justify-content: space-between;
+    text-align: center;
+    display: none;
+
+ }
+ .barra-busqueda i{
+    color: white;
+    
+ }
+ .usuario{
+   display: flex;
+   /* display: block */;
+   color: white;
+   align-items: center;
+   margin-left: 25px;
+   margin-top: 8px; 
+   
+   } 
+   .usuario i{
+   justify-content: space-between;
+   margin-right: 20px;
+   font-size: 25px;
+   transition: 700ms
+ }
+ .usuario a { 
+   transition: 700ms;
+ }
+ .main-header-top-bar{
+    display: flex; 
+    text-align: center;
+   justify-content:space-evenly;
+   
+ }
+ 
+   
+ .site-navbar{
+    display: flex;
+    justify-content: space-around;
+    width: 35%;
+ }
+ .site-navbar a{
+   transition: 700ms;
+ }
+.precio-anterior{
+   text-decoration: line-through;
+   text-align: left;
+   margin: 0;
+}
+
+/* ----------------------------------------------main---------------------------------- */
+.fondo{
+   width: 100%;
+   height: 370px;
+   
+}
+.informacion{
+   display: flex;
+   margin-top: 35px;
+   text-align: center;
+   justify-content: space-around;
+ }
+
+.cajita-información{
+   border: 2px solid gray;
+   width: 20%;
+   font-size: 10px;
+   border-radius: 5px;
+   background-color: #eaecef/* #e8eff7 */;
+ }  
+.cajita-información i{
+   margin-top: 12px;
+   font-size: 30px;
+
+}   
+.titulares {
+   font-size: 24px;
+   text-align: center;
+   font-family: 'Roboto', sans-serif; 
+  /*  background-color: #ebebeb; */
+   margin: 20px;
+}  
+.precio {
+   font-size: 18px;
+   font-family: 'Roboto', sans-serif;
+   font-weight: bold;
+}
+.descuento {
+   font-size: 16px;
+   font-family: 'Roboto', sans-serif;
+   color: green
+}
+.descripcion {
+   font-size: 20px;
+   font-family: 'Roboto', sans-serif;
+   /* display: none; */
+   
+}
+main {
+   border-bottom: 10px;
+   box-sizing: border-box;
+   
+   
+    }
+   
+article img{
+   text-align: center;
+   width: 100%;
+   /* box-sizing: border-box; */
+}
+main section{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+.producto{
+   width: 90vw;
+   ;
+   display: inline-block;
+   /* padding: 15px; */
+   /* border: 1px solid #ccc;  */
+   margin: 10px;
+   border-top:  1px solid #ccc;
+   text-align: center; 
+   transition:700ms
+   
+}  
+.valor{
+   display: flex;
+   flex-direction: row;
+   justify-content: flex-start;
+   font-weight:100;
+  
+} 
+/* .valor p{
+margin-right: 4px; 
+margin-bottom: 0;
+} */
+.consultar{
+   font-size: 20px;
+   margin-top: 5px;
+}
+.producto div{
+    
+   background-color: white;
+   padding: 10px;
+   box-sizing: border-box;
+   /* width: 90vw; */
+   
+}
+.producto img{
+   background-color: white;
+   
+}
+.nuevo{
+   width: 47px;
+   background-color: green;
+   color: white;
+   border-radius: 5px;
+  /*  position: absolute; */
+   
+}
+.oferta{
+   width: 49px;
+   background-color: blue;
+   color: white;
+   border-radius: 5px; 
+   /* position: absolute; */
+   }
+   .envio{
+      color: green;
+      font-size: 20px;
+   }
+    section article a{
+      display: block;
+      color: green;
+      font-style: normal;
+      font-family:'Times New Roman', Times, serif;
+      
+   }
+   .cajita-información img{
+      width: 50px;
+      height: 50px;
+   }
+/* ----------------------------------------------visualizacion---------------------------------- */
+ @media(min-width:768px){
+    a{
+        display: block;
+        
+    }
+   .barra-busqueda{
+    display: block;
+    
+   }
+   
+   .barra-busqueda input  {
+      width: 70%;
+      border-radius: 5px;
+    
+   }
+   .barra-busqueda button{
+      width: 23%;
+      border-radius: 5px;
+    
+   }
+   .main-header-top-bar{
+      justify-content: space-around;
+   }
+   header img{
+      width: 200px;
+      height: 46px;
+      margin-top:8px ;
+   
+   }
+   .main-header-top-bar, .main-navbar{
+      max-width: 760px;
+      margin: auto;
+      font-size: 19px;
+
+   }
+   .cajita-información {
+      font-size: 20px;
+    }
+    .producto{
+      box-shadow: 0px 0px 10px rgb(100, 100, 100);
+         width: 40vw;
+     }
+ } 
+ @media(min-width:1100px){
+   header img{
+      width: 280px;
+      
+   }
+   .main-header-top-bar, .main-navbar{
+      max-width: 1100px;
+      margin: auto;
+      font-size: 22px;
+   }
+   .barra-busqueda input{
+      width: 75%;
+      font-size: 20px;
+   }
+   .barra-busqueda button{
+      font-size: 20px;
+
+   }
+ 
+   .producto{
+      width: 20vw;
+  }
+  .producto:hover{
+   box-shadow: 0px 0px 10px rgb(63, 15, 15);
+ }
+
+ .cajita-información img{
+   width: 100px;
+   height: 90px;
+ } 
+ .usuario i:hover{
+   color:black;
+   font-size: 40px;
+ }
+ 
+ .usuario a:hover{
+   color:black;
+   font-size: 30px;
+ }
+ .site-navbar a:hover{
+   color:black;
+   font-size: 30px;
+ }
+ .producto:hover{
+   width: 24vw;
+ }
+ .burger-menu i:hover{
+   font-size: 30px;
+ }
+ .marca{
+   font-size: 40px;
+  } 
+}
