@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam&family=Satisfy&display=swap');
+
+.main-header {
+    background-color: #214566 /* #9c4f0536 */; 
+    padding: 10px;
+    color : black; 
+   /*  position: fixed;
+    top: 0 */
+   /*  font-family: 'Roboto', sans-serif; */
+    
+}
+
+/* header img */
+
+main{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.marca{
+   
+   color: white;
+   margin-top: 10px;
+   margin-left: 8px;
+   padding: 0px;
+   /* width: 140px;  */
+   height: 36px;
+   align-items: center;
+   font-family: 'Kalam', cursive;
+   font-family: 'Satisfy', cursive;
+    } 
+a {
+    color: white; 
+    display: inline-block;
+    padding: 5px 0;
+    display: none;
+    text-decoration: none;
+   /*  font-style: italic; */
+    font-family:'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: normal;
+ }
+  .burger-menu i{
+    margin-top:10px ;
+    color: black;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10%;
+    transition: 1000ms;
+}
+ .barra-busqueda{ 
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 15px;
+    /* display: flex; */
+    justify-content: space-between;
+    text-align: center;
+    display: none;
+
+ }
+ .barra-busqueda i{
+    color: white;
+    
+ }
+ .usuario{
+   display: flex;
+   /* display: block */;
+   color: white;
+   align-items: center;
+   margin-left: 25px;
+   margin-top: 8px; 
+   
+   } 
+   .usuario i{
+   justify-content: space-between;
+   margin-right: 20px;
+   font-size: 25px;
+   transition: 700ms
+ }
+ .usuario a { 
+   transition: 700ms;
+ }
+ .main-header-top-bar{
+    display: flex; 
+    text-align: center;
+   justify-content:space-evenly;
+   
+ }
+ 
+   
+ .site-navbar{
+    display: flex;
+    justify-content: space-around;
+    width: 35%;
+ }
+ .site-navbar a{
+   transition: 700ms;
+ }
+.precio-anterior{
+   text-decoration: line-through;
+   text-align: left;
+   margin: 0;
+}
+
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: whitesmoke;
+}
+
+p{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 14px;
+
+}
+
+
+h1{
+    font-size: 48px;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    border-bottom: solid black 4px;
+}
+
+.carro-completo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+
+.items {
+    background-color: rgb(136 136 136 / 34%);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 60vw;
+}
+.buy {
+    width: 30vw;
+    text-align: center;
+    background-color: rgb(136 136 136 / 34%);
+    margin-bottom: 500px;
+    margin-top: 200px;
+    padding: 15px;
+}
+.buy div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-bottom: solid 2px whitesmoke ;
+    margin: 10px;
+}
+h3 {
+    border-bottom:solid 2px whitesmoke;
+    padding-bottom: 10px ;
+}
+
+
+.items article {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: solid 3px whitesmoke;
+    padding: 15px;
+    padding-right: 0px;
+    width: 100%;
+    padding-top: 15px;
+}
+.items article div{
+    border-radius: 50%;
+
+}
+img {
+    width: 40%;
+}
+
+
+
+.cart {
+text-align: center;
+}
+
+@media(min-width: 1200px){
+    .items { width: 60vw;
+        height: 120vh;
+    }
+    .carro-completo { 
+        width: 100vw;
+    }
+    
+}
+@media(max-width:768px){
+    .carro-completo {
+        display: flex;
+        flex-direction: column;
+    
+    }
+     .cart article {
+        flex-direction: column;
+       align-items: flex-start;
+       width: 768px;
+
+    }
+    .items{
+        width: 768px;
+    }
+    .buy{
+        margin-top: 20px;
+        width: 768px;
+    }
+}
+
+@media (max-width: 320px){
+    .carro-completo {
+        display: flex;
+        flex-direction: column;
+    
+    }
+     .cart article {
+        flex-direction: column;
+       align-items: flex-start;
+       width: 320px;
+
+    }
+    .items{
+        width: 320px;
+    }
+    .buy{
+        margin-top: 20px;
+        width: 320px;
+    }
+
+}
