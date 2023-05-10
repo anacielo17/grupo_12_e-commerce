@@ -6,3 +6,7 @@ Nuestro grupo está integrado por estudiantes de Digital House: Ana Cielo Seidel
 Se utilizaron tres sitios de referencias propias del rubro con el objetivo de tener mayores herramenitas sobre este comercio como ser las clasificaciones, precision conceptual, requerimientos para la venta como ser politicas y convenios nacionales, entre otras cosas. Dentro de estas paginas, podemos citar a : https://www.apache.com.ar, https://www.agronline.com.ar/, https://www.agromec.com.ar.
 
 También se busco referencias en sitios más genéricos, que resentan una estructura abarcativa de todas las posibles utilidades y necesidades de los usuarios, dichos sitios sirvieron como ejemplo para recrear un bosquejo general en base a las funcionalidades que utilizan y la estética que presentan. Dentro de ellas : https://www.mercadolibre.com.ar,  https://www.fravega.com.
+
+Tablero de Seguimiento de actividades: Trello
+
+https://trello.com/invite/b/d3qJU3xA/ATTI46ca44c917c6148312d4cc2337b49b0d1B3394E2/proyecto-integrador-dh-grupo-12
