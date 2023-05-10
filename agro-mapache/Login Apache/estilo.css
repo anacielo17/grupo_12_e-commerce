@@ -1,0 +1,108 @@
+/* Estilos globales */
+* {
+	box-sizing: border-box;
+	font-family: sans-serif;
+    font-weight: bold;
+    color: #214566;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+    background-image: url('gif.jpg');
+ 
+}
+
+/* Estilos del marco */
+.wrapper {
+	
+	padding: 20px;
+	margin: 20px;
+	max-width: 400px;
+	text-align: center;
+    border: 4px solid #214566;
+    background-color: rgb(252, 243, 244);
+}
+
+.wrapper img {
+    width: 300px;
+    height: auto;
+  }
+
+/* Estilos del formulario */
+form {
+	margin-bottom: 20px;
+	text-align: center;
+    
+    
+}
+
+label {
+	display: block;
+	margin-bottom: 5px;
+	text-align: left;
+    font-weight: bold;
+}
+
+input[type="email"],
+input[type="password"] {
+	width: 100%;
+	padding: 10px;
+	border: 2px solid #214566;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	font-size: 16px;
+    
+    
+    
+}
+
+label.checkbox {
+	display: flex;
+	justify-content: center;
+}
+
+button {
+	background-color: white;
+	border: 1px solid #ccc;
+	padding: 10px 20px;
+	border-radius: 5px;
+	font-size: 16px;
+	cursor: pointer;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.google-button {
+	background-color: #dd4b39;
+	color: white;
+}
+
+.google-button:hover {
+	background-color: #e74b37;
+}
+
+/* Estilos del pie de página */
+footer {
+	text-align: center;
+	color: #666;
+	font-size: 14px;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 1024px) {
+	.container {
+	  flex-direction: column;
+	}
+	
+	.card {
+	  max-width: 100%;
+	}
+	
+	input[type="email"],
+	input[type="password"],
+	button {
+	  width: 100%;
+	}
+  }
+  
