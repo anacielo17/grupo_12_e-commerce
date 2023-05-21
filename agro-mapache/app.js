@@ -8,7 +8,15 @@ const catalogoRoutes = require("./routes/catalogo.js");
 const carritoRoutes = require("./routes/carrito-compras.js");
 const registroRoutes = require("./routes/registro.js");
 const loginRoutes = require("./routes/login.js");
- 
+
+app.set("view engine", "ejs") 
+app.set("views", [
+    path.join(__dirname, "./views/main"),
+    path.join(__dirname, "./views/products"),
+    path.join(__dirname, "./views/users")
+])
+
+
 app.use(registroRoutes);
 app.use(mainRoutes);
 app.use(catalogoRoutes);
@@ -17,9 +25,6 @@ app.use(loginRoutes);
 
 
 app.use(express.static("public"));
-
-
-
 
 
 app.listen(2000, () =>{
