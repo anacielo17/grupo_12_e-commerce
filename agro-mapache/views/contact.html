@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/styles.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="main-header">
+
+        <div class="main-header-top-bar">
+            <div class="burger-menu">
+                <i class="fa-solid fa-bars" style="color: #05070b;"></i>
+            </div>
+            <h2 class="marca">AgroMapache</h2>
+            <!-- <img src="./img/logo2.jpeg" class="logo"> -->
+            <div class="barra-busqueda">
+                <input class="color-text-gris" type="text" value="Buscar productos">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                <!-- <input type="text" placeholder="Buscar">
+                <button type="submit"> Buscar</button> -->
+            </div>
+            <div class="usuario">
+                <i class="fa-solid fa-circle-user"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <a href="carrito-compra.html"> Mis compras</a>
+            </div>
+        </div>
+        </div>
+
+        <nav>
+            <nav class="main-navbar">
+                <ul class="site-navbar">
+                    <a href="#Noticias"> Noticias</a>
+                    <a href="#Contacto"> Contacto </a>
+                </ul>
+            </nav>
+
+    </header>
+
+    <main>
+
+        <form action="/contacto" method="get" class="form">
+
+            <div class="control-form">
+                <i class="fa-solid fa-paper-plane"></i>
+                <select>
+                    <option value="cg">Consulta (General)</option>
+                    <option value="at">Asesoramiento técnico</option>
+                    <option value="sdr">Solicitud de repuestos</option>
+                    <option value="ex">Exportaciones</option>
+                    <option value="vta">Ventas</option>
+                </select>
+            </div>
+
+            <div class="control-form">
+                <div>
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" name="nombreRazonSocial" placeholder="Ingrese Nombre o Razón Social*" required>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" name="correoElectronico" placeholder="Ingrese Email*" required>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-phone"></i>
+                    <input type="text" name="númeroTeléfono" placeholder="Ingrese Teléfono*" required>
+                </div>
+
+                <div>
+                    <input type="text" name="ConsultaComentario" placeholder="Ingrese Consujlta / Comentario">
+                </div>
+            </div>
+
+                <div class="boton-cierre ">
+                    <button type="reset">Borrar</button>
+                    <button type="submit">Enviar</button>
+                    <p>* Campo Obligatorio</p>
+                </div>
+        </form>ƒ
+
+        <div>
+            <h3 class="title">Contacto</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, odit. Sapiente doloremque, dolores
+                vel reiciendis totam quis odio suscipit deserunt quidem quae a porro? Dolorem recusandae blanditiis a
+                itaque exercitationem.</p>
+            <a href="/contacto"><img src="img. Geolocalización.png" width="300px"></a>
+            <h3 class="title">Teléfono</h3>
+            <p>+54 000 0000 0000 / Administración</p>
+            <p>+54 000 0000 0000 / Ventas</p>
+            <p>+54 0800 0000 0000 / Atención al Cliente</p>
+            <h3 class="title">Horario</h3>
+            <p>9:00 - 19:00 horas</p>
+        </div>
+    </main>
+
+    <footer>
+        <h2>LOGO</h2>
+
+        <div class="redes">
+            <i class="fa-brands fa-instagram"></i>
+            <p>@agromapache</p>
+            <i class="fa-brands fa-facebook"></i>
+            <p>@agromapache</p>
+            <i class="fa-brands fa-twitter"></i>
+            <p>@agromapache</p>
+        </div>
+
+        <div class="contáctenos">
+            <i class="fa-solid fa-envelope"></i>
+            <p>@gmail</p>
+            <i class="fa-solid fa-envelope"></i>
+            <p>@gmail</p>
+            <i class="fa-solid fa-phone"></i>
+            <p>+54 000 0000 0000 / Ventas</p>
+            <i class="fa-solid fa-phone"></i>
+            <p>+54 000 0000 0000 / Post-Ventas y Logistica</p>
+        </div>
+
+        <div class="acercaDe">
+            <i class="fa-solid fa-circle-check"></i>
+            <p>Términos y Condiciones</p>
+            <i class="fa-solid fa-circle-check"></i>
+            <p>Cancelar compra</p>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
