@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Login</title>
-	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<title>Agro-mapache</title>
+	<link rel="stylesheet" href="/css/login.css">
 </head>
+
 <body>
 	<div class="wrapper">
-		<h1><img src="/Users/Gonza/Desktop/Proyecto/logo.jpeg" alt="Logo" class="logo"></h1>
-        
+		<h1><a href="/home"><img src="/img/logo2.jpeg" class="logo"></a></h1>
+
 		<form>
 			<label for="email">Email:</label><br>
 			<input type="email" id="email" name="email" required><br><br>
@@ -23,8 +25,10 @@
 			<button type="submit" class="google-button">Ingresa con Google</button>
 		</form>
 
-		<p class="terms">Al hacer clic en "Ingresar", acepta nuestros <a href="#">Términos y condiciones</a> y nuestra <a href="#">Política de privacidad</a>.</p>
-		</div>
-	
+		<p class="terms">Al hacer clic en "Ingresar", acepta nuestros <a href="#">Términos y condiciones</a> y nuestra
+			<a href="#">Política de privacidad</a>.</p>
+	</div>
+	<%- include("../partials/footer") %>
 </body>
+
 </html>

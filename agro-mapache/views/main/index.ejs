@@ -1,45 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include ("../partials/head") %>
+<%- include("../partials/head")  %>
+    
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/css/styles.css">
 <body>
+    
+<%- include("../partials/header") %> 
+    
 
-    <header class="main-header">
-
-        <div class="main-header-top-bar">
-            <div class="burger-menu">
-                <i class="fa-solid fa-bars" style="color: #05070b;"></i>
-            </div>
-            <h2 class="marca">AgroMapache</h2>
-            <!-- <img src="./img/logo2.jpeg" class="logo"> -->
-            <div class="barra-busqueda">
-                <input class="color-text-gris" type="text" value="Buscar productos">
-                <button><i class="fa-solid fa-magnifying-glass"></i></button>
-                <!-- <input type="text" placeholder="Buscar">
-                <button type="submit"> Buscar</button> -->
-            </div>
-            <div class="usuario">
-                <i class="fa-solid fa-circle-user"></i>
-                <i class="fa-solid fa-cart-shopping"></i>
-                <a href="carrito-compra.html"> Mis compras</a>
-            </div>
-        </div>
-        </div>
-
-        <nav>
-            <nav class="main-navbar">
-                <ul class="site-navbar">
-                    <a href="#Noticias"> Noticias</a>
-                    <a href="#Contacto"> Contacto </a>
-                </ul>
-            </nav>
-
-    </header>
     <main>
         <img src="./img/fondo1.jpeg" class="fondo">
         <section class="informacion">
@@ -324,6 +293,8 @@
             </div>
         </section>
     </main>
+    <%- include("../partials/footer")  %>
 </body>
+
 
 </html>
