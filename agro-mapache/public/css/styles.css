@@ -341,3 +341,81 @@ margin-bottom: 0;
    font-size: 40px;
   } 
 }
+
+/*          contacto main           */
+
+.form {
+   width: 100vw;
+   padding: 20px;
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: column;
+   align-content: center;
+   justify-content: space-around;
+}
+
+.control-form {
+   margin-bottom: 15px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+}
+
+.control-form input {
+   width: 35vw;
+   padding: 5px;
+   margin-bottom: 10px;
+}
+
+div.coment {
+   width: 37vw;
+   padding: 5px;
+   display: flex;
+   flex-wrap: nowrap;
+   flex-direction: column;
+   align-content: center;
+}
+
+div.coment input {
+   height: 100px;
+}
+
+div.contact {
+   padding: 0px;
+   margin-left: 30px;
+   display: flex;
+   flex-wrap: nowrap;
+   flex-direction: column;
+   align-content: center;
+   justify-content: space-around;
+}
+
+
+/*          footer          */
+
+footer {
+   width: 100vw;
+   background-color: #214566;
+   color: white;
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: column;
+   align-self: center;
+}
+
+div.redes {
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;  
+}
+
+div.contactenos {
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;  
+}
+
+div.acercaDe {
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;  
+}
