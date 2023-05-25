@@ -18,63 +18,63 @@
 
     <main>
 
-            <form action="/contacto" method="get" class="form">
-    
-                <div class="control-form">
-                    <i class="fa-solid fa-paper-plane"></i>
-                    <select>
-                        <option value="cg">Consulta (General)</option>
-                        <option value="at">Asesoramiento técnico</option>
-                        <option value="sdr">Solicitud de repuestos</option>
-                        <option value="ex">Exportaciones</option>
-                        <option value="vta">Ventas</option>
-                    </select>
-                </div>
-    
-                <div class="control-form">
-                    <div>
-                        <i class="fa-solid fa-user"></i>
-                        <input type="text" name="nombreRazonSocial" placeholder="Ingrese Nombre o Razón Social*" required>
-                    </div>
-    
-                    <div>
-                        <i class="fa-solid fa-envelope"></i>
-                        <input type="email" name="correoElectronico" placeholder="Ingrese Email*" required>
-                    </div>
-    
-                    <div>
-                        <i class="fa-solid fa-phone"></i>
-                        <input type="text" name="númeroTeléfono" placeholder="Ingrese Teléfono*" required>
-                    </div>
-    
-                </div>
-    
-                <div class="coment">
-                    <input type="text" name="consultaComentario" placeholder="Ingrese Consulta / Comentario">
-                    <p>* Campo Obligatorio</p>
-                </div>
-    
-                <div class="boton-cierre">
-                    <button type="reset">Borrar</button>
-                    <button type="submit">Enviar</button>
-    
-                </div>
-            </form>
-    
-            <div class="contact">
-                <h3 class="title">Contacto</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, odit. Sapiente doloremque, dolores
-                    vel reiciendis totam quis odio suscipit deserunt quidem quae a porro? Dolorem recusandae blanditiis a
-                    itaque exercitationem.</p>
-                <a href="/contacto"><img src="img. Geolocalización.png" width="300px"></a>
-                <h3 class="title">Teléfono</h3>
-                <p>+54 000 0000 0000 / Administración</p>
-                <p>+54 000 0000 0000 / Ventas</p>
-                <p>+54 0800 0000 0000 / Atención al Cliente</p>
-                <h3 class="title">Horario</h3>
-                <p>9:00 - 19:00 horas</p>
+        <form action="/contacto" method="get" class="form">
+
+            <div class="control-form">
+                <i class="fa-solid fa-paper-plane"></i>
+                <select>
+                    <option value="cg">Consulta (General)</option>
+                    <option value="at">Asesoramiento técnico</option>
+                    <option value="sdr">Solicitud de repuestos</option>
+                    <option value="ex">Exportaciones</option>
+                    <option value="vta">Ventas</option>
+                </select>
             </div>
-        </main>
+
+            <div class="control-form">
+                <div>
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" name="nombreRazonSocial" placeholder="Ingrese Nombre o Razón Social*" required>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" name="correoElectronico" placeholder="Ingrese Email*" required>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-phone"></i>
+                    <input type="text" name="númeroTeléfono" placeholder="Ingrese Teléfono*" required>
+                </div>
+
+            </div>
+
+            <div class="coment">
+                <input type="textarea" name="consultaComentario" placeholder="Ingrese Consulta / Comentario">
+                <p>* Campo Obligatorio</p>
+            </div>
+
+            <div class="boton-cierre">
+                <button type="reset">Borrar</button>
+                <button type="submit">Enviar</button>
+
+            </div>
+        </form>
+
+        <div class="contact">
+            <h3 class="title">Contacto</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur, odit. Sapiente doloremque, dolores
+                vel reiciendis totam quis odio suscipit deserunt quidem quae a porro? Dolorem recusandae blanditiis a
+                itaque exercitationem.</p>
+            <a href="/contacto"><img src="/public/img/img. Geolocalización.png" width="300px"></a>
+            <h3 class="title">Teléfono</h3>
+            <p>+54 000 0000 0000 / Administración</p>
+            <p>+54 000 0000 0000 / Ventas</p>
+            <p>+54 0800 0000 0000 / Atención al Cliente</p>
+            <h3 class="title">Horario</h3>
+            <p>9:00 - 19:00 horas</p>
+        </div>
+    </main>
         <%- include("../partials/footer")  %>
         <!-- <footer>
             <h2>LOGO</h2>
