@@ -1,12 +1,9 @@
 /* Estilos globales */
 * {
-	box-sizing: border-box;
-	font-family: sans-serif;
-}
-
-body {
-	margin: 0;
-	padding: 0;
+	box-sizing: border-box;  
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0px;
+    padding: 0px;
 }
 
 .background {
@@ -19,6 +16,14 @@ body {
 }
 
 /* Estilos del contenedor */
+
+.marca{
+	color: white;
+	height: 36px;
+	font-family: 'Kalam', cursive;
+	font-family: 'Satisfy', cursive;
+}
+	
 .container {
 	display: flex;
 	align-items: center;

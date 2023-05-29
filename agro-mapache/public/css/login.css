@@ -1,5 +1,9 @@
-/* Estilos globales */
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam&family=Satisfy&display=swap');
+
 * {
+	margin: 0;
+	padding: 0;
 	box-sizing: border-box;
 	font-family: sans-serif;
     font-weight: bold;
@@ -7,59 +11,75 @@
 }
 
 body {
+	width: 100vw;
+}
+
+.marca{
+	color: white;
+	height: 36px;
+	font-family: 'Kalam', cursive;
+	font-family: 'Satisfy', cursive;
+	background-color:#214566;
 	margin: 0;
-	padding: 0;
-    background-image: url('gif.jpg');
- 
+	padding-top: 15px;
+	padding-bottom: 15px;
+	box-sizing: content-box;
 }
 
 /* Estilos del marco */
+
+.Background-gif{
+	display: none;
+}
+
 .wrapper {
-	
-	padding: 20px;
-	margin: 20px;
-	max-width: 400px;
 	text-align: center;
-    border: 4px solid #214566;
     background-color: rgb(252, 243, 244);
 }
 
-.wrapper img {
-    width: 300px;
-    height: auto;
-  }
-
 /* Estilos del formulario */
-form {
-	margin-bottom: 20px;
+.login {
 	text-align: center;
-    
-    
+    padding: 20px;
+	width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.terms{
+	padding-bottom: 10px;
 }
 
 label {
-	display: block;
-	margin-bottom: 5px;
-	text-align: left;
-    font-weight: bold;
+	display: none;
 }
 
-input[type="email"],
-input[type="password"] {
-	width: 100%;
+.control {
+	width: 70vw;
 	padding: 10px;
 	border: 2px solid #214566;
 	border-radius: 5px;
 	margin-bottom: 20px;
 	font-size: 16px;
-    
-    
-    
+}
+
+.google-button {
+	width: 70vw;
+	padding: 10px;
+	background-color: #dd4b39;
+	color: white;
+	border-radius: 5px;
+	font-size: 16px;
+}
+
+.google-button:hover {
+	background-color: #e74b37;
 }
 
 label.checkbox {
 	display: flex;
 	justify-content: center;
+	margin-bottom: 20px;
 }
 
 button {
@@ -69,17 +89,8 @@ button {
 	border-radius: 5px;
 	font-size: 16px;
 	cursor: pointer;
-	margin-bottom: 20px;
 	text-align: center;
-}
-
-.google-button {
-	background-color: #dd4b39;
-	color: white;
-}
-
-.google-button:hover {
-	background-color: #e74b37;
+	width: 30vw;
 }
 
 /* Estilos del pie de página */
@@ -89,8 +100,7 @@ footer {
 	font-size: 14px;
 }
 
-/* Estilos para dispositivos móviles */
-@media (max-width: 1024px) {
+@media (min-width: 1024px) {
 	.container {
 	  flex-direction: column;
 	}
@@ -99,10 +109,30 @@ footer {
 	  max-width: 100%;
 	}
 	
-	input[type="email"],
-	input[type="password"],
-	button {
+	.control {
 	  width: 100%;
 	}
+
+	.google-button{
+		width: 100%
+	}
+
+	.Background-gif{
+		display: flex;
+		width: 100vw;
+	}
+
+	.wrapper{
+		text-align: center;
+		border: 4px solid #214566;
+		background-color: rgb(252, 243, 244);
+		width: 30vw;
+		position: absolute;
+		top: 15px;
+		left: 15px;
+	}
+
+	.wrapper form{
+		width: 100%;
+	}
   }
-  

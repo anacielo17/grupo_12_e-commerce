@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam&family=Satisfy&display=swap');
+
+* {
+    box-sizing: border-box;  
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+    margin :0px;
+    padding: 0px;
+    background-color: whitesmoke;
+    text-align: center;
+}
+
+/*              header              */
+
+.main-header {
+    width: 100vw;
+    background-color: #214566;
+    padding: 10px;
+    color: black; 
+}
+
+.marca{
+    color: white;
+    margin-top: 10px;
+    margin-left: 8px;
+    padding: 0px;
+    height: 36px;
+    align-items: center;
+    font-family: 'Kalam', cursive;
+    font-family: 'Satisfy', cursive;
+}
+
+/*              formulario main             */
+
+.form {
+    width: 100vw;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:left;
+    align-items: flex-end;
+}
+
+.form.form {
+   justify-content: center;
+}
+
+div.nombreProducto input {
+    width: 60vw;
+    margin-bottom: 20px;
+    margin-left: 60px;
+}
+
+div.descripcionProducto input {
+    width: 60vw;
+    height: 100px;
+    margin-bottom: 20px;
+    margin-left: 60px;
+}
+
+div.precioProducto input {
+    width: 60vw;
+    margin-bottom: 20px;
+    margin-left: 60px;
+}
+
+div.imagenProducto input {
+    width: 65vw;
+    margin-bottom: 20px;
+    margin-left: 60px;
+}
+
+div.boton-cierre {
+    width: 60vw;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-left: 60px;
+}
+
+/*              footer              */
+footer {
+    width: 100vw;
+    height: 100px;
+    background-color: #214566;
+    color: white;
+    text-align: left;
+    font-family: 'Times New Roman', Times, serif;
+   
+}
+
+h2.logo {
+    padding: 20px;
+    font-family: 'Kalam', cursive;
+    font-family: 'Satisfy', cursive;
+}
