@@ -1,31 +1,33 @@
 <header class="main-header">
 
     <div class="main-header-top-bar">
-        <div class="burger-menu">
-            <i class="fa-solid fa-bars" style="color: #05070b;"></i>
-        </div>
-        <h2 class="marca">AgroMapache</h2>
-        <!-- <img src="./img/logo2.jpeg" class="logo"> -->
+
+        <a href="/home">
+            <h2 class="marca">AgroMapache</h2>
+        </a>
+
         <div class="barra-busqueda">
-            <input class="color-text-gris" type="text" value="Buscar productos">
+            <input type="text" placeholder="Buscar productos">
             <button><i class="fa-solid fa-magnifying-glass"></i></button>
-            <!-- <input type="text" placeholder="Buscar">
-            <button type="submit"> Buscar</button> -->
         </div>
+
         <div class="usuario">
-            <i class="fa-solid fa-circle-user"></i>
-            <i class="fa-solid fa-cart-shopping"></i>
-            <a href="carrito-compra.html"> Mis compras</a>
+            <a href="/user/login"><i class="fa-solid fa-circle-user"></a></i>
+            <a href="/products/carrito-compra"><i class="fa-solid fa-cart-shopping"></a></i>
+            <a> Mis compras</a>
         </div>
-    </div>
     </div>
 
-    <nav>
-        <nav class="main-navbar">
-            <ul class="site-navbar">
-                <a href="#Noticias"> Noticias</a>
-                <a href="#Contacto"> Contacto </a>
-            </ul>
-        </nav>
+
+    <nav class="main-navbar">
+        <div class="burger-menu">
+            <a href="/products/catalogo"> <i class="fa-solid fa-bars" style="color: #05070b;"></a></i>
+        </div>
+
+        <ul class="menu">
+            <li><a href="#Noticias"> Noticias</a></li>
+            <li><a href="/home/contact"> Contacto </a></li>
+        </ul>
+
 
 </header>
