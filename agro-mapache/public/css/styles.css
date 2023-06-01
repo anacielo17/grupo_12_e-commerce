@@ -463,24 +463,21 @@ footer {
    color: white;
    display: flex;
    flex-wrap: wrap;
-   flex-direction: column;
+   flex-direction: column; 
    align-self: center;
 }
-
-div.redes {
+.probando{
    display: flex;
-   flex-wrap: wrap;
-   flex-direction: row;
+   justify-content: space-around; 
 }
+ .redes {
+   flex-direction: column;
+   font-size: 22px;
+   margin: 10px;
 
-div.contactenos {
-   display: flex;
-   flex-wrap: wrap;
-   flex-direction: row;
-}
+ } 
+ .redes i {
+   margin-right: 10px;
+   margin-bottom: 20px;
+ }
 
-div.acercaDe {
-   display: flex;
-   flex-wrap: wrap;
-   flex-direction: row;
-}
