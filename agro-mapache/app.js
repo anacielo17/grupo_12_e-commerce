@@ -37,8 +37,12 @@ crear controllers necesarios (regla basica: .get hacen render y los otros hacen 
 (get necesitan fs.readFileSinc))
 escribir controller de POST de productos (fs.writeFileySinc-productos .push) 
 escribir controller de PUT de productos (fs.writeFileySinc- productos.findIndex) 
-escribir controller de DELETE de productos (fs.writeFileySinc- productos.filter) 
-agregar detalle del producto
+escribir controller de DELETE de productos (fs.writeFileySinc- productos.filter)
+
+// hecho creo//
+
+//falta hacer//
+agregar detalle del producto, update product y create product
 agregar vista de edicion (similar a formulario de creacion).
 definir lista de productos 
 

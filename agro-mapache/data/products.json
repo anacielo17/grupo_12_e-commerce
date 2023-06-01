@@ -1,0 +1,29 @@
+[
+    {
+        "id":1,
+        "title": "cosechadora",
+        "price":4000, 
+        "description": "lorem",
+        "image":"/img/products/nombre de la imagen",
+        "category": "campo",
+        "colours":  "red"
+    },
+    {
+        "id": 2,
+        "title": "sierra",
+        "precio": 25555,
+        "description": "lorem",
+        "image":"..",
+        "category": "campo",
+        "colours":  "red"
+    },
+    {
+        "id": 3,
+        "title": "tractor",
+        "precio": 2244,
+        "description": "lorem",
+        "image":"..",
+        "category": "campo",
+        "colours":  "red"
+    }
+]

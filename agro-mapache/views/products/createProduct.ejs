@@ -19,7 +19,7 @@
             <h2 class="marca">AgroMapache</h2>
     </header>
 
-    <form action="/formularioProducto" method="get" class="form">
+    <form action="/formularioProducto" method="post" enctype="multipart/form-data">
 
         <div class="nombreProducto">
             <label for="nombreProducto">Nombre Producto:</label>
@@ -36,7 +36,7 @@
 
         <div class="imagenProducto">
             <label for="imagenProducto">Imagen Producto:</label>
-            <input type="file" name="imagenProducto" accept=".jpg, .png" class="control" required>
+            <input type="file" name="imagenProducto" class="control" required>
         </div>
 
         <div class="boton-cierre">
