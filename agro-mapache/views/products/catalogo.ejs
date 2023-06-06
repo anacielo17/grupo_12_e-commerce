@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Document</title>
+    <title>Listado de Productos</title>
 </head> 
 
 <body>
@@ -51,24 +51,26 @@
                 </div>
 
 
-            </form> -->
-        </section>
+            </form> 
+         </section> -->
+         <a href="/products/createProduct" class="nuevos-productos"> Agregar producto </a>
 
+         <% productos.forEach(productos=> {  %>
         <section class="catalogo-main">
 
             <article class="producto">
 
-                <img src="/img/hacha_de_camping.png" width="300px">
+               <a href="/products/detail"><img src= <%= productos.img%> width="300px"></a> 
                 <div class="detalle-producto">
                     <div class="valor">
-                        <p class="precio"> $12.123</p>
+                        <p class="precio"><%= productos.price %></p>
                     </div>
 
-                    <strong class="descripcion">Hacha de camping Bahco</strong>
+                    <strong class="descripcion"><%= productos.name %></strong>
                 </div>
             </article>
-
-            <article class="producto">
+            <%}) %>
+         <!--    <article class="producto">
 
                 <img src="/img/hacha_de_pico.png" width="300px">
                 <div class="detalle-producto">
@@ -130,7 +132,7 @@
 
             <article class="producto">
 
-                <img src="/img/retroexcavadora.png" width="300px">
+                <img src="/img/moledora_mixer.jpg" width="300px">
                 <div class="detalle-producto">
                     <div class="valor">
                         <p class="precio"> Precio a consultar</p>
@@ -148,7 +150,7 @@
                     </div>
                     <strong class="descripcion">Casilla 5x2.60mts, 2 ejes, 1 habitación</strong>
                 </div>
-            </article>
+            </article> -->
 <!-- 
             <article class="producto">
 

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Detalle del producto</title>
+</head>
+<body>
+    <%- include("../partials/header") %> 
+    <h3 class="container-title"> Detalle del producto</h3>
+    <main>
+        <div class="container-img">
+            <img src="/img/hacha_de_camping.png" alt="imagen-product">
+        </div>
+        <div class="container-info-producto">
+            <div class="container-name">
+                <h3>Hacha de camping Bahco</h3>
+            </div>
+            <div class="container-price">
+                <span>$12.123</span>
+            </div>
+            <div class="container-descrip-productos"> 
+               <h3> Carcateristicas del Producto</h3>
+               <p> Mango de madera de fresno curvado  380Mm - 850 G,agujero adicional para colgar de 8 mm en el extremo del mango para fácil almacenamiento. 
+Cómodo de usar por su mango de madera curvo de fresno</p>  
+            </div>
+            <div class="container-add-cart">
+                <div class="container-quantity">
+                    <input type="number" placeholder="1" value="1" min="1" class="input-quantity">
+                </div>
+            <button class="b-add-to-cart"> + Añadir al carrito</button>
+            </div>
+           <div class="container-send">
+            <i class="fa-solid fa-truck-fast"> </i>
+           <span> Envios a todo el pais</span>
+        </div>
+        <div class="container-price-iva">
+            <span> Precios finales Iva incluido</span>
+        </div>
+        <div class="contact">
+        <a href="/home/contact"><p>Para más información, contáctanos!</p></a>
+        </div>
+        </div> 
+        
+    </main>
+    <%- include("../partials/footer")  %>
+</body>
+</html>

@@ -5,48 +5,49 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/formularioProduxtos.css">
+        <link rel="stylesheet" href="/css/styles.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
             integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="/formularioProductos.css">
+        
 
         <title>Formulario de Productos</title>
     </head>
-
+    
 <body>
+<%- include("../partials/header") %>  
 
-    <header class="main-header">
-            <h2 class="marca">AgroMapache</h2>
-    </header>
-
+<main>
+    <section class="form-register">
     <form action="/formularioProducto" method="post" enctype="multipart/form-data">
+        <h4>Crear Producto</h4>
+        <!-- <div class="nProducto">
+            <label for="nombreProducto">Nombre producto:</label> -->
+            <input class="controls" type="text" name="producto" id="producto" placeholder="Ingrese Nombre del Producto" required>
+        <!-- </div> -->
 
-        <div class="nombreProducto">
-            <label for="nombreProducto">Nombre Producto:</label>
-            <input type="text" name="producto" id="producto" placeholder="Ingrese Nombre del Producto" required>
-        </div>
+        <!-- <div class="dProducto">
+            <label for="descripcionProducto">Descripción:</label> -->
+            <input class="controlsD" type="texttarea" name="descripcion" id= "descripcion" placeholder="Ingrese descripción del producto" required>
+        <!-- </div>
 
-        <div class="descripcionProducto"><label for="descripcionProducto">Descripción:</label>
-            <input type="textarea" name="descripcionProducto" placeholder="Ingrese descripción del producto" required>
-        </div>
+        <div class="nProducto"><label for="precioProducto">Precio:</label> -->
+            <input class="controls"  type="text" name="precio" id="prrecio" placeholder="Ingrese precio/texto" required>
+       <!--  </div>
 
-        <div class="precioProducto"><label for="precioProducto">Precio:</label>
-            <input type="text" name="precio" id="prrecio" placeholder="Ingrese precio" required>
-        </div>
+        <div class="nProducto">
+            <label for="imagenProducto">Imagen:</label> -->
+            <input class="controls"  type="file" name="imagenProducto"  required>
+       <!--  </div> -->
 
-        <div class="imagenProducto">
-            <label for="imagenProducto">Imagen Producto:</label>
-            <input type="file" name="imagenProducto" class="control" required>
-        </div>
-
-        <div class="boton-cierre">
-            <button type="reset">Borrar</button>
-            <button type="submit">Guardar</button>
-        </div>
-
+        <!-- <div class="boton-cierre"> -->
+            <input class="botons" type="reset"></input>
+            <input class="botonsE" type="submit"></button>
+        <!-- </div>  -->
     </form>
-
-    <footer> 
-        <h2 class="logo">AgroMapache</h2>
-    </footer>
+    </section>
+    
+ </main>
+<!--  <%- include("../partials/footer")  %> -->
 </body>

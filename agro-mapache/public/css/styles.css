@@ -32,8 +32,8 @@ body {
    display: flex;
    color: white;
    height: 36px;
-   font-family: 'Kalam', cursive;
-   font-family: 'Satisfy', cursive;
+   /* font-family: 'Kalam';
+   font-family: 'Satisfy'; */
 }
 
 a {
@@ -472,7 +472,7 @@ footer {
 }
  .redes {
    flex-direction: column;
-   font-size: 22px;
+   font-size: 16px;
    margin: 10px;
 
  } 

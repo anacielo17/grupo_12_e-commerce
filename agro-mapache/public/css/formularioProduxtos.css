@@ -2,99 +2,67 @@
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kalam&family=Satisfy&display=swap');
 
-* {
-    box-sizing: border-box;  
-    font-family: 'Times New Roman', Times, serif;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-body{
-    margin :0px;
-    padding: 0px;
-    background-color: whitesmoke;
-    text-align: center;
+.form-register{
+    width: 400px;
+    background:#dbdbe7/* #76767e *//* #24303c */; 
+    padding: 30px;
+    margin:auto;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    border-radius: 4px;
+    color: black;
+     box-shadow: 2px 13px 37px #000 
 }
-
-/*              header              */
-
-.main-header {
-    width: 100vw;
-    background-color: #214566;
+h4{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+.controls {
+    width: 100%;
+    background: #abb3bb/* #76767e *//*  #24303c  */;
     padding: 10px;
-    color: black; 
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: none/* 1px solid #2b2d2f */; 
+    font-size: 18px;
+    color: black;
 }
-
-.marca{
-    color: white;
-    margin-top: 10px;
-    margin-left: 8px;
-    padding: 0px;
-    height: 36px;
-    align-items: center;
-    font-family: 'Kalam', cursive;
-    font-family: 'Satisfy', cursive;
-}
-
-/*              formulario main             */
-
-.form {
-    width: 100vw;
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content:left;
-    align-items: flex-end;
-}
-
-.form.form {
-   justify-content: center;
-}
-
-div.nombreProducto input {
-    width: 60vw;
-    margin-bottom: 20px;
-    margin-left: 60px;
-}
-
-div.descripcionProducto input {
-    width: 60vw;
-    height: 100px;
-    margin-bottom: 20px;
-    margin-left: 60px;
-}
-
-div.precioProducto input {
-    width: 60vw;
-    margin-bottom: 20px;
-    margin-left: 60px;
-}
-
-div.imagenProducto input {
-    width: 65vw;
-    margin-bottom: 20px;
-    margin-left: 60px;
-}
-
-div.boton-cierre {
-    width: 60vw;
+.controlsD{
+    width: 100%;
+    background: #abb3bb/*  #76767e *//* #24303c */;
     padding: 10px;
-    margin-bottom: 20px;
-    margin-left: 60px;
-}
-
-/*              footer              */
-footer {
-    width: 100vw;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: none/* 1px solid #2b2d2f */;  
+    font-size: 18px;
+    color: black;
     height: 100px;
-    background-color: #214566;
-    color: white;
-    text-align: left;
-    font-family: 'Times New Roman', Times, serif;
-   
 }
+ .botons{
+    width: 100%;
+    background:#abb3bb; 
+    border: none/* 1px solid #2b2d2f */;
+    padding: 12px;
+    margin: 16px 0;
+    font-size: 16px;
 
-h2.logo {
-    padding: 20px;
-    font-family: 'Kalam', cursive;
-    font-family: 'Satisfy', cursive;
+}
+.botonsE{
+    width: 100%;
+    background:#abb3bb ;
+    border:none; 
+    padding: 12px;
+    color: black;
+    margin: 16px 0;
+    font-size: 16px;
+    cursor: pointer;
+
+}
+.botonsE:hover{
+    background-color:#1fac1d ;
 }

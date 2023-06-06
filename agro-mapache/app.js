@@ -28,8 +28,8 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 
 
-app.listen(2000, () =>{
-    console.log("Servidor corriendo en el puerto 2000");
+app.listen(3000, () =>{
+    console.log("Servidor corriendo en el puerto 3000");
 });
 /* 
 Crear rutas necesarias del CRUD en productRoutes.js (estan en sprint 4)
@@ -45,5 +45,5 @@ escribir controller de DELETE de productos (fs.writeFileySinc- productos.filter)
 agregar detalle del producto, update product y create product
 agregar vista de edicion (similar a formulario de creacion).
 definir lista de productos 
-
+Deje comentado produtDetail para poder ver el html y tambien dejé comentado productosRoutes
 */
