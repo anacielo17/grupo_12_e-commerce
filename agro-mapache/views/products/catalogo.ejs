@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
- <head>
-        <meta charset="UTF-8">
+<head>
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/Catalogo.css">
@@ -10,14 +10,14 @@
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Listado de Productos</title>
-</head> 
+</head>
 
 <body>
 
-    <%- include("../partials/header") %> 
+    <%- include("../partials/header") %>
 
-    <main>
-     <!--    <section class="filter-menu">
+        <main>
+            <!--    <section class="filter-menu">
             <h2>Filtro</h2>
 
             <form action="">
@@ -53,24 +53,29 @@
 
             </form> 
          </section> -->
-         <a href="/products/createProduct" class="nuevos-productos"> Agregar producto </a>
+            <a href="/products/createProduct" class="nuevos-productos"> Agregar producto </a>
 
-         <% products.forEach(product=> {  %>
-        <section class="catalogo-main">
 
-            <article class="producto">
+            <section class="catalogo-main">
 
-               <a href="/products/detail"><img src= <%= product.img%> width="300px"></a> 
-                <div class="detalle-producto">
-                    <div class="valor">
-                        <p class="precio"><%= product.price %></p>
-                    </div>
+                <% productos.forEach(producto=> { %>
+                    <article class="producto">
 
-                    <strong class="descripcion"><%= product.name %></strong>
-                </div>
-            </article>
-            <%}) %>
-         <!--    <article class="producto">
+                        <a href="/products/detail"><img src=<%=producto.img%> width="300px"></a>
+                        <div class="detalle-producto">
+                            <div class="valor">
+                                <p class="precio">
+                                    <%= producto.price %>
+                                </p>
+                            </div>
+
+                            <strong class="descripcion">
+                                <%= producto.name %>
+                            </strong>
+                        </div>
+                    </article>
+                    <%}) %>
+                        <!--    <article class="producto">
 
                 <img src="/img/hacha_de_pico.png" width="300px">
                 <div class="detalle-producto">
@@ -151,7 +156,7 @@
                     <strong class="descripcion">Casilla 5x2.60mts, 2 ejes, 1 habitación</strong>
                 </div>
             </article> -->
-<!-- 
+                        <!-- 
             <article class="producto">
 
                 <img src="./img/desmalezadora_de_empuje.jpg" width="300px">
@@ -240,10 +245,10 @@
                 </div>
             </article> -->
 
-        </section>
-    </main>
-    
-    <%- include("../partials/footer")  %>
+            </section>
+        </main>
+
+        <%- include("../partials/footer") %>
 
 </body>
 

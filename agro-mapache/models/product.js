@@ -8,7 +8,7 @@ const model = {
     findAll: function () {
         const productsJson = fs.readFileSync(path.join(__dirname, this.route), "utf-8");
 
-        const products = productsJson;
+        const products = JSON .parse(productsJson);
 
         return products;
 
