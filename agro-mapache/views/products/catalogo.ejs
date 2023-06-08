@@ -55,18 +55,18 @@
          </section> -->
          <a href="/products/createProduct" class="nuevos-productos"> Agregar producto </a>
 
-         <% productos.forEach(productos=> {  %>
+         <% products.forEach(product=> {  %>
         <section class="catalogo-main">
 
             <article class="producto">
 
-               <a href="/products/detail"><img src= <%= productos.img%> width="300px"></a> 
+               <a href="/products/detail"><img src= <%= product.img%> width="300px"></a> 
                 <div class="detalle-producto">
                     <div class="valor">
-                        <p class="precio"><%= productos.price %></p>
+                        <p class="precio"><%= product.price %></p>
                     </div>
 
-                    <strong class="descripcion"><%= productos.name %></strong>
+                    <strong class="descripcion"><%= product.name %></strong>
                 </div>
             </article>
             <%}) %>
