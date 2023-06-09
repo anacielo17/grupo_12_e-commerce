@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const path = require ("path");
+const methodOverride = require('method-override');
 
 const indexRoutes = require("./routes/indexRoutes.js");
 const productsRoutes = require("./routes/productsRoutes.js");
@@ -14,18 +15,15 @@ app.set("views", [
     path.join(__dirname, "./viwes/partials")
 ]);
 
+app.use(express.static("public"));
+app.use(express.urlencoded({extended:true}));
+app.use(express.json());
+app.use(methodOverride('_method'));
 
 
 app.use("/user",userRoutes);
 app.use("/home",indexRoutes);
 app.use("/products",productsRoutes);
-
-
-
-
-app.use(express.static("public"));
-app.use(express.urlencoded({extended:true}));
-app.use(express.json());
 
 
 app.listen(3000, () =>{
@@ -44,6 +42,7 @@ escribir controller de DELETE de productos (fs.writeFileySinc- productos.filter)
 //falta hacer//
 agregar detalle del producto, update product y create product
 agregar vista de edicion (similar a formulario de creacion).
-definir lista de productos 
+
 Deje comentado produtDetail para poder ver el html y tambien dejé comentado productosRoutes
 */
+//Eliminar producto y buscar producto por id ya funciona, falta la funcion de editar y crear el css de update

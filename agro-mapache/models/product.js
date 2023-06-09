@@ -46,8 +46,10 @@ const model = {
         const indice =  products.findIndex(product => product.id === id);
 
        // con esto, modificamos los datos que queremos cambiar, a traves de los que nos pasan por parametros
-        products[indice].title = newData.title;   // modificar cuando ponga las categorias en el objeto literal
-        products[indice].price = newData.price;  // modificar cuando ponga las categorias en el objeto literal
+        products[indice].name = newData.name;   // modificar cuando ponga las categorias en el objeto literal
+        products[indice].price = newData.price;
+        products[indice].description = newData.description;
+        products[indice].img = newData.img;  // modificar cuando ponga las categorias en el objeto literal
 
         const productsJson = JSON.stringify(products);
 

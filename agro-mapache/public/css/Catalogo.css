@@ -70,6 +70,8 @@ main section {
     font-size: 18px;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
+    color:green;
+    margin-bottom: 5px;
 }
 
 .descripcion {

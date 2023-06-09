@@ -12,22 +12,21 @@
 </head>
 <body>
     <%- include("../partials/header") %> 
-    <h3 class="container-title"> Detalle del producto</h3>
+    <h3 class="container-title"> Detalle del producto <%= product.id %></h3>
     <main>
         <div class="container-img">
-            <img src="/img/hacha_de_camping.png" alt="imagen-product">
+            <img src=<%= product.img%> alt="imagen-product">
         </div>
         <div class="container-info-producto">
             <div class="container-name">
-                <h3>Hacha de camping Bahco</h3>
+                <h3><%=product.name %></h3>
             </div>
             <div class="container-price">
-                <span>$12.123</span>
+                <span><%= product.price %></span>
             </div>
             <div class="container-descrip-productos"> 
                <h3> Carcateristicas del Producto</h3>
-               <p> Mango de madera de fresno curvado  380Mm - 850 G,agujero adicional para colgar de 8 mm en el extremo del mango para fácil almacenamiento. 
-Cómodo de usar por su mango de madera curvo de fresno</p>  
+               <p> <%= product.description %></p>  
             </div>
             <div class="container-add-cart">
                 <div class="container-quantity">
@@ -42,9 +41,17 @@ Cómodo de usar por su mango de madera curvo de fresno</p>
         <div class="container-price-iva">
             <span> Precios finales Iva incluido</span>
         </div>
+        <br>
         <div class="contact">
         <a href="/home/contact"><p>Para más información, contáctanos!</p></a>
         </div>
+        <form action="/products/<%= product.id %>/delete?_method=delete" method="post">
+            <input type="submit" value="Eliminar producto" class="eliminate"></input>
+          </form>
+          <br>
+          <a href="/products/update<%= product.id %>/update">
+            <button>Editar producto</button> 
+          </a>
         </div> 
         
     </main>

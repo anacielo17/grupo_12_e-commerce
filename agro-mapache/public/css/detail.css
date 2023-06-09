@@ -6,9 +6,9 @@
 body{
     margin: 0 auto;
 }
-img{
-    max-width: 100%;
-}
+ img{
+    width: 600px;
+} 
 .container-name{
     padding:30px;
     background-color: #eee;
@@ -96,4 +96,5 @@ main{
     color: #76767e;
     text-align:left; 
     font-style: normal;
+    margin-bottom: 20px;
 }

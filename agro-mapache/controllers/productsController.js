@@ -34,15 +34,17 @@ const productsController = {
     
     // @GET detalle del producto por el ID
     productDetail: (req, res) => {
-       /*  const id = Number(req.params.id)
+        const id = Number(req.params.id)
         const productoAMostrar = productModel.findById(id)
         if (!productoAMostrar) {
             return res.send("El id no existe")
-        } */
-        res.render("detail", { title: "detalle"/* , product: productoAMostrar  */})
+        } 
+        res.render("detail", { title: "detalle", product: productoAMostrar  })
     },
     
-    // @DELETE borrar producto segun ID
+    // @DELETE borrar producto segun ID // 
+   /*  te va pedir instalar la libreria method-override que que para que sobre-escriba el post y funcione el eliminar producto. 
+   YA FUNCIONA ASI QUE NO BORRES NADA  */
     deleteProduct: (req,res)=>{
         const id= Number(req.params.id);
 
@@ -66,14 +68,14 @@ getCreate: (req, res) => {
 },
  
 // @POST/ products
-/* postProduct:(req, res) => {
+postProduct:(req, res) => {
     let datos = req.body;
     datos.price = Number(datos.price);
     datos.file = "/img/products" + req.file.filename;
     productModel.createOne(datos);
     res.redirect("/products");
 }
- */
+ 
 
 }
 

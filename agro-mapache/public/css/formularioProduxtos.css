@@ -9,22 +9,22 @@
 }
 .form-register{
     width: 400px;
-    background:#dbdbe7/* #76767e *//* #24303c */; 
+  /*   background:#dbdbe7/* #76767e *//* #24303c */;  
     padding: 30px;
     margin:auto;
     margin-top: 50px;
     margin-bottom: 40px;
     border-radius: 4px;
     color: black;
-     box-shadow: 2px 13px 37px #000 
+     box-shadow:  1px 1px 3px #000
 }
 h4{
     font-size: 22px;
     margin-bottom: 20px;
 }
 .controls {
-    width: 100%;
-    background: #abb3bb/* #76767e *//*  #24303c  */;
+    width: 100%;/* 
+    background: #abb3bb/* #76767e *//*  #24303c  */; 
     padding: 10px;
     border-radius: 4px;
     margin-bottom: 16px;
@@ -34,7 +34,7 @@ h4{
 }
 .controlsD{
     width: 100%;
-    background: #abb3bb/*  #76767e *//* #24303c */;
+    /* background: #abb3bb/*  #76767e *//* #24303c */; 
     padding: 10px;
     border-radius: 4px;
     margin-bottom: 16px;
@@ -45,7 +45,7 @@ h4{
 }
  .botons{
     width: 100%;
-    background:#abb3bb; 
+    /* background:#abb3bb;  */
     border: none/* 1px solid #2b2d2f */;
     padding: 12px;
     margin: 16px 0;
@@ -54,7 +54,7 @@ h4{
 }
 .botonsE{
     width: 100%;
-    background:#abb3bb ;
+    /* background:#abb3bb ; */
     border:none; 
     padding: 12px;
     color: black;

@@ -20,34 +20,22 @@
 
 <main>
     <section class="form-register">
-    <form action="/formularioProducto" method="post" enctype="multipart/form-data">
+    <form action="/products" method="post" enctype="multipart/form-data">
         <h4>Crear Producto</h4>
-        <!-- <div class="nProducto">
-            <label for="nombreProducto">Nombre producto:</label> -->
-            <input class="controls" type="text" name="producto" id="producto" placeholder="Ingrese Nombre del Producto" required>
-        <!-- </div> -->
-
-        <!-- <div class="dProducto">
-            <label for="descripcionProducto">Descripción:</label> -->
-            <input class="controlsD" type="texttarea" name="descripcion" id= "descripcion" placeholder="Ingrese descripción del producto" required>
-        <!-- </div>
-
-        <div class="nProducto"><label for="precioProducto">Precio:</label> -->
-            <input class="controls"  type="text" name="precio" id="prrecio" placeholder="Ingrese precio/texto" required>
-       <!--  </div>
-
-        <div class="nProducto">
-            <label for="imagenProducto">Imagen:</label> -->
-            <input class="controls"  type="file" name="imagenProducto"  required>
-       <!--  </div> -->
-
-        <!-- <div class="boton-cierre"> -->
-            <input class="botons" type="reset"></input>
-            <input class="botonsE" type="submit"></button>
-        <!-- </div>  -->
+       
+            <input class="controls" type="text" name="name" id="name" placeholder="Ingrese Nombre del Producto" required>
+   
+            <input class="controlsD" type="texttarea" name="description" id= "description" placeholder="Ingrese descripción del producto" required>
+        
+            <input class="controls"  type="text" name="price" id="price" placeholder="Ingrese precio/texto" required>
+       
+            <input class="controls"  type="file" name="img"  required>
+       
+            <input class="botonsE" type="submit"></input>
+       
     </form>
     </section>
     
  </main>
-<!--  <%- include("../partials/footer")  %> -->
+  <%- include("../partials/footer")  %> 
 </body>
