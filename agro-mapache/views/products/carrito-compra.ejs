@@ -13,84 +13,83 @@
 </head>
 
 <body>
-    <%- include("../partials/header") %> 
-    <main>
 
-        <div class="carro-completo">
-            <div class="items">
-                <div class="cart">
+    <%- include("../partials/header") %>
+
+        <main>
+
+            <div class="carro-completo">
+                <div class="items">
+
                     <article>
 
-                        <img src="/img/fumigadora.jpg" width="200px">
-                        <p> Fumigadores 210 Litros</p>
+                        <img src="/img/fumigadora.jpg">
                         <div>
+                            <h3 class="nombre-articulo"> Fumigadora 210 Litros</h3>
                             <button id="menos" type="button">-</button>
 
                             <input type="text" id="contador" class="form-control" value="1" min="1" />
 
                             <button id="mas" type="button">+</button>
+                            <p class="precio">$400.000</p>
+                            <button class="delete-product" id='' type="button"><i class="fa-solid fa-trash-can"></i></button>
                         </div>
-                        <p>$400.000</p>
-                        <i class="fa-solid fa-trash-can"></i>
 
                     </article>
 
-
                     <article>
 
-
-                        <img src= /img/desmalezadora.png" width="200px">
-                        <p class="nombre"> APACHE 54000 </p>
+                        <img src= '/img/desmalezadora.png'>
                         <div>
+                            <h3 class="nombre-articulo">APACHE 54000</h3>
                             <button id="menos" type="button">-</button>
 
                             <input type="text" id="contador" class="form-control" value="1" min="1" />
 
                             <button id="mas" type="button">+</button>
+                            <p class="precio">$500.000</p>
+                            <button class="delete-product" id='' type="button"><i class="fa-solid fa-trash-can"></i></button>
                         </div>
 
-
-                        <p class=" precio"> $ 500.000</p>
-                        <i class="fa-solid fa-trash-can"></i>
-
                     </article>
-
 
                     <article>
 
-                        <img src="/img/casa-rodante.jpg" width="200px">
-                        <p>Casilla Rural CR-455 </p>
-                        <div >
+                        <img src="/img/casa-rodante.jpg">
+                        <div>
+                            <h3 class="nombre-articulo">Casilla Rural CR-455</h3>
                             <button id="menos" type="button">-</button>
 
                             <input type="text" id="contador" class="form-control" value="1" min="1" />
 
                             <button id="mas" type="button">+</button>
+                            <p class="precio">$700.000</p>
+                            <button class="delete-product" id='' type="button"><i class="fa-solid fa-trash-can"></i></button>
                         </div>
-                        <p> $ 700.000</p>
-                        <i class="fa-solid fa-trash-can"></i>
 
                     </article>
+
+                    
+
                 </div>
+
+                <section class="buy">
+                    <h3> RESUMEN DE COMPRA </h3>
+                    <div>
+                        <p> TOTAL</p>
+                        <p> $1.600.000 </p>
+                    </div>
+                    <div class="botones">
+                    <button type="submit" class="boton-compra"> Finalizar compra</button>
+                    <button type="submit" class="seguir-compra">Seguir comprando</button>
+                </div>
+                </section>
 
             </div>
-            <section class="buy">
-                <h3 > RESUMEN DE COMPRA </h3>
-                <div>
-                <p> TOTAL</p>
-                <p> $900.000 </p>
-                </div>
-              
-                <button type="submit" class="boton-compra"> Finalizar compra</button>
-                <button type="submit" class="seguir-compra">Seguir comprando</button>
-           
 
-         </section>
+        </main>
 
-        </div>
-
-    </main>
-    <%- include("../partials/footer")  %>
+        <%- include("../partials/footer") %>
 </body>
 
 
