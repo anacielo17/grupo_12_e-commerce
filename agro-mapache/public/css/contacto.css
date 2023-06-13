@@ -76,6 +76,10 @@ textarea {
         display: flex;
         flex-direction: row;
     }
+
+    .contact {
+        width: 70vw;
+    }
 }
 
 @media(min-width:768px) {
