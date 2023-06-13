@@ -1,0 +1,90 @@
+/*          contacto main           */
+
+.contact {
+    padding: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.contact .descripcion {
+    text-align: justify;
+}
+
+.contact div {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.mapa {
+    width: 100%;
+}
+
+.form {
+    width: 100vw;
+    padding: 10px;
+}
+
+.control-form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.control-form select {
+    width: 90%;
+    padding: 5px;
+}
+
+.contact-form div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contact-form input {
+    width: 90%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+div.coment {
+    padding: 5px;
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+}
+
+.boton-cierre {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.boton-cierre button {
+    padding: 5px 10px 5px 10px;
+}
+
+@media(min-width:768px) {
+
+    .seccion-contacto {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media(min-width:768px) {
+
+    .form {
+        width: 40vw;
+    }
+
+    .boton-cierre button {
+        padding: 10px 15px 10px 15px;
+    }
+}

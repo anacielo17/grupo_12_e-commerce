@@ -76,7 +76,10 @@ a {
 
 .usuario {
    color: white;
-   display: none;
+   display: flex;
+   position: absolute;
+   right: 10px;
+   top: 65px;
 }
 
 .usuario i {
@@ -87,6 +90,7 @@ a {
 
 .usuario a {
    transition: 700ms;
+   padding-right: 20px;
 }
 
 .main-navbar.a {
@@ -263,6 +267,39 @@ section article a {
    height: 50px;
 }
 
+/*          footer          */
+
+footer {
+   width: 100vw;
+   background-color: #214566;
+   color: white;
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: column; 
+   align-self: center;
+}
+
+footer h2{
+   padding: 10px;
+}
+
+.probando{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around; 
+}
+
+ .redes {
+   flex-direction: column;
+   font-size: 16px;
+   margin: 10px;
+
+ } 
+ .redes i {
+   margin-right: 10px;
+   margin-bottom: 20px;
+ }
+
 /* ----------------------------------------------visualizacion---------------------------------- */
 @media(min-width:768px) {
 
@@ -272,7 +309,12 @@ section article a {
    }
 
    .usuario {
-      display: flex
+      display: flex;
+      position: relative;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
    }
 
    .usuario a{
@@ -295,6 +337,10 @@ section article a {
       padding-right: 20px;
    }
 
+   .burger-menu{
+      margin-left: 10px;
+   }
+
    header img {
       width: 200px;
       height: 46px;
@@ -313,6 +359,10 @@ section article a {
    .producto {
       box-shadow: 0px 0px 10px rgb(100, 100, 100);
       width: 40vw;
+   }
+
+   .probando{
+      flex-direction: row;
    }
 }
 
@@ -390,78 +440,3 @@ section article a {
       font-size: 40px;
    }
 }
-
-/*          contacto main           */
-
-.form {
-   width: 100vw;
-   padding: 20px;
-   display: flex;
-   flex-wrap: wrap;
-   flex-direction: column;
-   align-content: center;
-   justify-content: space-around;
-}
-
-.control-form {
-   margin-bottom: 15px;
-   padding-top: 10px;
-   padding-bottom: 10px;
-}
-
-.control-form input {
-   width: 35vw;
-   padding: 5px;
-   margin-bottom: 10px;
-}
-
-div.coment {
-   width: 37vw;
-   padding: 5px;
-   display: flex;
-   flex-wrap: nowrap;
-   flex-direction: column;
-   align-content: center;
-}
-
-div.coment input {
-   height: 100px;
-}
-
-div.contact {
-   padding: 0px;
-   margin-left: 30px;
-   display: flex;
-   flex-wrap: nowrap;
-   flex-direction: column;
-   align-content: center;
-   justify-content: space-around;
-}
-
-
-/*          footer          */
-
-footer {
-   width: 100vw;
-   background-color: #214566;
-   color: white;
-   display: flex;
-   flex-wrap: wrap;
-   flex-direction: column; 
-   align-self: center;
-}
-.probando{
-   display: flex;
-   justify-content: space-around; 
-}
- .redes {
-   flex-direction: column;
-   font-size: 16px;
-   margin: 10px;
-
- } 
- .redes i {
-   margin-right: 10px;
-   margin-bottom: 20px;
- }
-
