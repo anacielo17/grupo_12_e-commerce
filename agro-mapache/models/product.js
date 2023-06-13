@@ -43,13 +43,13 @@ const model = {
     updateById: function (id,newData) {
         let products = this.findAll();
         // con el findIdex buscamos en que indice esta guardado el producto deseado a modificasr
-        const indice =  products.findIndex(product => product.id === id);
+        const indice =  products.findIndex(productActual => productActual.id === id);
 
        // con esto, modificamos los datos que queremos cambiar, a traves de los que nos pasan por parametros
-        products[indice].name = newData.name;   // modificar cuando ponga las categorias en el objeto literal
+        products[indice].name = newData.name;   
         products[indice].price = newData.price;
         products[indice].description = newData.description;
-        products[indice].img = newData.img;  // modificar cuando ponga las categorias en el objeto literal
+        products[indice].img = newData.img;  
 
         const productsJson = JSON.stringify(products);
 

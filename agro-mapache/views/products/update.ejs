@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/formularioProduxtos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -13,7 +14,7 @@
     
     <main>
         <section class="form-edition">
-        <form action="/products/<%= product.id %>/update?_method=put" method="post">
+        <form action="/products/<%= product.id %>/update?_method=put" method="post" enctype="multipart/form-data">
             <h4>Editar Producto</h4>
            
                 <input class="controls" type="text" name="name" value="<%=product.name%>" >
@@ -22,7 +23,7 @@
             
                 <input class="controls"  type="text" name="price" value="<%=product.price%>">
            
-                <input class="controls"  type="file" name="img"  value="<%=product.img%>">
+                <input class="controls"  type="hidden" name="oldImage"  value="<%=product.img%>">
            
                 <input class="botonsE" type="submit" value="Guardar cambios"></input>
            

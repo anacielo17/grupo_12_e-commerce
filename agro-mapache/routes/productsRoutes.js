@@ -28,5 +28,5 @@ productsRoutes.get("/:id/detail", productsController.productDetail) // detalle d
 productsRoutes.get("/:id/update", productsController.getUpdate) // vamos al form de edicion 
 productsRoutes.put("/:id/update", productsController.updateProduct) // put , accion de edicion, enviamos el formulario
 productsRoutes.delete("/:id/delete", productsController.deleteProduct)
-/* productsRoutes.post("/", upload.single(imagenProducto), productsController.postProduct); // creamos un nuevo producto */  
+/* productsRoutes.post("/", upload.single(imagenProducto), productsController.postProduct) */; // creamos un nuevo producto */  
 module.exports = productsRoutes;

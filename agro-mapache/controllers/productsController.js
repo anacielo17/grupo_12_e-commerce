@@ -24,11 +24,12 @@ const productsController = {
     //@GET  Buscar el producto a modificar
     getUpdate: (req, res) => {
         const id = Number(req.params.id)
+        console.log(id)
         const productoAModificar = productModel.findById(id)
         if (!productoAModificar) {
             return res.send("El id no existe")
         }
-        res.render("updateProduct", {product: productoAModificar});
+        res.render("update", {product: productoAModificar});
 
     },
     
@@ -43,22 +44,24 @@ const productsController = {
     },
     
     // @DELETE borrar producto segun ID // 
-   /*  te va pedir instalar la libreria method-override que que para que sobre-escriba el post y funcione el eliminar producto. 
-   YA FUNCIONA ASI QUE NO BORRES NADA  */
+   
     deleteProduct: (req,res)=>{
         const id= Number(req.params.id);
 
         productModel.deleteById(id) ;
 
-        res.redirect("/products")
+        res.redirect("/products/catalogo")
     },  
 
    // @ PUT actualizamos el protucto con PUT ! falta realizar la vista de acutalizacion de productos 
     updateProduct: (req, res)=> {
+     const id= Number (req.params.id);     
     let nuevosDatos = req.body;
+    nuevosDatos.img= req.file ? req.file.filename : req.body.oldImage
+    
     productModel.updateById(id,nuevosDatos);
 
-    res.redirect("/products");
+    res.redirect("/products/catalogo");
 
 },
 
@@ -73,7 +76,7 @@ postProduct:(req, res) => {
     datos.price = Number(datos.price);
     datos.file = "/img/products" + req.file.filename;
     productModel.createOne(datos);
-    res.redirect("/products");
+    res.redirect("/products/catalogo");
 }
  
 
