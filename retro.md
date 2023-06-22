@@ -8,3 +8,7 @@ Considerando el inclumplimiento del sprint 2, la autocrítica que realiza el gru
 Por ello, para la entrega del tercer sprint, el grupo relalizó reuniones más seguidas donde se indicó lo que se hizo, lo que faltaba por hacer y los inconvenientes.
 Se aprovechó el tiempo de trabajo en las clases para avanzar sobre el proyecto y despejar dudas con los profesores.
 A patir del cuarto sprint comenzaremos a trabajar en disitntas ramas. 
+
+<!-- Cuarto Sprint -->
+Advertimos la falta de disponibilidad de tiempo y coordinacion entre todos los integrantes para realizar reuniones. Sin embargo, se trabajo sobre una clara diferencia de tareas y se mantuvo la comunicación para ver el progreso del equipo. Además, se dividio el trabajo en una sub-rama para evitar alteraciones en los códigos como ya habia ocurrido.  
+Se debería tener una distribución de tareas más igualitaria y más práctica de herramientas básicas. 
