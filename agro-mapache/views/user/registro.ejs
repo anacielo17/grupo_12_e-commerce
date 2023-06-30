@@ -1,11 +1,137 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Registro</title>
-	<link rel="stylesheet" type="text/css" href="/css/registro.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/registro.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Registro</title>
 </head>
+
 <body>
-	<div class="container">
+    <%- include("../partials/header") %>
+        <main>
+            <div class="container">
+                <div class="title">Iniciar sesión</div>
+                <form action="/user/list" method="post" enctype="multipart/form-data">
+                    <div class="user-details">
+                        <div class="input-box">
+                            <span class="details"> Nombre completo</span>
+                            <input name="firstName" type="text" placeholder="Enter your name" required>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Apellido</span>
+                            <input name="lastName" type="text" placeholder="Enter your surname" required>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Correo electronico</span>
+                            <input name="email" type="text" placeholder="Enter your email" required>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Teléfono</label>
+                            <input name="phone" type="tel" placeholder="Enter your phonenumber" >
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Contraseña</span>
+                            <input name="password" type="text" placeholder="Enter your password" required>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Conrfirmar Contraseña</span>
+                            <input  type="text" placeholder="Confirm your password" required>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Ingresa tu foto</span>
+                            <input type="file" name="avatar">
+                        </div>
+                    </div>
+                    <div class="condición-details">
+                        <input name="type" type="radio" name="condicion" id="dot-1">
+                        <input name="type" type="radio" name="condicion" id="dot-2">
+                        <span class="condicón-title"> Condición</span>
+                        <div class="category">
+                            <label for="dot-1">
+                                <span class="dot one"></span>
+                                <span class="condición">Vendedor</span>
+                            </label>
+                            <label for="dot-2">
+                                <span class="dot two"></span>
+                                <span class="condición">Comprador</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <input type="submit" value="Crear Usuario">
+                    </div>
+                </form>
+
+
+                <!-- <section>
+                <div class="columns is-centered">
+                    <div class="column is-6">
+                        <h1>Registro</h1>
+                        <form action="/users" method="POST">
+
+                            <div class="field">
+                                <label for="first_name">Nombre</label>
+                                <div class="control">
+                                    <input type="text" name="first_name" id="first_name">
+                                </div>
+                                <p class="feedback"></p>
+                            </div>
+
+                            <div class="field">
+                                <label for="last_name">Apellido</label>
+                                <div class="control">
+                                    <input type="text" name="last_name" id="last_name">
+                                </div>
+                                <p class="feedback"></p>
+                            </div>
+
+                            <div class="field">
+                                <label for="email">Email</label>
+                                <div class="control">
+                                    <input type="text" name="email" id="email">
+                                </div>
+                                <p class="feedback"></p>
+                            </div>
+
+                            <div class="field">
+                                <label for="password">Password</label>
+                                <div class="control">
+                                    <input type="text" name="password" id="password">
+                                </div>
+                                <p class="feedback"></p>
+                            </div>
+ -->
+                <!-- div class="field">
+                                <label for="category">Categoría</label>
+                                <div class="control">
+                                    <select name="category" id="category">
+                                        <option value="">Seleccione una opción</option>
+                                        <option value="vendedor">Vendedor</option>
+                                        <option value="comprador">Comprador</option>
+                                    </select>
+                                </div>
+                                <p class="feedback"></p>
+                            </div> -->
+
+                <!--  <div class="field">
+                                <div class="control">
+                                    <button type="submit">Crear usuario</button>
+                                </div>
+                            </div> 
+                        </form>  
+                    </div>
+                </div>
+            </section>
+        </div>  -->
+
+                <!-- <div class="container">
 		<div class="card">
 			<img src="/img/logo2.jpeg" class="logo">
 			<h2>Crear cuenta</h2>
@@ -26,11 +152,12 @@
 				<button class="google-button">Ingresar con Google</button>
 			</form>
 
-			<p class="terms">Al hacer clic en "Ingresar", acepta nuestros <a href="#">Términos y condiciones</a> y nuestra <a href="#">Política de privacidad</a>.</p>
-		</div>
-		
-		<%- include("../partials/footer")  %>
+			<p class="terms">Al hacer clic en "Ingresar", acepta nuestros <a href="#">Términos y condiciones</a> y nuestra <a href="#">Política de privacidad</a></p>
+		</div> -->
+        </main>
+
 
 
 </body>
+
 </html>

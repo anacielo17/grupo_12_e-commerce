@@ -1,0 +1,125 @@
+ main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    color: whitesmoke;
+    margin-bottom: 25px;
+} 
+
+hr {
+    width: 90%;
+}
+
+.container-image {
+    width: 100%;
+    text-align: center;
+} 
+
+ .user-image {
+    width: 60%;
+    height: auto;
+    border-radius: 50px;
+} 
+
+ .user-info {
+    margin: 25px;
+    margin-top: 25px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+} 
+
+ .user-detail {
+    margin-left: 5%;
+} 
+
+
+
+ .container-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    border: solid white 1px;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    text-align: start;
+}
+ 
+.center-items {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+ .container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 25px;
+} 
+
+ .form{
+    text-align: center;
+    width: 100%;
+} 
+
+
+ .user-eliminar {
+    background-color: red;
+    border: 1px solid red;
+    border-radius: 5px;
+} 
+
+ 
+
+ .user-edit {
+    background-color:orange;
+    border: 1px solid orange;
+    border-radius: 5px;
+} 
+
+ 
+
+
+@media (min-width: 768px) {
+     .container-info {
+        width: 100%;
+    } 
+
+     .container-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 35%;
+        text-align: none;
+    } 
+
+     .user-image {
+        width: 90%;
+    } 
+
+     .user-info {
+        margin-top: 40px;
+    }
+
+     .user-detail {
+        width: 45%;
+        margin-top: 0px;
+    } 
+
+     .container {
+        justify-content: end;
+        width: 50%;
+        margin-left: 35%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    } 
+}
+
+@media (min-width: 1200px) {
+    .order-item {
+        width: 20%;
+    }
+}

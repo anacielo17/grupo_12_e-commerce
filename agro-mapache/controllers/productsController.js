@@ -75,7 +75,7 @@ postProduct:(req, res) => {
     let datos = req.body;
     datos.price = Number(datos.price);
        // datos.imgs = req.files.map(file => '/imgs/products' + file.filename); puede faltar una barra despue d products 
-       datos.imgs =  '/imgs/products/' + req.file 
+       datos.imgs =  '/img/products/' + req.file 
    
     productModel.createOne(datos);
     res.redirect("/products/catalogo");

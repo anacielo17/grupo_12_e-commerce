@@ -1,1 +1,128 @@
-[{"id":1,"price":"$12.123","name":"Hacha de camping Bahco","img":"/img/hacha_de_camping.png","description":"Mango de madera de fresno curvado  380Mm - 850 G, agujero adicional para colgar de 8 mm en el extremo del mango para fácil almacenamiento. Cómodo de usar por su mango de madera curvo de fresno"},{"id":2,"price":"$24.589","name":"Hacha de pico Bahco Mango Fibra Vidrio 900Mm - 3 Kg","img":"/img/hacha_de_pico.png","description":"Empuñadura suave en el mango para comodidad adicional y agujero para colgar para fácil almacenamiento. Mango fabricado en polipropileno reforzado con fibra de vidrio para mayor longevidad"},{"id":3,"price":"$104.620","name":"Motosierra Niwa CNW62","img":"/img/motosierra_niwa.png","description":"Niwa 62cc., 22 de espada, contiene cadena (CNW62)"},{"id":4,"price":"$10.049.916","name":"Autoelevador Diesel Motor Chino 3000kg","img":"/img/autoelevador_diesel.jpg","description":"Autoelevador Diesel Motor Chino 3000kg. Altura 4.5Metros"},{"id":5,"price":"$8.500.000","name":"Acoplado Tanque 3000 Lts Conese","img":"/img/acoplado_tanque.jpg","description":"Capacidad: 3.000 lts, aro a bolita: 500 x 50. Ejes 2” con rodamientos 30206-30208. Elásticos de 9 hojas.  Chasis de chapa plegada de 3/16 de espesor (5mm) y tanque construido en chapa 1/8 (abulonado al chasis). Enganche trasero y Guardabarros"},{"id":6,"price":"$4.649.840","name":"Moledora Mixer Loyto Nº6/V-3500 C/sinfin De Descarga Rigido","img":"/img/moledora_mixer.jpg","description":"Potencia requerida: 40 - 60 HP. Capacidad mezclador: 1200 kg. de maíz entero. Equipo Opcional: Balanza electrónica de tres celdas; sinfin de descarga plegable o rígido y barrera magnética capta metales."},{"id":8,"price":"$76.388","name":"Desmalezadora Motoguadaña Fema de Empuje","img":"/img/desmalezadora_de_empuje.jpg","description":"Desmalezadora de empuje Fema BC250 - R  52cc -1,47 Kw. 7000 RPM. Capacidad de tanque de Combustible 1 Litro.  2 Ruedas Neumáticas. Incluye Cabezal de Nylon"},{"id":9,"price":"$1.496.000","name":"Carro Playo 4x2Mts 4 Toneladas","img":"/img/carro_playo.jpg","description":" Chasis reforzado construido en chapa plegada de 1/8” y 3/16”.Piso de chapa chapa 1/8 antideslizante.Eje de 2” de acero macizo con rodillos cónicos 7/8 TR. 1.55 M. Elásticos de acero reforzados. Tren giratorio a bolitas de acero. Frentes ventilados y barandas laterales volcables construidas en chapa N.º 18. Eje para llantas simples o duales"},{"id":10,"price":"$152.212,5","name":"Soplador Aspirador Stiga SBC327V","img":"/img/soplador.jpeg","description":"8300 RPM. Sistema anti vibración"},{"id":11,"price":"$498.600","name":" Cortadora Manual 14 73Cc Husqvarna K770","img":"/img/cortadora_manual.png","description":"• Cilindrada 73.5 c.c. Potencia 3.7 Kw. Profundidad de corte máx. 125 mm. Tamaño del disco 350 mm. Nivel de ruido 101 dB (A). Disco de corte No incluido"},{"id":12,"price":"$1.500","name":"Elaion Moto 2T 100cc YPf","img":"/img/elaion_moto.jpg","description":"Elaion Moto 2T 100 cc Caja 60 pomos Ypf"},{"id":13,"price":"$16.868","name":"Carretilla Chapa Rueda Neumática 130Kg Fema","img":"/img/carretilla.jpg","description":"Material: Chapa. Espesor de la Bandeja: 1 mm.  Rueda-Rayo de acero. Manija: 32 x 1.2 mm. Capacidad: 130 Kg. - 65 Litros. Ideal Construcción – Jardinería"},{"id":14,"price":"$105.311","name":"Calefactor Para Exterior Garrafa 10Kg Acero Inoxidable","img":"/img/calefactor_exterior.jpg","description":"Para: Gas Envasado. Salida: 9.894,43 Calorías - 39.238 BTU. Encendido: Electrónico, válvula Seguridad. Alimentación: Gas Licuado Garrafa 10 Kg. Dimensiones: 845 mm x 2.270 mm y peso: 23,5 Kg"},{"id":16,"price":"$2.324","name":"Tijera de Poda 8 1/4 pulgadas, Castelgarden","img":"/img/tijera_de_poda.jpg","description":"Cuchilla Acero Castelgarden y Mango aluminio y pvc"},{"id":17,"price":"Precio a consultar","name":"Pulverizadora OMBU","img":"/img/pulverizadora_ombu.jpeg","description":"Motor Cummins 190hp.   Año: 2019. Horas de uso: 2100 hs.  Caja automática. Botalón de 38m de labor. Equipo Trimble (Pro700 y NA900)"},{"id":18,"price":"Precio a consultar","name":"Tractor New Holland TD5","img":"/img/Tractor_n_h.jpeg","description":"Tractor New Holland TD5. Año: 2019. Hs de Uso: 850.  HP: 90.  Estado: Impecable"},{"id":19,"price":"$2.718.300","name":"Embolsadora De Granos Secos Loyto Eg9 Sin Cubiertas","img":"/img/embolsadora.jpg","description":"Tunel para bolsas de 9 pies con altura de trabajo regulable que permite superar un 15% aprox. de la capacidad de la bolsa sin sobrepasasr su estiramiento. Cuerpo de sinfin abulonado con camisa cambiable. Tova expandible con tapa."},{"id":20,"price":"Precio a consultar","name":"Rastra De Discos Desencontrada Con Alas Rebatibles Hidraulicas (100-100) 56x24","img":"/img/rastras_discos.jpeg","description":"Chasis Construido Con Tubo Estructural 100X100X6,35, Bandejas Porta Discos De 100X100X6.35, Equipado Con 2 Cilindros Compensados, Cañeria Hidraulica Y Mangueras, Lanza Con Recuperacion De Punto, Tren De Disco Con Ejes De 39 Mm D"}]
+[
+    {
+        "id": 1,
+        "price": "$12.123",
+        "name": "Hacha de camping Bahco",
+        "img": "/img/hacha_de_camping.png",
+        "description": "Mango de madera de fresno curvado  380Mm - 850 G, agujero adicional para colgar de 8 mm en el extremo del mango para fácil almacenamiento. Cómodo de usar por su mango de madera curvo de fresno"
+    },
+    {
+        "id": 2,
+        "price": "$24.589",
+        "name": "Hacha de pico Bahco Mango Fibra Vidrio 900Mm - 3 Kg",
+        "img": "/img/hacha_de_pico.png",
+        "description": "Empuñadura suave en el mango para comodidad adicional y agujero para colgar para fácil almacenamiento. Mango fabricado en polipropileno reforzado con fibra de vidrio para mayor longevidad"
+    },
+    {
+        "id": 3,
+        "price": "$104.620",
+        "name": "Motosierra Niwa CNW62",
+        "img": "/img/motosierra_niwa.png",
+        "description": "Niwa 62cc., 22 de espada, contiene cadena (CNW62)"
+    },
+    {
+        "id": 4,
+        "price": "$10.049.916",
+        "name": "Autoelevador Diesel Motor Chino 3000kg",
+        "img": "/img/autoelevador_diesel.jpg",
+        "description": "Autoelevador Diesel Motor Chino 3000kg. Altura 4.5Metros"
+    },
+    {
+        "id": 5,
+        "price": "$8.500.000",
+        "name": "Acoplado Tanque 3000 Lts Conese",
+        "img": "/img/acoplado_tanque.jpg",
+        "description": "Capacidad: 3.000 lts, aro a bolita: 500 x 50. Ejes 2” con rodamientos 30206-30208. Elásticos de 9 hojas.  Chasis de chapa plegada de 3/16 de espesor (5mm) y tanque construido en chapa 1/8 (abulonado al chasis). Enganche trasero y Guardabarros"
+    },
+    {
+        "id": 6,
+        "price": "$4.649.840",
+        "name": "Moledora Mixer Loyto Nº6/V-3500 C/sinfin De Descarga Rigido",
+        "img": "/img/moledora_mixer.jpg",
+        "description": "Potencia requerida: 40 - 60 HP. Capacidad mezclador: 1200 kg. de maíz entero. Equipo Opcional: Balanza electrónica de tres celdas; sinfin de descarga plegable o rígido y barrera magnética capta metales."
+    },
+    {
+        "id": 8,
+        "price": "$76.388",
+        "name": "Desmalezadora Motoguadaña Fema de Empuje",
+        "img": "/img/desmalezadora_de_empuje.jpg",
+        "description": "Desmalezadora de empuje Fema BC250 - R  52cc -1,47 Kw. 7000 RPM. Capacidad de tanque de Combustible 1 Litro.  2 Ruedas Neumáticas. Incluye Cabezal de Nylon"
+    },
+    {
+        "id": 9,
+        "price": "$1.496.000",
+        "name": "Carro Playo 4x2Mts 4 Toneladas",
+        "img": "/img/carro_playo.jpg",
+        "description": " Chasis reforzado construido en chapa plegada de 1/8” y 3/16”.Piso de chapa chapa 1/8 antideslizante.Eje de 2” de acero macizo con rodillos cónicos 7/8 TR. 1.55 M. Elásticos de acero reforzados. Tren giratorio a bolitas de acero. Frentes ventilados y barandas laterales volcables construidas en chapa N.º 18. Eje para llantas simples o duales"
+    },
+    {
+        "id": 10,
+        "price": "$152.212,5",
+        "name": "Soplador Aspirador Stiga SBC327V",
+        "img": "/img/soplador.jpeg",
+        "description": "8300 RPM. Sistema anti vibración"
+    },
+    {
+        "id": 11,
+        "price": "$498.600",
+        "name": " Cortadora Manual 14 73Cc Husqvarna K770",
+        "img": "/img/cortadora_manual.png",
+        "description": "• Cilindrada 73.5 c.c. Potencia 3.7 Kw. Profundidad de corte máx. 125 mm. Tamaño del disco 350 mm. Nivel de ruido 101 dB (A). Disco de corte No incluido"
+    },
+    {
+        "id": 12,
+        "price": "$1.500",
+        "name": "Elaion Moto 2T 100cc YPf",
+        "img": "/img/elaion_moto.jpg",
+        "description": "Elaion Moto 2T 100 cc Caja 60 pomos Ypf"
+    },
+    {
+        "id": 13,
+        "price": "$16.868",
+        "name": "Carretilla Chapa Rueda Neumática 130Kg Fema",
+        "img": "/img/carretilla.jpg",
+        "description": "Material: Chapa. Espesor de la Bandeja: 1 mm.  Rueda-Rayo de acero. Manija: 32 x 1.2 mm. Capacidad: 130 Kg. - 65 Litros. Ideal Construcción – Jardinería"
+    },
+    {
+        "id": 14,
+        "price": "$105.311",
+        "name": "Calefactor Para Exterior Garrafa 10Kg Acero Inoxidable",
+        "img": "/img/calefactor_exterior.jpg",
+        "description": "Para: Gas Envasado. Salida: 9.894,43 Calorías - 39.238 BTU. Encendido: Electrónico, válvula Seguridad. Alimentación: Gas Licuado Garrafa 10 Kg. Dimensiones: 845 mm x 2.270 mm y peso: 23,5 Kg"
+    },
+    {
+        "id": 16,
+        "price": "$2.324",
+        "name": "Tijera de Poda 8 1/4 pulgadas, Castelgarden",
+        "img": "/img/tijera_de_poda.jpg",
+        "description": "Cuchilla Acero Castelgarden y Mango aluminio y pvc"
+    },
+    {
+        "id": 17,
+        "price": "Precio a consultar",
+        "name": "Pulverizadora OMBU",
+        "img": "/img/pulverizadora_ombu.jpeg",
+        "description": "Motor Cummins 190hp.   Año: 2019. Horas de uso: 2100 hs.  Caja automática. Botalón de 38m de labor. Equipo Trimble (Pro700 y NA900)"
+    },
+    {
+        "id": 18,
+        "price": "Precio a consultar",
+        "name": "Tractor New Holland TD5",
+        "img": "/img/Tractor_n_h.jpeg",
+        "description": "Tractor New Holland TD5. Año: 2019. Hs de Uso: 850.  HP: 90.  Estado: Impecable"
+    },
+    {
+        "id": 19,
+        "price": "$2.718.300",
+        "name": "Embolsadora De Granos Secos Loyto Eg9 Sin Cubiertas",
+        "img": "/img/embolsadora.jpg",
+        "description": "Tunel para bolsas de 9 pies con altura de trabajo regulable que permite superar un 15% aprox. de la capacidad de la bolsa sin sobrepasasr su estiramiento. Cuerpo de sinfin abulonado con camisa cambiable. Tova expandible con tapa."
+    },
+    {
+        "id": 20,
+        "price": "Precio a consultar",
+        "name": "Rastra De Discos Desencontrada Con Alas Rebatibles Hidraulicas (100-100) 56x24",
+        "img": "/img/rastras_discos.jpeg",
+        "description": "Chasis Construido Con Tubo Estructural 100X100X6,35, Bandejas Porta Discos De 100X100X6.35, Equipado Con 2 Cilindros Compensados, Cañeria Hidraulica Y Mangueras, Lanza Con Recuperacion De Punto, Tren De Disco Con Ejes De 39 Mm D"
+    }
+]

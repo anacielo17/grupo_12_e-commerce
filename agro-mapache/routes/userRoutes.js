@@ -1,11 +1,13 @@
 const express = require("express");
 const userRoutes = express.Router();
-const userController = require("../controllers/userControllers");
+const controllers = require("../controllers/userControllers");
 
 
-userRoutes.get("/register", userController.getRegistro);
-userRoutes.get("/login",userController.getLogin);
-
+userRoutes.get("/registro", controllers.getRegistro)  
+userRoutes.get("/login",controllers.getLogin); 
+userRoutes.get("/list",controllers.getList); 
+userRoutes.get("/:id/update",controllers.getUpdate) // vamos al form de edicion 
+userRoutes.put("/:id/update",controllers.updateUser) // put , accion de edicion, enviamos el formulario
+userRoutes.delete("/:id/delete",controllers.deleteUser)
 module.exports = userRoutes;
-
 

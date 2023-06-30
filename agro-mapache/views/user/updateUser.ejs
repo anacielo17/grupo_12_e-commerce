@@ -1,0 +1,67 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/registro.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Editar Usuario</title>
+</head>
+
+<body>
+    <%- include("../partials/header") %>
+        <main>
+            <div class="container">
+                <div class="title">Editar perfil</div>
+                <form action="/user/<%= user.id %>/update?_method=put" method="post" enctype="multipart/form-data">
+                    <div class="user-details">
+                        <div class="input-box">
+                            <span class="details"> Nombre completo</span>
+                            <input name="firstName" type="text" placeholder="Enter your name" required value="<%= user.firstName%>">
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Apellido</span>
+                            <input name="lastName" type="text" placeholder="Enter your surname" required value="<%= user.lastName%>" >
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Correo electronico</span>
+                            <input name="email" type="text" placeholder="Enter your email" required value="<%= user.email%>">
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Teléfono</label>
+                            <input name="phone" type="tel" placeholder="Enter your phonenumber" value="<%= user.phone%>">
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Contraseña</span>
+                            <input name="password" type="text" placeholder="Enter your password" required value="<%= user.password%>">
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Conrfirmar Contraseña</span>
+                            <input  type="text" placeholder="Confirm your password" required value="<%= user.password%>">
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Ingresa tu foto</span>
+                            <input type="file" type="hidden" name="oldImage"  value="<%=user.img%>">
+                        </div>
+                    </div>
+                    <div class="condición-details">
+                        <input name="type" type="radio" name="condicion" id="dot-1">
+                        <input name="type" type="radio" name="condicion" id="dot-2">
+                        <span class="condicón-title"> Condición</span>
+                        <div class="category">
+                            <label for="dot-1">
+                                <span class="dot one"></span>
+                                <span class="condición">Vendedor</span>
+                            </label>
+                            <label for="dot-2">
+                                <span class="dot two"></span>
+                                <span class="condición">Comprador</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <input type="submit" value="Guardar cambios">
+                    </div>
+                </form>

@@ -1,6 +1,6 @@
-/*const path = require("path");
-
-const registroController =
+const path = require("path");
+const userModel = require('../models/user.js');
+const controllers =
 {
 
     getRegistro: (req, res) => {
@@ -10,14 +10,61 @@ const registroController =
     getLogin: (req, res) => {
 
         res.render("login", { title: "login" })
-    }
+    },
+    getList: (req, res) => {
+        const listado = userModel.findAll();
+
+        res.render("list", { title:"Listado", listado })
+    },
+    //@GET  Buscar el usuario a modificar
+    getUpdate: (req, res) => {
+        const id = Number(req.params.id)
+        console.log(id)
+        const usuarioAModificar = userModel.findById(id)
+        if (!usuarioAModificar) {
+            return res.send("El id no existe")
+        }
+        res.render("updateUser", {user: usuarioAModificar});
+
+    },
+     // @DELETE borrar usuario segun ID //
+    deleteUser: (req,res)=>{
+        const id= Number(req.params.id);
+
+        userModel.deleteById(id) ;
+
+        res.redirect("list") 
+    },
+    // @ PUT actualizamos el usuario con PUT ! 
+    updateUser: (req, res)=> {
+        const id= Number (req.params.id);     
+       let nuevosDatos = req.body;
+       nuevosDatos.img= req.file ? req.file.filename : req.body.oldImage
+       
+       userModel.updateById(id,nuevosDatos);
+   
+       res.redirect("list");
+   
+   },
+
+   // @POST/ products
+  /*  postUser:(req, res) => {
+       let datos = req.body;
+       datos.phone = Number(datos.phone);
+          // datos.imgs = req.files.map(file => '/imgs/products' + file.filename); puede faltar una barra despue d products 
+       datos.avatar =  '/img/products/' + req.file;
+       datos.email= 
+      
+       productModel.createOne(datos);
+       res.redirect("/user/list");
+   }
+     */
 
 
 }
-module.exports = registroController;//
- 
-const userModel = require('../models/user.js');
-const bcrypt = require('bcrypt');
+module.exports = controllers;//
+
+/* const bcrypt = require('bcrypt');
 
 const controllers = {
     signOut: (req, res) => {
@@ -29,7 +76,7 @@ const controllers = {
     },
 
     getRegister: (req, res) => {
-        res.render('register');
+        res.render('registro');
     },
 
     registerUser: (req, res) => {
@@ -82,4 +129,4 @@ const controllers = {
     }
 }
 
-module.exports = controllers */
+module.exports = controllers */  

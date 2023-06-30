@@ -34,7 +34,7 @@ Crear rutas necesarias del CRUD en productRoutes.js (estan en sprint 4)
 crear controllers necesarios (regla basica: .get hacen render y los otros hacen segun corresponda (delete,put) 
 (get necesitan fs.readFileSinc))
 escribir controller de POST de productos (fs.writeFileySinc-productos .push) 
-escribir controller de PUT de productos (fs.writeFileySinc- productos.findIndex) 
+escribir controllessr de PUT de productos (fs.writeFileySinc- productos.findIndex) 
 escribir controller de DELETE de productos (fs.writeFileySinc- productos.filter)
 
 // hecho creo//

@@ -1,38 +1,153 @@
+
 /* Estilos globales */
-* {
+ *{
 	box-sizing: border-box;  
     font-family: 'Times New Roman', Times, serif;
     margin: 0px;
     padding: 0px;
 }
+main{
+	display:flex;
+	height: 110vh;
+	justify-content: center;
+	align-items: center;
+	background-color: whitesmoke;
+}
+ .container {
+	margin-top: 60px;
+	max-width: 500px;
+	width: 100%;
+	border-radius: 5px;
+	padding: 25px 30px;
+	background-color: white
+	/* display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh; */
+}  
+.container .title{
+	font-size: 25px;
+	font-weight: 500;
+	position: relative;
+}
+.container .title::before{
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 3px;
+	width: 30px;
+	background: #214566;
 
-.background {
+}
+.container form .user-details{
+/* 	display: flex; */
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin:20px 0 12px 0;
+	
+}
+form .user-details .input-box{
+	margin-bottom: 15px;
+	width: calc(100% / 2 -20px);
+}
+.user-details .input-box .details{
+display: block;
+font-weight: 500;
+margin-bottom: 5px;
+}
+.user-details .input-box input{
+	height: 25px;
+	width: 100%;
+	outline: none;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	padding-left: 15px;
+	font-size: 16px;
+	border-bottom-width: 2px;
+	transition: all 0.3s ease;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+	border-color: #214566;
+}
+
+form .button{
+	height: 45px;
+	margin: 45px 0;
+}
+form .button input{
+	height: 100%;
+	width: 100%;
+	outline: none;
+	color: black;
+	border: none;
+	font-size: 18px;
+	font-weight: 500;
+	border-radius: 5px;
+	letter-spacing: 1px;
+	background:#214566 ;
+}
+form .button input:hover{
+	background: rgb(255, 94, 0);
+}
+
+form .condición-details .condicón-title{
+	font-size: 20px;
+	font-weight: 500;
+}
+form .condición-details .category{
+	display: flex;
+	width: 80%;
+	margin: 14px 0;
+	justify-content: space-between;
+}
+.condición-details .category label{
+	display: flex;
+	align-items: center;
+
+}
+.condición-details .category .dot{
+	height: 18px;
+	width: 18px;
+	background: #d9d9d9;
+	border-radius: 40%;
+	margin-right: 10px;
+	border: 5px solid transparent; 
+	transition: all 0.3s ease;
+}
+
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two{
+	border-color: #d9d9d9;
+	background-color: #214566;
+} 
+form input[type="radio"]{
+	display: none;
+}
+
+/* .background {
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
 	z-index: -1;
-}
+} */
 
 /* Estilos del contenedor */
 
-.marca{
+ /* .marca{
 	color: white;
 	height: 36px;
 	font-family: 'Kalam', cursive;
 	font-family: 'Satisfy', cursive;
-}
+} */
 	
-.container {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 100vh;
-}
+
 
 /* Estilos de la tarjeta */
-.card {
+/* .card {
 	
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 	border-radius: 5px;
@@ -56,10 +171,10 @@ h2 {
 
 p {
 	margin-bottom: 20px;
-}
+} */
 
 /* Estilos del formulario */
-form {
+/* form {
 	margin-bottom: 20px;
 }
 
@@ -99,4 +214,4 @@ button {
 .google-button {
 	background-color: #dd4b39;
 	color: white;
-}
+}  */
