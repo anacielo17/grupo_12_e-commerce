@@ -21,8 +21,8 @@ app.use(express.json());
 app.use(methodOverride('_method'));
 
 
+app.use(indexRoutes);
 app.use("/user",userRoutes);
-app.use("/home",indexRoutes);
 app.use("/products",productsRoutes);
 
 
