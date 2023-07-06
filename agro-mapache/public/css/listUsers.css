@@ -1,12 +1,28 @@
- main {
-    display: flex;
-    flex-wrap: wrap;
+   main {
+     display: flex;  
+     flex-wrap: wrap; 
     justify-content: start;
     color: whitesmoke;
-    margin-bottom: 25px;
+    margin-bottom: 25px;;
+} 
+.user-eliminar {
+    background-color: red;
+    border: 1px solid red;
+    border-radius: 5px;
 } 
 
-hr {
+ 
+ .user-edit {
+    background-color:orange;
+    border: 1px solid orange;
+    border-radius: 5px;
+} 
+ .user-detail {
+    margin-left: 5%;
+    color: black;
+} 
+/* 
+ hr {
     width: 90%;
 }
 
@@ -30,10 +46,7 @@ hr {
     justify-content: start;
 } 
 
- .user-detail {
-    margin-left: 5%;
-    color: black;
-} 
+
 
 
 
@@ -67,22 +80,6 @@ hr {
 } 
 
 
- .user-eliminar {
-    background-color: red;
-    border: 1px solid red;
-    border-radius: 5px;
-} 
-
- 
-
- .user-edit {
-    background-color:orange;
-    border: 1px solid orange;
-    border-radius: 5px;
-} 
-
- 
-
 
 @media (min-width: 768px) {
      .container-info {
@@ -96,10 +93,9 @@ hr {
         width: 35%;
         text-align: none;
     } 
-
-     .user-image {
+      .user-image {
         width: 90%;
-    } 
+    }  
 
      .user-info {
         margin-top: 40px;
@@ -117,10 +113,10 @@ hr {
         margin-top: 15px;
         margin-bottom: 15px;
     } 
-}
+} 
 
-@media (min-width: 1200px) {
+ @media (min-width: 1200px) {
     .order-item {
         width: 20%;
     }
-}
+}      */

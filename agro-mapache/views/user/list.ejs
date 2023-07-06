@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    <link rel="stylesheet" href="/css/listUsers.css">
+    <link rel="stylesheet" href="/css/styles.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+       
     <title>Usuarios</title>
-    <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/css/listUsers.css">
+    
+  
 </head>
 <body>
-    <%- include('../partials/header') %>
+       <%- include('../partials/header') %>   
     <main>
         <section class="user-info">
          <% usuarios.forEach( usuario => { %> 
@@ -24,8 +27,7 @@
                                 <img class="user-image" src="/img/user/avatar.default.png" alt="Imagen de perfil del usuario">
                         <% } %>
                     </div>
-                    <div class="user-detail">
-                        <p> <b>user: </b> <%=usuario.userName%></p>
+                    <div class="user-detail"> 
                         <p> <b>Nombre: </b> <%=usuario.firstName%></p>
                         <p> <b>Apellido: </b> <%=usuario.lastName%></p>
                         <p> <b>Email: </b> <%=usuario.email%></p>
@@ -49,7 +51,7 @@
             <% }); %>
         </section>
     </main>
-    <hr>
-    <%- include('../partials/footer') %>
+    
+    <%- include('../partials/footer') %> 
 </body>
 </html>

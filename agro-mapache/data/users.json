@@ -1,1 +1,85 @@
-[{"id":1,"firstName":"Nev","lastName":"Redbourn","email":"nredbourn0@boston.com","password":"psYCh15k7jV","type":"Customer","avatar":""},{"id":2,"type":"Customer"},{"id":3,"firstName":"Ban","lastName":"Lambal","email":"blambal2@pinterest.com","password":"AoRBAJz","type":"Customer","avatar":""},{"id":4,"firstName":"Roxane","lastName":"McCotter","email":"rmccotter3@creativecommons.org","password":"nGtM9nM","type":"Customer","avatar":""},{"id":5,"firstName":"Winny","lastName":"Hiscocks","email":"whiscocks4@adobe.com","password":"vEVK4CHcXKz","type":"Customer","avatar":""},{"id":6,"firstName":"Leonora","lastName":"Howood","email":"lhowood5@yahoo.co.jp","password":"eybOskm9eZF","type":"Customer","avatar":""},{"id":7,"firstName":"Valaria","lastName":"Causnett","email":"vcausnett6@com.com","password":"gXrX5NfJMPY","type":"Customer","avatar":""},{"id":8,"firstName":"Luke","lastName":"Jelleman","email":"ljelleman7@ihg.com","password":"iLWYxVHp9AUU","type":"Customer","avatar":""},{"id":9,"firstName":"Perry","lastName":"Twelvetree","email":"ptwelvetree8@devhub.com","password":"F5UPuyeKt","type":"Customer","avatar":""},{"id":10,"firstName":"Susann","lastName":"Pestridge","email":"spestridge9@utexas.edu","password":"gdb5Iwli","type":"Customer","avatar":""},{"phone":null,"avatar":"/img/products/undefined","id":11}]
+[
+    {
+        "id": 1,
+        "firstName": "Nev",
+        "lastName": "Redbourn",
+        "email": "nredbourn0@boston.com",
+        "password": "psYCh15k7jV",
+        "type": "Customer",
+        "avatar": ""
+    },
+    
+    {
+        "id": 3,
+        "firstName": "Ban",
+        "lastName": "Lambal",
+        "email": "blambal2@pinterest.com",
+        "password": "AoRBAJz",
+        "type": "Customer",
+        "avatar": ""
+    },
+    {
+        "id": 4,
+        "firstName": "Roxane",
+        "lastName": "McCotter",
+        "email": "rmccotter3@creativecommons.org",
+        "password": "nGtM9nM",
+        "type": "Customer",
+        "avatar": ""
+    },
+    {
+        "id": 5,
+        "firstName": "Winny",
+        "lastName": "Hiscocks",
+        "email": "whiscocks4@adobe.com",
+        "password": "vEVK4CHcXKz",
+        "type": "Customer",
+        "avatar": ""
+    },
+    {
+        "id": 6,
+        "firstName": "Leonora",
+        "lastName": "Howood",
+        "email": "lhowood5@yahoo.co.jp",
+        "password": "eybOskm9eZF",
+        "type": "Customer",
+        "avatar": ""
+    },
+    {
+        "id": 7,
+        "firstName": "Valaria",
+        "lastName": "Causnett",
+        "email": "vcausnett6@com.com",
+        "password": "gXrX5NfJMPY",
+        "type": "Customer",
+        "avatar": ""
+    },
+    {
+        "id": 8,
+        "firstName": "Luke",
+        "lastName": "Jelleman",
+        "email": "ljelleman7@ihg.com",
+        "password": "iLWYxVHp9AUU",
+        "type": "Customer",
+        "avatar": ""
+    },
+    {
+        "id": 9,
+        "firstName": "Perry",
+        "lastName": "Twelvetree",
+        "email": "ptwelvetree8@devhub.com",
+        "password": "F5UPuyeKt",
+        "type": "Customer",
+        "avatar": ""
+    },
+    {
+        "id": 10,
+        "firstName": "Susann",
+        "lastName": "Pestridge",
+        "email": "spestridge9@utexas.edu",
+        "password": "gdb5Iwli",
+        "type": "Customer",
+        "avatar": ""
+    }
+   
+]
