@@ -12,3 +12,7 @@ A patir del cuarto sprint comenzaremos a trabajar en disitntas ramas.
 <!-- Cuarto Sprint -->
 Advertimos la falta de disponibilidad de tiempo y coordinacion entre todos los integrantes para realizar reuniones. Sin embargo, se trabajo sobre una clara diferencia de tareas y se mantuvo la comunicación para ver el progreso del equipo. Además, se dividio el trabajo en una sub-rama para evitar alteraciones en los códigos como ya habia ocurrido.  
 Se debería tener una distribución de tareas más igualitaria y más práctica de herramientas básicas. 
+<!-- Quinto Sprint  -->
+Trabajar sobre ramas distintas nos ayuda a cuidar el codigo asi que se busca implementarlo sobre cada sprint. 
+Falta compromiso y disponibilidad para  el trabajo y se deberia lograr un distribución más igualitaria de las tareas. 
+Se esta mejorando progresivamente en la presentacion visual del proyecto para que sea más agradable a la vista del cliente. 
