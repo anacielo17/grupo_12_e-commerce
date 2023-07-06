@@ -12,9 +12,9 @@ const controllers =
         res.render("login", { title: "login" })
     },
     getList: (req, res) => {
-        const listado = userModel.findAll();
+        const usuarios = userModel.findAll();
 
-        res.render("list", { title:"Listado", listado })
+        res.render("list", { title:"Listado", usuarios })
     },
     //@GET  Buscar el usuario a modificar
     getUpdate: (req, res) => {
@@ -48,25 +48,74 @@ const controllers =
    },
 
    // @POST/ products
-  /*  postUser:(req, res) => {
+    postUser:(req, res) => {
        let datos = req.body;
        datos.phone = Number(datos.phone);
           // datos.imgs = req.files.map(file => '/imgs/products' + file.filename); puede faltar una barra despue d products 
        datos.avatar =  '/img/products/' + req.file;
        datos.email= 
       
-       productModel.createOne(datos);
+       userModel.createOne(datos);
        res.redirect("/user/list");
-   }
-     */
+   },
+
+   signOut: (req, res) => {
+    res.clearCookie('email');
+
+    req.session.user = {};
+
+    res.redirect('/users/login');
+}, 
+registerUser: (req, res) => {
+    const user = {
+        ...req.body
+    };
+
+    const newPassword = bcrypt.hashSync(user.password, 12);
+
+    user.password = newPassword;
+
+    userModel.createOne(user);
+
+    res.send('Se registró el usuario');
+},
+loginUser: (req, res) => {
+    const searchedUser = userModel.findByEmail(req.body.email);
+
+    
+    if(!searchedUser){
+        return res.redirect('/users/login?error=El mail o la contraseña son incorrectos');
+    }
+    
+    const {password: hashedPw} = searchedUser;
+    const isCorrect = bcrypt.compareSync(req.body.password, hashedPw);
+    
+    if(isCorrect){
+        if(!!req.body.remember){
+            res.cookie('email', searchedUser.email, {
+                maxAge: 1000 * 60 * 60 * 24 * 360 * 9999
+            });
+        }
+
+        delete searchedUser.password;
+        delete searchedUser.id;
+
+        req.session.user = searchedUser;
+
+        res.redirect('/');
+    } else {
+        return res.redirect('/users/login?error=El mail o la contraseña son incorrectos');
+    }
+},
+     
 
 
 }
-module.exports = controllers;//
+module.exports = controllers;
 
-/* const bcrypt = require('bcrypt');
+ const bcrypt = require('bcrypt');
 
-const controllers = {
+/*const controllers = {
     signOut: (req, res) => {
         res.clearCookie('email');
 
@@ -126,7 +175,7 @@ const controllers = {
         } else {
             return res.redirect('/users/login?error=El mail o la contraseña son incorrectos');
         }
-    }
+    } /*
 }
 
-module.exports = controllers */  
+module.exports = controllers; */
