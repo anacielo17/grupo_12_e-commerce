@@ -4,8 +4,12 @@ const path = require("path");
 const indexController = {
 
     getIndex: (req, res) => {
-        
-        res.render("index", { title: "index" })
+        let userData= req.session.user;
+        if(!userData){
+            userData = {}
+        }
+         
+        res.render("index", { title: "index", userData});
     },
 
     getContact: (req, res) => {

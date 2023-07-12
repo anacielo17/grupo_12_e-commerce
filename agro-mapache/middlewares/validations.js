@@ -2,17 +2,16 @@ const expressValidator = require('express-validator');
 
 const validations = {
     validateCreateProduct: [
-        expressValidator.body('title')
+        expressValidator.body('name')
             .notEmpty()
             .withMessage('El nombre no debe estar vacío')
             .custom((value) => {
-                if(!value.includes('!')){
-                    throw new Error('La contraseña debe contener un signo de exclama');
+                if(value.includes('!')){
+                    throw new Error('El nombre no debe contener signo de exclamación');
                 } 
                 return true;
             }),
         expressValidator.body('price')
-            .isInt().withMessage('El precio debe ser un número')
             .notEmpty().withMessage('El precio no debe estar vacío')
     ]
 };

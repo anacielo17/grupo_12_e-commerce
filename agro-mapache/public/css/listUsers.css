@@ -1,4 +1,4 @@
-   main {
+ main {
      display: flex;  
      flex-wrap: wrap; 
     justify-content: start;
@@ -21,7 +21,7 @@
     margin-left: 5%;
     color: black;
 } 
-/* 
+ /* 
  hr {
     width: 90%;
 }
@@ -119,4 +119,4 @@
     .order-item {
         width: 20%;
     }
-}      */
+}       */

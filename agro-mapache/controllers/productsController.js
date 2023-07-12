@@ -1,5 +1,8 @@
 const path = require("path");
+expressValidator = require("express-validator")
 const productModel = require("../models/product");
+const multer = require ("multer");
+
 
 
 const productsController = {
@@ -67,17 +70,22 @@ const productsController = {
 
 //@GET / products/create nos lleva al formulario createProducts.ejs
 getCreate: (req, res) => {
-    res.render("createProduct", { title: "formulario" })
+    res.render("createProduct", { title: "formulario", errors: [], values: [] })
 },
  
 // @POST/ products
 postProduct:(req, res) => {
+    const validation= expressValidator.validationResult(req);
+    console.log(validations.erros);
+    if(validation.errors.length >0){
+        return res.render("createProduct",{errors: validation.errors, values: req.body})
+    }
     let datos = req.body;
     datos.price = Number(datos.price);
        // datos.imgs = req.files.map(file => '/imgs/products' + file.filename); puede faltar una barra despue d products 
-       datos.imgs =  '/img/products/' + req.file 
+       datos.img =  '/img/products/' + req.file.filename 
    
-    productModel.createOne(datos);
+    productModel.createOne(datos); 
     res.redirect("/products/catalogo");
 }
  

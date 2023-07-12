@@ -1,90 +1,92 @@
+const fs = require("fs")
 const path = require("path");
-const userModel = require('../models/user.js');
-const controllers =
-{
-
+const uuid= require ("uuid")
+const userModel = require('../models/user');
+const bcrypt= require("bcrypt")
+const controllers = {
+ 
     getRegistro: (req, res) => {
         
         res.render("registro", { title: "registro" })
     },
     getLogin: (req, res) => {
+        const error = req.query.error || "";
 
-        res.render("login", { title: "login" })
+        res.render("login", { title: "login", error })
     },
     getList: (req, res) => {
         const usuarios = userModel.findAll();
 
         res.render("list", { title:"Listado", usuarios })
     },
+
     //@GET  Buscar el usuario a modificar
     getUpdate: (req, res) => {
         const id = Number(req.params.id)
-        console.log(id)
+       /*  console.log(id) */
         const usuarioAModificar = userModel.findById(id)
         if (!usuarioAModificar) {
             return res.send("El id no existe")
         }
         res.render("updateUser", {user: usuarioAModificar});
 
-    },
+    }, 
+    // @ PUT actualizamos el usuario con PUT ! 
+    updateUser: (req, res)=> {
+        const id= Number (req.params.id);     
+       let newData = req.body;
+       const newPassword = bcrypt.hashSync (newData,password,12)
+       newData.password = newPassword
+       delete newData.oldImage;
+       newData.img= req.file ? req.file.filename : req.body.oldImage
+       
+      let users = userModel.updateById(id,newData);
+   
+       res.render("/list",{users});
+   
+   },
      // @DELETE borrar usuario segun ID //
     deleteUser: (req,res)=>{
         const id= Number(req.params.id);
 
-        userModel.deleteById(id) ;
+       let users = userModel.deleteById(id) ;
 
-        res.redirect("list") 
+        res.redirect("/user/list");  
     },
-    // @ PUT actualizamos el usuario con PUT ! 
-    updateUser: (req, res)=> {
-        const id= Number (req.params.id);     
-       let nuevosDatos = req.body;
-       nuevosDatos.img= req.file ? req.file.filename : req.body.oldImage
-       
-       userModel.updateById(id,nuevosDatos);
-   
-       res.redirect("list");
-   
-   },
-
-   // @POST/ products
-    postUser:(req, res) => {
-       let datos = req.body;
-       datos.phone = Number(datos.phone);
-          // datos.imgs = req.files.map(file => '/imgs/products' + file.filename); puede faltar una barra despue d products 
-       datos.avatar =  '/img/products/' + req.file;
-       datos.email= 
-      
-       userModel.createOne(datos);
-       res.redirect("/user/list");
-   },
-
+ 
    signOut: (req, res) => {
     res.clearCookie('email');
 
     req.session.user = {};
 
-    res.redirect('/users/login');
+    res.redirect('/user/login'); 
 }, 
 registerUser: (req, res) => {
-    const user = {
+
+    const user = { 
         ...req.body
-    };
+     }; 
+     /* let user = req.body;
+       user.firstName= req.body.firstName;
+       user.lastName= req.body.lastName;
+       user.email= req.body.email; 
+       user.phone = Number(user.phone);
+       user.password =req.body.password;
+ /*  */
+  /*  const newPassword = bcrypt.hashSync( user.password, 12); 
 
-    const newPassword = bcrypt.hashSync(user.password, 12);
-
-    user.password = newPassword;
-
+   user.password = newPassword  */
     userModel.createOne(user);
-
-    res.send('Se registró el usuario');
+    console.log(user)
+    res.redirect('/user/list');
+    
 },
 loginUser: (req, res) => {
     const searchedUser = userModel.findByEmail(req.body.email);
 
     
     if(!searchedUser){
-        return res.redirect('/users/login?error=El mail o la contraseña son incorrectos');
+        return res.redirect('/user/login?error=El mail o la contraseña son incorrectos');
     }
     
     const {password: hashedPw} = searchedUser;
@@ -104,7 +106,7 @@ loginUser: (req, res) => {
 
         res.redirect('/');
     } else {
-        return res.redirect('/users/login?error=El mail o la contraseña son incorrectos');
+        return res.redirect('/user/login?error=El mail o la contraseña son incorrectos');
     }
 },
      
@@ -113,7 +115,7 @@ loginUser: (req, res) => {
 }
 module.exports = controllers;
 
- const bcrypt = require('bcrypt');
+
 
 /*const controllers = {
     signOut: (req, res) => {
@@ -128,19 +130,6 @@ module.exports = controllers;
         res.render('registro');
     },
 
-    registerUser: (req, res) => {
-        const user = {
-            ...req.body
-        };
-
-        const newPassword = bcrypt.hashSync(user.password, 12);
-
-        user.password = newPassword;
-
-        userModel.createOne(user);
-
-        res.send('Se registró el usuario');
-    },
 
     getLogin: (req, res) => {
         const error = req.query.error || '';

@@ -15,11 +15,12 @@
 		</div>
 
 		<div class="wrapper">
-			<a href="/home" class="underline"><h2 class="marca">AgroMapache</h2></a>
+			<a href="/" class="underline"><h2 class="marca">AgroMapache</h2></a>
 
 			<form class="login">
 				<div>
 					<div class="register">
+						<h3 style="color: red"> <%= error %></h3>
 						<span>¿Aún no tenés cuenta?<a href="/user/registro"> Registrate!</a></span>
 					</div>
 					<label for="email">Email:</label><br>
@@ -32,9 +33,9 @@
 				</div>
 
 				<div>
-					<label class="checkbox">
-						<input type="checkbox" name="remember"> Recordar email y contraseña
-					</label>
+					<label class="checkbox"> Mantener sesion iniciada
+					<input type="checkbox" name="remember"> </label>
+					
 				</div>
 
 				<div>

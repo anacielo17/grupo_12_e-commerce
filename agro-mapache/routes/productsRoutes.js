@@ -4,8 +4,8 @@ const multer = require ("multer");
 
 const productsRoutes = express.Router();
 
-
 const productsController = require ("../controllers/productsController");
+const validationMiddlewares= require ("../middlewares/validations")
 
 const storage = multer.diskStorage({
     destination: (req,file,cb)=> {
@@ -17,7 +17,7 @@ const storage = multer.diskStorage({
     }
 }
 )
-
+ 
 const upload = multer({storage});
 
 
@@ -28,5 +28,5 @@ productsRoutes.get("/:id/detail", productsController.productDetail) // detalle d
 productsRoutes.get("/:id/update", productsController.getUpdate) // vamos al form de edicion 
 productsRoutes.put("/:id/update", productsController.updateProduct) // put , accion de edicion, enviamos el formulario
 productsRoutes.delete("/:id/delete", productsController.deleteProduct)
-productsRoutes.post("/catalogo", upload.single("img"), productsController.postProduct);   
-module.exports = productsRoutes;
+productsRoutes.post("/catalogo", upload.single('img'), /* validationMiddlewares.validateCreateProduct, */  productsController.postProduct);   
+module.exports = productsRoutes; 

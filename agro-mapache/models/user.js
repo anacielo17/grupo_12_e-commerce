@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const uuid= require ("uuid")
 const model = {
     // ruta del archivo JSON
     route: "../data/users.json",
@@ -16,6 +17,18 @@ const model = {
         const users = this.findAll();
 
         let searched = users.find( user => user.id === id)
+
+        if(!searched) {
+            searched = null
+        }
+
+        return searched ;
+    },
+
+    findByEmail: function (email) {
+        const users = this.findAll();
+
+        let searched = users.find( user => user.email === email)
 
         if(!searched) {
             searched = null
@@ -44,11 +57,12 @@ const model = {
         const indice =  users.findIndex(userActual => userActual.id === id);
 
        // con esto, modificamos los datos que queremos cambiar, a traves de los que nos pasan por parametros
-        users[indice].firstName = newData.lastNameame;   
+        users[indice].firstName = newData.firstName;   
         users[indice].lastName = newData.lastName;
         users[indice].email = newData.email;
+        users[indice].phone = newData.phone;
         users[indice].password = newData.password;
-        users[indice].avatar = newData.password;
+        users[indice].avatar = newData.avatar;
 
 
         const usersJson = JSON.stringify(users);
@@ -63,13 +77,19 @@ const model = {
     createOne: function(newUser) {
         let users = this.findAll();
        // le di ID al nuevo usuario
-        newUser.id = users[users.length -1]. id + 1;
+     /*   if(users.length > 0 ){
+        newUser.id = users[users.length -1].id + 1;
+       } else{ */
+        newUser.id = uuid.v4();
+       
+        
        // lo mandamos al array 
         users.push(newUser);
       
         const usersJson = JSON.stringify(users);
 
         fs.writeFileSync(path.join(__dirname,this.route), usersJson);
+        return newUser
     }
 }
     module.exports = model;
