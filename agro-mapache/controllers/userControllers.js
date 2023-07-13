@@ -22,7 +22,7 @@ const controllers = {
 
     //@GET  Buscar el usuario a modificar
     getUpdate: (req, res) => {
-        const id = Number(req.params.id)
+        const id = (req.params.id)
        /*  console.log(id) */
         const usuarioAModificar = userModel.findById(id)
         if (!usuarioAModificar) {
@@ -33,21 +33,21 @@ const controllers = {
     }, 
     // @ PUT actualizamos el usuario con PUT ! 
     updateUser: (req, res)=> {
-        const id= Number (req.params.id);     
+        const id= (req.params.id);     
        let newData = req.body;
-       const newPassword = bcrypt.hashSync (newData,password,12)
-       newData.password = newPassword
+       /* const newPassword = bcrypt.hashSync (newData,password,12)
+       newData.password = newPassword */
        delete newData.oldImage;
        newData.img= req.file ? req.file.filename : req.body.oldImage
        
       let users = userModel.updateById(id,newData);
    
-       res.render("/list",{users});
+       res.redirect("/user/list",/* {users} */);
    
    },
      // @DELETE borrar usuario segun ID //
     deleteUser: (req,res)=>{
-        const id= Number(req.params.id);
+        const id= (req.params.id);
 
        let users = userModel.deleteById(id) ;
 
@@ -63,9 +63,8 @@ const controllers = {
 }, 
 registerUser: (req, res) => {
 
-    const user = { 
-        ...req.body
-     }; 
+    const user = req.body; 
+    delete user.confirmPassword;
      /* let user = req.body;
        user.firstName= req.body.firstName;
        user.lastName= req.body.lastName;

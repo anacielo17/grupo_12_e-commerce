@@ -76,10 +76,10 @@ getCreate: (req, res) => {
 // @POST/ products
 postProduct:(req, res) => {
     const validation= expressValidator.validationResult(req);
-    console.log(validations.erros);
+   /*  console.log(validations.erros);
     if(validation.errors.length >0){
         return res.render("createProduct",{errors: validation.errors, values: req.body})
-    }
+    } */
     let datos = req.body;
     datos.price = Number(datos.price);
        // datos.imgs = req.files.map(file => '/imgs/products' + file.filename); puede faltar una barra despue d products 

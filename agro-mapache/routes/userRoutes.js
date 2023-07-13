@@ -21,7 +21,7 @@ userRoutes.get("/registro", controllers.getRegistro)
 userRoutes.get("/list",controllers.getList);
 userRoutes.get("/sign-out", controllers.signOut); 
 userRoutes.get("/:id/update",controllers.getUpdate) // vamos al form de edicion 
-userRoutes.post("/registro", controllers.registerUser);
+userRoutes.post("/registro", upload.single('avatar'), controllers.registerUser);
 userRoutes.post("/",controllers.loginUser);
 userRoutes.put("/:id/update",upload.single('avatar'),controllers.updateUser) // put , accion de edicion, enviamos el formulario
 userRoutes.delete("/:id/delete",controllers.deleteUser) 
