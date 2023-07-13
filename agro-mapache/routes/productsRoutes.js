@@ -26,7 +26,7 @@ productsRoutes.get("/catalogo", productsController.getCatalogo); // si catalogo 
 productsRoutes.get("/createProduct", productsController.getCreate)  
 productsRoutes.get("/:id/detail", productsController.productDetail) // detalle de producto, falta realizar la vista
 productsRoutes.get("/:id/update", productsController.getUpdate) // vamos al form de edicion 
-productsRoutes.put("/:id/update", productsController.updateProduct) // put , accion de edicion, enviamos el formulario
+productsRoutes.put("/:id/update", upload.single('img'), productsController.updateProduct) // put , accion de edicion, enviamos el formulario
 productsRoutes.delete("/:id/delete", productsController.deleteProduct)
 productsRoutes.post("/catalogo", upload.single('img'), /* validationMiddlewares.validateCreateProduct, */  productsController.postProduct);   
 module.exports = productsRoutes; 

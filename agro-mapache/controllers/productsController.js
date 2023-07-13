@@ -58,7 +58,7 @@ const productsController = {
 
    // @ PUT actualizamos el protucto con PUT ! falta realizar la vista de acutalizacion de productos 
     updateProduct: (req, res)=> {
-     const id= Number (req.params.id);     
+    const id= Number (req.params.id);     
     let nuevosDatos = req.body;
     nuevosDatos.img= req.file ? req.file.filename : req.body.oldImage
     

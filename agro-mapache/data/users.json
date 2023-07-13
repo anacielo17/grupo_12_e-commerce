@@ -1,1 +1,38 @@
-[{"id":1,"firstName":"Nev","lastName":"Redbourn","email":"nredbourn0@boston.com","password":"psYCh15k7jV","type":"Customer","phone":"333"},{"id":2,"firstName":"Cielito","lastName":"Lambal","email":"cielito@pinterest.com","password":"AoRBAJz","type":"Customer","avatar":""},{"id":3,"firstName":"Ban","lastName":"Lambal","email":"blambal2@pinterest.com","password":"Amnmnm","type":"Customer","avatar":""},{"id":4,"firstName":"Osita","lastName":"Ositosqui","email":"osita@pinterest.com","password":"ksksksks","type":"Customer","avatar":""},{"id":5,"firstName":"Winny","lastName":"Hiscocks","email":"whiscocks4@adobe.com","password":"vEVK4CHcXKz","type":"Customer","phone":"333","avatar":""},{"firstName":"Ana ","lastName":"Seidel","email":"anacieloseidel@gmail.com","phone":"3333","password":"pasado","type":"on","id":"dd254dbf-065c-4d51-9f14-2eafeddd8bed"}]
+[
+    {
+        "firstName": "Ana ",
+        "lastName": "Seidel",
+        "email": "anacieloseidel@gmail.com",
+        "phone": "3333",
+        "password": "pasado",
+        "type": "on",
+        "id": "dd254dbf-065c-4d51-9f14-2eafeddd8bed"
+    },
+    {
+        "firstName": "Renzito",
+        "lastName": "Magrassi",
+        "email": "renzito@gmail.com",
+        "phone": "3456",
+        "password": "$2b$12$sS56/3ZmmT6c5zwHXPDUlOrnSbZP1twUWMSvm8.W8Dx3tHYxDQjyK",
+        "type": "on",
+        "id": "e2e53eb1-b310-4326-9845-a638359e891d"
+    },
+    {
+        "firstName": "Maria",
+        "lastName": "Seidel",
+        "email": "maru@gmail.com",
+        "phone": "767676",
+        "password": "$2b$12$eX/JcjasnhCjeG5lbRdk5Of92Icp7Uo0xLPFiGqJoAp2deAYUKS3q",
+        "type": "on",
+        "id": "b2f67075-f4a5-45ce-8bfe-6fc772d6d795"
+    },
+    {
+        "firstName": "Kevin",
+        "lastName": "Will",
+        "email": "kevin@gmail.com",
+        "phone": "6666",
+        "password": "$2b$12$hZBO7/MPOIF8/Q0zJvsULu2aflLhcwKFtXUuM4vWLyTLKHOLem5TK",
+        "type": "on",
+        "id": "cab4f9f7-c29d-48a1-9002-1fa09dc9465d"
+    }
+]
