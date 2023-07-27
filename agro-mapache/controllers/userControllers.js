@@ -1,8 +1,10 @@
 const fs = require("fs")
-const path = require("path");
 const uuid = require("uuid")
-const userModel = require('../models/user');
+const path = require("path");
 const bcrypt = require("bcrypt")
+const {validationResult} = require ("express-validator")
+const userModel = require('../models/user');
+
 const controllers = {
 
     getRegistro: (req, res) => {
@@ -62,8 +64,25 @@ const controllers = {
 
         res.redirect('/user/login');
     },
+   
     registerUser: (req, res) => {
-
+        const resultValidation= validationResult(req);
+        if(resultValidation.errors.length > 0) {
+            return res.render("registro", {
+                errors: resultValidation.mapped(), 
+                oldData: req.body
+            });
+        }
+        let userInDB = userModel.findByEmail(req.body.email);  
+        if( userInDB){
+            return res.render("registro",{
+                errors: {
+                    msg: "Este mail ya está registrado",
+                    
+                }, oldData: req.body
+            },
+           )
+        }
         const user = req.body;
         delete user.confirmPassword;
 
@@ -74,7 +93,8 @@ const controllers = {
         console.log(user)
         res.redirect('/user/list');
 
-    },
+    }, 
+    
     loginUser(req, res) {
         const searchedUser = userModel.findByEmail(req.body.email);
 
@@ -97,13 +117,18 @@ const controllers = {
             delete searchedUser.password;
             delete searchedUser.id;
 
-            req.session.user = searchedUser;
+            req.session.userLogged = searchedUser;
 
             return res.redirect('/');
         } else {
             return res.redirect('/user/login?error=La contraseña es incorrecta');
         }
     },
+    profile: (req, res) => 
+    {return res.render('userProfile', {
+			user: req.session.userLogged
+		});
+	} 
    /*  loginUser: (req, res) => {
         const searchedUser = userModel.findByEmail(req.body.email);
     

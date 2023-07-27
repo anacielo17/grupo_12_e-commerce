@@ -78,19 +78,20 @@ a {
    color: white;
    display: flex;
    position: absolute;
-   right: 10px;
+   right: 20px;
    top: 65px;
 }
 
 .usuario i {
    justify-content: space-between;
-   font-size: 25px;
+   font-size: 20px;
    transition: 700ms
 }
 
 .usuario a {
    transition: 700ms;
-   padding-right: 20px;
+   padding-right: 10px;
+   font-size: 18px;
 }
 
 .main-navbar.a {
@@ -110,7 +111,51 @@ a {
 .site-navbar a {
    transition: 700ms;
 }
+.desplegable img{
+   width: 30%;
+}
 
+.cont-ul li{
+   list-style: none;
+   cursor: pointer;
+}
+
+.desplegable .probando{
+   display: flex;
+   position: relative;
+   align-items: center;
+   margin-top: 2px;
+}
+.ul-second li{
+   margin-top: 2px;
+}
+.usuario .mis-compras{
+   margin-top: 9px;
+   place-items: center;
+}
+.fa-cart-shopping{
+   margin-top: 9px;
+   
+}
+
+.ul-second{
+   display: none;
+   position: absolute;
+}
+.desplegable:hover > .ul-second{
+   display: block;
+}
+.ul-second a{ 
+   font-style: normal;
+   transition: none;
+   font-size: 15px;
+   
+}
+
+/* .dropdown{
+   display: inline-block;
+   position: relative;
+} */
 /* ----------------------------------------------main---------------------------------- */
 
 .fondo {
@@ -305,7 +350,7 @@ footer h2{
 
    .main-header-top-bar {
       justify-content: space-around;
-      font-size: 20px;
+      /* font-size: 20px; */
    }
 
    .usuario {
@@ -374,7 +419,7 @@ footer h2{
 
    .main-header-top-bar {
       max-width: 2000px;
-      font-size: 22px;
+      /* font-size: 22px; */
    }
 
    .main-navbar {
@@ -422,7 +467,12 @@ footer h2{
       color: black;
       font-size: 30px;
    }
-
+   .ul-second a:hover{ 
+      color: black;
+      
+      font-size: 15px;
+      
+ }
    .site-navbar a:hover {
       color: black;
       font-size: 30px;

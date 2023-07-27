@@ -36,6 +36,16 @@ const model = {
 
         return searched ;
     },
+   // Buscar por cualquier campo - no lo utilizamos ahora pero lo quiero a mano. 
+  /*  findByField: function (field,text){
+    let allUsers = this.findAll();
+    let userFound = allUsers.find (user => user[field] === text);
+    if(!userFound) {
+        userFound = null
+    }
+
+    return userFound ;
+   }, */
     //Eliminar un usuario
     deleteById: function (id) {
         let users = this.findAll();
@@ -61,7 +71,11 @@ const model = {
         users[indice].lastName = newData.lastName;
         users[indice].email = newData.email;
         users[indice].phone = newData.phone;
+        users[indice].gender= newData.gender;
+        users[indice].country = newData.country;
         users[indice].password = newData.password;
+        users[indice].confirmPassword = newData.confirmPassword;
+        users[indice].type = newData.type;
         users[indice].avatar = newData.avatar;
 
 
@@ -89,6 +103,7 @@ const model = {
         const usersJson = JSON.stringify(users);
 
         fs.writeFileSync(path.join(__dirname,this.route), usersJson);
+        
         return newUser
     }
 }

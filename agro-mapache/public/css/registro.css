@@ -92,17 +92,18 @@ form .button input:hover{
 	background: rgb(255, 94, 0);
 }
 
-form .condición-details .condicón-title{
+
+/* form .condición-details .condicón-title{
 	font-size: 20px;
 	font-weight: 500;
-}
-form .condición-details .category{
+} */
+/* form .condición-details .category{
 	display: flex;
 	width: 80%;
 	margin: 14px 0;
 	justify-content: space-between;
-}
-.condición-details .category label{
+} */
+/* .condición-details .category label{
 	display: flex;
 	align-items: center;
 
@@ -125,7 +126,7 @@ form .condición-details .category{
 form input[type="radio"]{
 	display: none;
 }
-
+ */
 /* .background {
 	position: fixed;
 	top: 0;

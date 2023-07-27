@@ -47,20 +47,40 @@
                         </div>
                     </div>
                     <div class="condición-details">
-                        <input name="type" type="radio" name="condicion" id="dot-1">
-                        <input name="type" type="radio" name="condicion" id="dot-2">
-                        <span class="condicón-title"> Condición</span>
-                        <div class="category">
-                            <label for="dot-1">
-                                <span class="dot one"></span>
-                                <span class="condición">Vendedor</span>
-                            </label>
-                            <label for="dot-2">
-                                <span class="dot two"></span>
-                                <span class="condición">Comprador</span>
-                            </label>
-                        </div>
+                        <label> <b>Pais de nacimiento: </b>  </label>
+                        <select name="country">
+                            <option value="Argentina">Argentina</option>
+                            <option value="Bolivia">Bolivia</option>
+                            <option value="Brasil">Brasil</option>
+                            <option value="Colombia">Colombia</option>
+                            <option value="Chile">Chile</option>
+                            <option value="Ecuador">Ecuador</option>
+                            <option value="Paraguay">Paraguay</option>
+                            <option value="Peru">Peru</option>
+                            <option value="Uruguay">Uruguay</option>
+                            <option value="Venezuela">Venezuela</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                        
+                        <label> <b>Sexo: </b>  </label>
+                        <select name="gender">
+                            <option value="Femenino">Femenino</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Prefiero no decirlo">Prefiero no decirlo</option>
+                            
+                        </select>
                     </div>
+                    <br>
+
+                    <div class="condición-details">
+                        <label> <b> Condición:  </b>  </label>
+                        <select name="type">
+                            <option value="Comprador">Comprador</option>
+                            <option value="Vendedor">Vendedor</option>
+                            
+                        </select>
+                    </div>
+
                     <div class="button">
                         <input type="submit" value="Guardar cambios">
                     </div>

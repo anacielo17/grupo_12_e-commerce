@@ -19,7 +19,7 @@
     <main>
         <section class="user-info">
          <% usuarios.forEach( usuario => { %> 
-                <article class="usuario">
+                <article class="usuario-list">
                     <div class="container-image">
                         <% if(usuario.avatar) {%>
                             <img class="user-image" src="/img/user <%=usuario.avatar%>" alt="Imagen de perfil del usuario">
@@ -30,11 +30,14 @@
                     <div class="user-detail"> 
                         <p> <b>Nombre: </b> <%=usuario.firstName%></p>
                         <p> <b>Apellido: </b> <%=usuario.lastName%></p>
+                        <p> <b>Género: </b> <%=usuario.gender%></p>
                         <p> <b>Email: </b> <%=usuario.email%></p>
+                        <p> <b>Pais: </b> <%=usuario.country%></p>
                         <p> <b>Telefono: </b> <%=usuario.phone%></p>
                         <p> <b>Condición: </b> <%=usuario.type%></p>
                     </div>
-                    <div class="container">
+                    <br>
+                    <div class="container-list">
                         <form action="/user/<%= usuario.id %>/update" class="form">
                             <button class="user-edit" type="submmit">
                                 Editar perfil

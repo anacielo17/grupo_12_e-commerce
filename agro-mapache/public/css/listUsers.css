@@ -1,6 +1,6 @@
  main {
-     display: flex;  
-     flex-wrap: wrap; 
+    /*  display: flex;  
+     flex-wrap: wrap;  */
     justify-content: start;
     color: whitesmoke;
     margin-bottom: 25px;;
@@ -9,6 +9,10 @@
     background-color: red;
     border: 1px solid red;
     border-radius: 5px;
+    margin-left: 5px;
+    width: 70px;
+    height: 30px;
+    margin-bottom: 5px;
 } 
 
  
@@ -16,11 +20,44 @@
     background-color:orange;
     border: 1px solid orange;
     border-radius: 5px;
+    width: 70px;
+    height: 30px;
 } 
  .user-detail {
-    margin-left: 5%;
+    margin-left: 10px;
+    
     color: black;
 } 
+.user-detail p{
+    margin-bottom: 5px;
+}
+.usuario-list{
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 250px; 
+    margin-top: 40px; 
+    margin-bottom: 60px; 
+   
+    /* display: flex; */
+    /* position: relative */;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: inline;
+    margin-right: 10px;
+    
+}
+img.user-image {
+    margin-left: 50px;
+    width: 100px;
+    border-radius: 10px;
+
+}
+.container-list{
+    display: flex;
+    margin-left: 10px;
+}
  /* 
  hr {
     width: 90%;

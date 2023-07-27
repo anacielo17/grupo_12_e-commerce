@@ -1,6 +1,6 @@
 const expressValidator = require('express-validator');
 
-const validations = {
+const validationsProduct = {
     validateCreateProduct: [
         expressValidator.body('name')
             .notEmpty()
@@ -16,4 +16,4 @@ const validations = {
     ]
 };
 
-module.exports = validations;
+module.exports = validationsProduct;

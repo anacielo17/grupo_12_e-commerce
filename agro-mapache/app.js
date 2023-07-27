@@ -4,6 +4,7 @@ const path = require ("path");
 const methodOverride = require('method-override');
 const cookieParser= require("cookie-parser")
 const expressSession = require ("express-session");
+const userLoggeMiddleware = require("./middlewares/userLoggedMiddleware")
 
 
 
@@ -23,11 +24,14 @@ app.set("views", [
 
 //Middlewares
 app.use(express.static("public"));
-app.use(express.urlencoded({extended:true}));
+
+app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 app.use(methodOverride('_method'));
 app.use(cookieParser()); 
-app.use(expressSession({ secret: "Para qué un juicio final si ya estamos desechos" }));
+app.use(expressSession({ secret: "Para qué un juicio final si ya estamos desechos", 
+                        resave: false, 
+                        saveUninitialized: false }));
 app.use((req,res,next)=>{
     if(req.cookies.email){
      const userModel = require ("./models/user");
@@ -38,13 +42,13 @@ app.use((req,res,next)=>{
     }
     next()
 } )
-
+app.use(userLoggeMiddleware);
 // Routes
 app.use(indexRoutes);
 app.use("/user",userRoutes);
 app.use("/products",productsRoutes);
 
 
-app.listen(3000, () =>{
+app.listen(2000, () =>{
     console.log("Servidor corriendo en el puerto 3000");
 });  

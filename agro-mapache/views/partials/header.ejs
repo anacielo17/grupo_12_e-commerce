@@ -12,11 +12,36 @@
         </div>
 
         <div class="usuario">
-            <a href="/user/login"><i class="fa-solid fa-circle-user"></a></i>
-            
-            <a href="/products/carrito-compra"><i class="fa-solid fa-cart-shopping"></a></i>
-            <a class="mis-compras"> Mis compras</a>
+            <!-- <ul class="navbar-nav align-items-center"> -->
+            <% if (locals.isLogged) { %>
+
+
+                <ul class="cont-ul">
+
+                    <li class="desplegable">
+                        <div class="probando">
+                        <!-- <a class="nav-link dropdown-toggle" href="#" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false"> -->
+                        <img src="/img/user/avatar.default.png" style="border-radius: 100%;" href="#">
+                        <p>Hi <%= locals.userLogged.firstName %></p>
+                        </div>
+                        
+                        <ul class="ul-second" aria-labelledby="navbarDropdown">
+                            
+                            <li><a class="dropdown-item" href="/user/profile">Mi perfil</a></li>
+
+                            <li><a class="dropdown-item" href="/user/sign-out">Cerrar sesión</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <% } else { %>
+                    <a class="nav-link" href="/user/registro">Registro</a>
+                    <a href="/user/login"><i class="fa-solid fa-circle-user"></a></i>
+                    <% } %>
+                        <a href="/products/carrito-compra"><i class="fa-solid fa-cart-shopping" ></a></i>
+                        <a class="mis-compras"> Mis compras</a>
         </div>
+        <!-- </ul> -->
+    </div>
     </div>
 
 
@@ -28,11 +53,8 @@
         <ul class="menu">
             <li><a href="#Noticias"> Noticias</a></li>
             <li><a href="/contact"> Contacto </a></li>
-           
-            <form action="/user/sign-out" method="get">
-                <input type="submit" value="Cerrar sesión">
-          
-            </form> 
-            
+
+
+
         </ul>
 </header>
