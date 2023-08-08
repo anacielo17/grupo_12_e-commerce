@@ -1,41 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/css/formularioProduxtos.css">
-        <link rel="stylesheet" href="/css/styles.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
-        
-
-        <title>Formulario de Productos</title>
-    </head>
-    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/registro.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <!--  <link rel="stylesheet" href="/css/formularioProduxtos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <title>Crear producto</title>
+</head>
 <body>
-<%- include("../partials/header") %>  
-
-<main>
-    <section class="form-register">
-    <form action="/products/catalogo" method="post" enctype="multipart/form-data">
-        <h4>Crear Producto</h4>
-       
-            <input class="controls" type="text" value= "<% values.name%>" name="name" id="name" placeholder="Ingrese Nombre del Producto" >
-   
-            <input class="controlsD" type="texttarea" value= "<% values.description%> "name="description" id= "description" placeholder="Ingrese descripción del producto" >
+    <%- include("../partials/header") %>  
+    
+    <main>
         
-            <input class="controls"  type="text" value= "<% values.price%>" name="price" id="price" placeholder="Ingrese precio/texto" >
-       
-            <input class="controls"  type="file" name="img">
-       
-            <input class="botonsE" type="submit"></input>
-       
-    </form>
-    </section>
+            <div class="container">
+                <div class="title">Crear producto</div>
+                <form action="/products/catalogo" method="post" enctype="multipart/form-data">
+                    <div class="user-details">
+                        <div class="input-box">
+                            <span class="details"> Nombre</span>
+                            <input name="name" type="text" placeholder="Enter name" required value= "<% values.name%>">
+                        </div>
+                        <div class="input-box">
+                            <span class="details"> Descripción</span>
+                            <input name="description" type="text" placeholder="Enter description" required value="<% values.description%>" >
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Precio</span>
+                            <input name="product_price" type="text" placeholder="Enter price" required value="<% values.product_price%>">
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Stock</label>
+                            <input name="product_inStock" type="number" placeholder="Enter stock" value="<% values.product_inStock%>">
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Origen</span>
+                            <input name="origin" type="text" placeholder="Enter origin" required value="<% values.origin%>">
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Marca</span>
+                            <input name="brand_code" type="text" placeholder="Enter brand code" required value="<% values.brand_code%>">
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Condición</span>
+                            <input name="product_condition" type="text" placeholder="Condition" required value="<% values.product_condition%>">
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Categoría</span>
+                            <input name="category" type="text" placeholder="Category" value="<% values.category%>">
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Ingresa foto</span>
+                            <input type="file" name="image" value="<% values.image%>">
+                        </div>
+                    </div>
+                    <div class="button">
+                        <input type="submit" value="Crear">
+                    </div>
+                </form>
+
     
  </main>
-  <%- include("../partials/footer")  %> 
-</body>
+  
+</body> 

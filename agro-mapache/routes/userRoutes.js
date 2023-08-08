@@ -36,12 +36,12 @@ userRoutes.get("/registro", guestMiddleware, controllers.getRegistro)
 userRoutes.get("/list", controllers.getList);
 userRoutes.get("/profile/", authMiddleware, controllers.profile);
 userRoutes.get("/sign-out", controllers.signOut);
-userRoutes.get("/:id/update", controllers.getUpdate) // vamos al form de edicion 
+userRoutes.get("/:customer_id/update", controllers.getUpdate) // vamos al form de edicion 
 
 
 userRoutes.post("/registro",upload.single('avatar'), /* validations.validateCreateUser, */ controllers.registerUser);
 userRoutes.post("/login", controllers.loginUser);
-userRoutes.put("/:id/update", upload.single('avatar'), controllers.updateUser) // put , accion de edicion, enviamos el formulario
-userRoutes.delete("/:id/delete", controllers.deleteUser)
+userRoutes.put("/:customer_id/update", upload.single('image'), controllers.updateUser) // put , accion de edicion, enviamos el formulario
+userRoutes.delete("/:customer_id/delete", controllers.deleteUser)
 module.exports = userRoutes;
 

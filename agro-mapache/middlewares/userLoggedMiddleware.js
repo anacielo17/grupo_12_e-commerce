@@ -1,10 +1,29 @@
-const User = require('../models/user');
-function userLoggeMiddleware(req, res, next) {
 
-    res.locals.isLogged = false
-    let emailInCookie = req.cookies.email;
-    let userFromCookie = User.findByEmail("email", emailInCookie); 
+let db = require("../database/models");
+const Op = db.Sequelize.Op
+
+
+const User = require('../models/user');
+async function userLoggeMiddleware(req, res, next) {
+try{
+     res.locals.isLogged = false
+
+     let emailInCookie = req.cookies.customer_email;
+     if(!emailInCookie){
+        return next()
+     }
+    let userFromCookie = await db.Customer.findOne(
+        {
+            where : {
+                customer_email: emailInCookie
+            }
+        
+    });  
     
+
+
+
+
     if (userFromCookie) {
         req.session.userLogged = userFromCookie
     }
@@ -14,6 +33,11 @@ function userLoggeMiddleware(req, res, next) {
         res.locals.userLogged = req.session.userLogged
 
     }
-    next(); 
+    next();
+} catch (error){
+    console.log (error); 
+    res.send ("Hubo un error")
+}
+    
 }
 module.exports = userLoggeMiddleware

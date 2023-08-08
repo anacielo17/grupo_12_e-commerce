@@ -17,7 +17,7 @@
         <div class="container" >
            
                 <div class="col-md-3" >
-                    <h2>Hola <%= user.firstName %> </h2>
+                    <h2>Hola <%= customer.customer_firstName %> </h2>
                     <% if(user.avatar) {%>
                         <img class="user-image" src="/img/user <%=user.avatar%>" alt="Imagen de perfil del usuario">
                     <% } else { %>
@@ -25,16 +25,16 @@
                     <% } %>
                      </div>
                    
-                    <div class="alert alert-success"><p>Tu apellido es:</p>  <p class="subrayado"> <%= user.lastName %> </p></div>
-                    <div class="alert alert-success"><p>Tu mail es:  </p>  <p class="subrayado"> <%= user.email %></p> </div>
+                    <div class="alert alert-success"><p>Tu apellido es:</p>  <p class="subrayado"> <%= customer.customer_lastName %> </p></div>
+                    <div class="alert alert-success"><p>Tu mail es:  </p>  <p class="subrayado"> <%= customer.customer_email %></p> </div>
                     
-                    <div class="alert alert-success"><p>Tu número de teléfono es: </p>  <p class="subrayado"> <%= user.phone %></p> </div>
+                    <div class="alert alert-success"><p>Tu número de teléfono es: </p>  <p class="subrayado"> <%= customer.customer_phone %></p> </div>
                     
-                    <div class="alert alert-success"><p>Tu pais es:  </p>  <p class="subrayado"> <%= user.country %></p> </div>
+                    <div class="alert alert-success"><p>Tu pais es:  </p>  <p class="subrayado"> <%= customer.customer_country %></p> </div>
                     
-                    <div class="alert alert-success"><p>Tu género es:  </p>  <p class="subrayado"> <%= user.gender %></p> </div>
+                    <div class="alert alert-success"><p>Tu género es:  </p>  <p class="subrayado"> <%= customer.customer_user.gender %></p> </div>
                     
-                    <div class="alert alert-success"><p>Tu clasificación de usuario es:  </p> <p class="subrayado"> <%= user.type %> </p></div>
+                    <div class="alert alert-success"><p>Tu clasificación de usuario es:  </p> <p class="subrayado"> <%= customer.customer_type %> </p></div>
                      
                 <!-- <div class="edit">
                     <form action="/user/<%= user.id %>/update" class="form">

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/Catalogo.css">
+    <link rel="stylesheet" href="/css/Catalogo.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -53,199 +53,30 @@
 
             </form> 
          </section> -->
-            <a href="/products/createProduct" class="nuevos-productos"> Agregar producto </a>
+        <a href="/products/createProduct" class="nuevos-productos"> Agregar producto </a>
 
 
             <section class="catalogo-main">
 
-                <% productos.forEach(producto=> { %>
+                <% products.forEach(product=> { %>
                     <article class="producto">
 
-                        <a href="/products/<%=producto.id%>/detail"> <img src=<%=producto.img%> width="300px"></a>
-                        <div class="detalle-producto">
-                            <div class="valor">
-                                <p class="precio">
-                                    <%= producto.price %>
-                                </p>
+                        <a href="/products/<%=product.product_id%>/detail"> <img src=<%=product.image%> width="300px"></a>
+
+                            <div class="detalle-producto">
+                                <p class="nuevo"> <%= product.product_condition %></p>
+                                <div class="valor">
+                                    <p class="precio">  <%= product.product_price %></p>
+
+                                </div>
+                                <p class="envio">Envios a todo el pais</p>
+                                <strong class="descripcion"> <%= product.name %></strong>
                             </div>
-
-                            <strong class="descripcion">
-                                <%= producto.name %>
-                            </strong>
-                            
-                        </div>
-                        
-                    </article>
+                        </article>
+                       
+                
                     <%}) %>
-                        <!--    <article class="producto">
-
-                <img src="/img/hacha_de_pico.png" width="300px">
-                <div class="detalle-producto">
-                    <div class="valor">
-                        <p class="precio"> $24589</p>
-                    </div>
-
-                    <strong class="descripcion">Hacha de pico Bahco Mango Fibra Vidrio</strong>
-                </div>
-            </article>
-
-            <article class="producto">
-
-                <img src="/img/motosierra_niwa.png" width="300px">
-                <div class="detalle-producto">
-                    <div class="valor">
-                        <p class="precio"> $104.620</p>
-                    </div>
-
-                    <strong class="descripcion">Motosierra Niwa </strong>
-                </div>
-            </article>
-
-            <article class="producto">
-
-                <img src="/img/autoelevador_diesel.jpg" width="300px">
-                <div class="detalle-producto">
-
-                    <div class="valor">
-                        <p class="precio"> $7.049.916</p>
-                    </div>
-
-                    <strong class="descripcion">Autoelevador Diesel Motor Chino 3000kg</strong>
-                </div>
-            </article>
-
-            <article class="producto">
-
-                <img src="/img/acoplado_tanque.jpg" width="300px">
-                <div class="detalle-producto">
-
-                    <div class="valor">
-                        <p class="precio"> $8.500.000</p>
-                    </div>
-                    <strong class="descripcion">Acoplado Tanque 3000 Lts Conese</strong>
-                </div>
-            </article>
-
-            <article class="producto">
-
-                <img src="/img/moledora_mixer.jpg" width="300px">
-                <div class="detalle-producto">
-                    <div class="valor">
-                        <p class="precio"> $4.649.840</p>
-                    </div>
-                    <strong class="descripcion">Moledora Mixer Loyto Nº6/V-3500 C/sinfin De Descarga Rigido</strong>
-                </div>
-            </article>
-
-            <article class="producto">
-
-                <img src="/img/moledora_mixer.jpg" width="300px">
-                <div class="detalle-producto">
-                    <div class="valor">
-                        <p class="precio"> Precio a consultar</p>
-                    </div>
-                    <strong class="descripcion">Retroexcavadora Mo350 Oberto</strong>
-                </div>
-            </article>
-
-            <article class="producto">
-
-                <img src="/img/casilla.jpg" width="300px">
-                <div class="detalle-producto">
-                    <div class="valor">
-                        <p class="precio"> Precio a consultar</p>
-                    </div>
-                    <strong class="descripcion">Casilla 5x2.60mts, 2 ejes, 1 habitación</strong>
-                </div>
-            </article> -->
-                        <!-- 
-            <article class="producto">
-
-                <img src="./img/desmalezadora_de_empuje.jpg" width="300px">
-                <div class="detalle-producto">
-                    <div class="valor">
-                        <p class="precio"> $76.388 </p>
-                    </div>
-                    <strong class="descripcion">Desmalezadora Motoguadaña Fema de Empuje</strong>
-                </div>
-            </article>
-
-            <article class="producto">
-
-                <img src="./img/carro_playo.jpg" width="300px">
-                <div class="detalle-producto">
-                    <div class="valor">
-                        <p class="precio"> $ 1.360.000</p>
-                    </div>
-                    <strong class="descripcion">Carro Playo 4x2Mts 4 Toneladas </strong>
-                </div>
-            </article>
-
-            <article class="producto">
-
-                <img src="./img/soplador.jpeg" width="300px">
-                <div class="detalle-producto">
-                    <div class="valor">
-                        <p class="precio"> $ 138.375</p>
-                    </div>
-                    <strong class="descripcion">Soplador Aspirador Stiga SBC327V </strong>
-                </div>
-            </article>
-
-            <article class="producto">
-
-                <img src="./img/cortadora_manual.png" width="300px">
-                <div class="detalle-producto">
-                    <div class="valor">
-                        <p class="precio"> $ 498.600</p>
-                    </div>
-                    <strong class="descripcion"> Cortadora Manual 14" 73Cc Husqvarna K770 </strong>
-                </div>
-            </article>
-
-            <article class="producto">
-
-                <img src="./img/carretilla.jpg" width="300px">
-                <div class="detalle-producto">
-                    <div class="valor">
-                        <p class="precio"> $ 16.868</p>
-                    </div>
-                    <strong class="descripcion"> Carretilla Chapa Rueda Neumática 130Kg Fema </strong>
-                </div>
-            </article>
-
-            <article class="producto">
-
-                <img src="./img/elaion_moto.jpg" width="300px">
-                <div class="detalle-producto">
-                    <div class="valor">
-                        <p class="precio"> $ 1.500</p>
-                    </div>
-                    <strong class="descripcion"> Elaion Moto 2T 100cc YPf</strong>
-                </div>
-            </article>
-
-            <article class="producto">
-
-                <img src="./img/calefactor_exterior.jpg" width="300px">
-                <div class="detalle-producto">
-                    <div class="valor">
-                        <p class="precio"> $ 105.311</p>
-                    </div>
-                    <strong class="descripcion"> Calefactor Para Exterior Garrafa 10Kg Acero Inoxidable</strong>
-                </div>
-            </article>
-
-            <article class="producto">
-
-                <img src="./img/calefactor_convector.jpg" width="300px">
-                <div class="detalle-producto">
-                    <div class="valor">
-                        <p class="precio"> $ 22.724</p>
-                    </div>
-                    <strong class="descripcion"> Calefactor Convector Eléctrico Fema </strong>
-                </div>
-            </article> -->
+                      
 
             </section>
         </main>

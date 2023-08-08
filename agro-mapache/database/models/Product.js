@@ -1,14 +1,14 @@
+const { DataTypes } = require("sequelize");
+
 module.exports = (sequelize, DataType) => {
     const alias = "Product";
     const cols = {
-        product_code: {
-            type: DataType.VARCHAR,
-            primaryKey: true
-
-        },
         product_id: {
             type: DataType.INTEGER,
-            allowNull: false,
+            primaryKey: true,
+            autoIncrement: true,
+            allowNull: false
+
         },
         product_date: {
             type: DataType.DATE
@@ -17,26 +17,61 @@ module.exports = (sequelize, DataType) => {
             type: DataType.INTEGER
         },
         brand_code: {
-            type: DataType.VARCHAR
+            type: DataType.STRING,
+            allowNull: false,
+            references: {
+                model: "brands",
+                key: "brand_code"
+            }
 
         },
         origin: {
-            type: DataType.VARCHAR
+            type: DataType.STRING,
+            allowNull: false
         },
         product_price: {
-            type: DataType.VARCHAR
+            type: DataType.STRING
         },
         name: {
-            type: DataType.VARCHAR
+            type: DataType.STRING
+        },
+        image: {
+            type: DataType.STRING,
+            /* allowNull: false */
+        },
+        description: {
+            type: DataType.STRING
+        },
+        category: {
+            type: DataType.INTEGER,
+            /* references: {
+                model: "categories",
+                key: "category_id"
+            } */
+        },
+        product_condition: {
+            type: DataType.STRING
         }
     };
 
     const config = {
         tableName: "products",
-        timeStamps: false
+        timestamps: false
     };
 
     const Product = sequelize.define(alias, cols, config);
-
+        Product.associate = models =>{
+        Product.belongsTo(models.Brand, {
+         as : "brand", 
+         timestamps:false, 
+         foreignKey: "brand_code"
+        }); 
+        /* Product.belongsTo(models.Category, {
+            as : "category", 
+            timestamps:false, 
+            foreingKey: "category_id"
+           });  */
+     }
+  
     return Product;
 }

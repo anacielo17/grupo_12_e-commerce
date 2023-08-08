@@ -24,9 +24,9 @@ const upload = multer({storage});
 productsRoutes.get("/carrito-compra", productsController.getCarrito)
 productsRoutes.get("/catalogo", productsController.getCatalogo); // si catalogo no es lo mismo que lista de productos, hacer nueva ruta
 productsRoutes.get("/createProduct", productsController.getCreate)  
-productsRoutes.get("/:id/detail", productsController.productDetail) // detalle de producto, falta realizar la vista
-productsRoutes.get("/:id/update", productsController.getUpdate) // vamos al form de edicion 
-productsRoutes.put("/:id/update", upload.single('img'), productsController.updateProduct) // put , accion de edicion, enviamos el formulario
-productsRoutes.delete("/:id/delete", productsController.deleteProduct)
-productsRoutes.post("/catalogo", upload.single('img'), /* validationMiddlewares.validateCreateProduct, */  productsController.postProduct);   
-module.exports = productsRoutes; 
+productsRoutes.get("/:product_id/detail", productsController.productDetail) // detalle de producto, falta realizar la vista
+productsRoutes.get("/:product_id/update", productsController.getUpdate) // vamos al form de edicion 
+productsRoutes.put("/:product_id/update", upload.single('image'), productsController.updateProduct) // put , accion de edicion, enviamos el formulario
+productsRoutes.delete("/:product_id/delete", productsController.deleteProduct)
+productsRoutes.post("/catalogo", upload.single('image'), /* validationMiddlewares.validateCreateProduct, */  productsController.postProduct);   
+module.exports = productsRoutes;  

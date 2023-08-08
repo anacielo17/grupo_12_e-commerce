@@ -3,11 +3,11 @@ module.exports = (sequelize, DataType) => {
 
     const cols ={
         order_code:{
-            type:DataType.INTEGER,
+            type:DataType.BIGINT,
             allowNull: false,
         },
         customer_id:{
-            type:DataType.VARCHAR,
+            type:DataType.STRING,
             allowNull:false,
             reference:{
                 model:"customers",
@@ -21,33 +21,33 @@ module.exports = (sequelize, DataType) => {
             type:DataType.DATE,
         },
         ship_adress:{
-            type:DataType.VARCHAR,
+            type:DataType.STRING,
             allowNull:false,
         },
         ship_city:{
-            type:DataType.VARCHAR,
+            type:DataType.STRING,
             allowNull:false
         },
         ship_PC:{
-            type:DataType.VARCHAR,
+            type:DataType.STRING,
             allowNull:false,
         },
         ship_province:{
-            type:DataType.VARCHAR,
+            type:DataType.STRING,
             allowNull:false
         },
         name_addresse:{
-            type:DataType.VARCHAR,
+            type:DataType.STRING,
             allowNull:false,
         },
         DNI_addresse:{
-            type:DataType.INTEGER,
+            type:DataType.BIGINT,
             allowNull:false,
         }
         };
         const config = {
             tableName: "orders",
-            timeStamps: false
+            timestamps: false
         };
     
         const Order = sequelize.define(alias, cols, config);

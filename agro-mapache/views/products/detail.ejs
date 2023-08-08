@@ -12,21 +12,22 @@
 </head>
 <body>
     <%- include("../partials/header") %> 
-    <h3 class="container-title"> Detalle del producto <%= product.id %></h3>
+    <h3 class="container-title"> Detalle del producto <%= product.product_id %></h3>
     <main>
         <div class="container-img">
-            <img src=<%= product.img%> alt="imagen-product">
+            <img src=<%= product.image%> alt="imagen-product">
         </div>
         <div class="container-info-producto">
             <div class="container-name">
                 <h3><%=product.name %></h3>
             </div>
             <div class="container-price">
-                <span><%= product.price %></span>
+                <span><%= product.product_price %></span>
             </div>
             <div class="container-descrip-productos"> 
                <h3> Carcateristicas del Producto</h3>
                <p> <%= product.description %></p>  
+               <p> <%= product.brand_code %></p> 
             </div>
             <div class="container-add-cart">
                 <div class="container-quantity">
@@ -45,12 +46,12 @@
         <div class="contact">
         <a href="/home/contact"><p>Para más información, contáctanos!</p></a>
         </div>
-        <form action="/products/<%= product.id %>/delete?_method=delete" method="post">
+        <form action="/products/<%= product.product_id %>/delete?_method=delete" method="post">
             <input type="submit" value="Eliminar producto" class="eliminate"></input>
           </form>
           <br>
-          <a href="/products/<%= product.id %>/update">
-            <button>Editar producto</button> 
+          <a href="/products/<%= product.product_id %>/update">
+            <button >Editar producto</button> 
           </a>
         </div> 
         

@@ -3,34 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/formularioProduxtos.css">
+    <link rel="stylesheet" href="/css/registro.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <!--  <link rel="stylesheet" href="/css/formularioProduxtos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <title>Editar producto</title>
 </head>
 <body>
     <%- include("../partials/header") %>  
     
     <main>
-        <section class="form-edition">
-        <form action="/products/<%= product.id %>/update?_method=put" method="post" enctype="multipart/form-data">
-            <h4>Editar Producto</h4>
-           
-                <input class="controls" type="text" name="name" value="<%=product.name%>" >
-       
-                <input class="controlsD" type="text" name="description" value="<%=product.description%>">
-            
-                <input class="controls"  type="text" name="price" value="<%=product.price%>">
-           
-                <input class="controls"   type="hidden"  name="oldImage"  value="<%=product.img%>">
-           
-                <input class="botonsE" type="submit" value="Guardar cambios"></input>
-           
-        </form>
-        </section>
+        
+            <div class="container">
+                <div class="title">Editar producto</div>
+                <form action="/products/<%= product.product_id %>/update?_method=put" method="post" enctype="multipart/form-data">
+                    <div class="user-details">
+                        <div class="input-box">
+                            
+                            <span class="details"> Nombre</span>
+                            <input name="name" type="text" placeholder="Enter name" required value="<%= product.name%>">
+                        </div>
+                        <div class="input-box">
+                            <span class="details"> Descripción</span>
+                            <input name="description" type="text" placeholder="Enter description" required value="<%= product.description%>" >
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Precio</span>
+                            <input name="product_price" type="text" placeholder="Enter price" required value="<%= product.product_price%>">
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Stock</label>
+                            <input name="product_inStock" type="number" placeholder="Enter stock" value="<%= product.product_inStock%>">
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Origen</span>
+                            <input name="origin" type="text" placeholder="Enter origin" required value="<%= product.origin%>">
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Marca</span>
+                            <input  name="brand_code" placeholder="Enter brand code" required value="<%= product.brand_code%>">
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Condición</span>
+                            <input name="product_condition" type="text" placeholder="Condition" required value="<%= product.product_condition%>">
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Categoría</span>
+                            <input name="category"  type="text" placeholder="Condition" value="<%= product.category%>">
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Ingresa foto</span>
+                            <input type="file" type="hidden" name="image"  value="<%=product.image%>">
+                        </div>
+                    </div>
+                    <div class="button">
+                        <input type="submit" value="Guardar cambios">
+                    </div>
+                </form>
+             
         
      </main>
-      <%- include("../partials/footer")  %> 
+    
     </body>
 </html>
