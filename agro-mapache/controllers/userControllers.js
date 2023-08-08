@@ -140,30 +140,31 @@ const controllers = {
 
     loginUser: async (req, res) => {
 
-        const customer_email = (req.params.customer_email)
+        const customer_email = (req.body.customer_email)
 
         try {
 
             const searchedUser = await db.Customer.findOne(
                 {
-                    where: { customer_email: customer_email }
+                    where: { customer_email: customer_email }, 
+                    raw: true
                 }
             );
 
             if (!searchedUser) {
                 return res.redirect('/user/login?error=El mail o la contraseña son incorrectos');
             }
-            const { customer_password: hashedPW } = searchedUser;
-
-            const comparePW = bcrypt.compareSync(req.body.customer_password, hashedPW);
+            const { password } = searchedUser;
+            console.log(searchedUser)
+            const comparePW = bcrypt.compareSync(req.body.password, password);
 
             if (comparePW) {
                 if (req.body.remember) {
-                    res.cookie('customer_email', searchedUser/* .customer_email */, {
+                    res.cookie('customer_email', searchedUser.customer_email, {
                         maxAge: 1000 * 60 * 60 * 24 * 365
                     });
                 } else {
-                    res.cookie('customer_email', searchedUser/* .customer_email */, { maxAge: 1000 * 60 * 60 * 2 });
+                    res.cookie('customer_email', searchedUser.customer_email, { maxAge: 1000 * 60 * 60 * 2 });
                 }
 
                 delete searchedUser.customer_password;

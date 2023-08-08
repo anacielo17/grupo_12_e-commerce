@@ -9,7 +9,7 @@ const validationMiddlewares= require ("../middlewares/validations")
 
 const storage = multer.diskStorage({
     destination: (req,file,cb)=> {
-        cb(null,"./public/img/products") //carpeta donde se guardan las imagenes, cree products para mover imagenes que vamos a usar en la lista ydemas 
+        cb(null,"./public/img/products") //cnparpeta donde se guardan las imagenes, cree products para mover imagenes que vamos a usar en la lista ydemas 
 
     },
     filename: (req,file,cb)=> {

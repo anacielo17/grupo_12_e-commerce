@@ -44,10 +44,10 @@ module.exports = (sequelize, DataType) => {
         },
         category: {
             type: DataType.INTEGER,
-            /* references: {
+             references: {
                 model: "categories",
                 key: "category_id"
-            } */
+            } 
         },
         product_condition: {
             type: DataType.STRING
@@ -66,11 +66,11 @@ module.exports = (sequelize, DataType) => {
          timestamps:false, 
          foreignKey: "brand_code"
         }); 
-        /* Product.belongsTo(models.Category, {
-            as : "category", 
+         Product.belongsTo(models.Category, {
+            as : "product_category", 
             timestamps:false, 
             foreingKey: "category_id"
-           });  */
+           });  
      }
   
     return Product;

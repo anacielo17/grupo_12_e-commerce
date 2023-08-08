@@ -118,7 +118,7 @@ const productsController = {
 
             const id = Number(req.params.product_id);
 
-            nuevosDatos.image = req.file.filename 
+            /* nuevosDatos.image = req.file.filename  */
 
             await db.Product.update(nuevosDatos, {
                 where: {
@@ -158,7 +158,7 @@ const productsController = {
                 brand_code: newData.brand_code,
                 category: Number(newData.category),
                 product_condition: newData.product_condition,
-                image:  req.file.filename    /* newData.image  *//* '/img/products/' +  req.file.filename  */
+                image: req.file.filename  /*  newData.image *//* '/img/products/' +  req.file.filename  */
 
 
 

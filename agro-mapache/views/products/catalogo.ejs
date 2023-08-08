@@ -61,7 +61,7 @@
                 <% products.forEach(product=> { %>
                     <article class="producto">
 
-                        <a href="/products/<%=product.product_id%>/detail"> <img src=<%=product.image%> width="300px"></a>
+                        <a href="/products/<%=product.product_id%>/detail"> <img src="/img/products/<%=product.image%>" width="300px"></a>
 
                             <div class="detalle-producto">
                                 <p class="nuevo"> <%= product.product_condition %></p>
