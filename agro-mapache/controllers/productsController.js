@@ -27,13 +27,20 @@ const productsController = {
             const products = await db.Product.findAll({
                 raw: true,
                  nest : true,   
-                 include: 
-                    "brand"
+                 include: [{
+                    association:"brand"
+                 },
+                  /* {
+                    association:"categoria"
+                }   */]
+                    
+                
                 
             });
            /*  console.log(products) */
             res.render("catalogo", { title: "catalogo", products })
         } catch (error) {
+            console.log(error)
             res.render("catalogo", { title: "catalogo", products: [] })
         }
         /*  const productos = productModel.findAll();
@@ -118,7 +125,7 @@ const productsController = {
 
             const id = Number(req.params.product_id);
 
-            /* nuevosDatos.image = req.file.filename  */
+         nuevosDatos.image = req.file.filename  
 
             await db.Product.update(nuevosDatos, {
                 where: {
@@ -156,7 +163,7 @@ const productsController = {
                 product_date: newData.product_date,
                 origin: newData.origin,
                 brand_code: newData.brand_code,
-                category: Number(newData.category),
+                product_category: Number(newData.product_category),
                 product_condition: newData.product_condition,
                 image: req.file.filename  /*  newData.image *//* '/img/products/' +  req.file.filename  */
 

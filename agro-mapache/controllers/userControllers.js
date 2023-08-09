@@ -97,7 +97,52 @@ const controllers = {
         res.redirect('/user/login');
     },
 
-    registerUser: async (req, res) => {
+    registerUser:  async (req, res) => {
+        const resultValidation = validationResult(req);
+        if (resultValidation.errors.length > 0) {
+            return res.render("registro", {
+                errors: resultValidation.mapped(),
+                oldData: req.body,
+            });
+        }
+        delete req.body.confirmPassword;
+
+        try {
+
+             let newData = req.body; 
+             let newPassword =  bcrypt.hashSync(req.body.password, 12);
+
+            const newCustomer = await db.Customer.create({
+                customer_name: newData.customer_name,
+                customer_lastName: newData.customer_lastName,
+                customer_birthdate: newData.customer_birthdate,
+                customer_country: newData.customer_country,
+                customer_phone:  Number(newData.customer_phone),
+                customer_email: newData.customer_email,
+                customer_gender: newData.customer_gender,
+                customer_type: newData.customer_type,
+                password:newPassword,
+                image: req.file.filename  /*  newData.image *//* '/img/products/' +  req.file.filename  */
+
+
+
+            });
+
+            console.log(newCustomer)
+
+
+            res.redirect("/user/list");
+
+        } catch (error) {
+            console.log(error);
+            res.send("No se pudo crear el usuario, intente nuevamente");
+        }
+
+    },
+    
+    
+    
+    /* async (req, res) => {
         const resultValidation = validationResult(req);
         if (resultValidation.errors.length > 0) {
             return res.render("registro", {
@@ -108,7 +153,7 @@ const controllers = {
         delete req.body.confirmPassword;
 
         try {
-            /* let userInDB = await db.Customer.findOne(req.body.customer_email);
+             let userInDB = await db.Customer.findOne(req.body.customer_email);
             if (userInDB) {
                 return res.render("registro", {
                     errors: {
@@ -117,8 +162,9 @@ const controllers = {
                     }, oldData: req.body
                 },
                 )
-            } */
+            } 
             const customer = req.body;
+            
 
 
 
@@ -136,7 +182,7 @@ const controllers = {
         }
 
 
-    },
+    }, */
 
     loginUser: async (req, res) => {
 
@@ -185,7 +231,7 @@ const controllers = {
     },
     profile: (req, res) => {
         return res.render('userProfile', {
-            user: req.session.userLogged
+            customer: req.session.userLogged
         });
     }
 

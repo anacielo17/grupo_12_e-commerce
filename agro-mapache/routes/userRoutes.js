@@ -39,7 +39,7 @@ userRoutes.get("/sign-out", controllers.signOut);
 userRoutes.get("/:customer_id/update", controllers.getUpdate) // vamos al form de edicion 
 
 
-userRoutes.post("/registro",upload.single('avatar'), /* validations.validateCreateUser, */ controllers.registerUser);
+userRoutes.post("/registro",upload.single('image'), /* validations.validateCreateUser, */ controllers.registerUser);
 userRoutes.post("/login", controllers.loginUser);
 userRoutes.put("/:customer_id/update", upload.single('image'), controllers.updateUser) // put , accion de edicion, enviamos el formulario
 userRoutes.delete("/:customer_id/delete", controllers.deleteUser)

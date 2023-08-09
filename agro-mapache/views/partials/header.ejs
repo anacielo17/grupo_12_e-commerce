@@ -21,8 +21,13 @@
                     <li class="desplegable">
                         <div class="probando">
                         <!-- <a class="nav-link dropdown-toggle" href="#" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false"> -->
-                        <img src="/img/user/avatar.default.png" style="border-radius: 100%;" href="#">
-                        <p>Hi <%= locals.userLogged.firstName %></p>
+                        <!-- <img src="/img/user/" style="border-radius: 100%;" href="#"> -->
+                        <% if(userLogged.image) {%>
+                            <img class="user-image" src="/img/user/<%=userLogged.image%>" alt="Imagen de perfil del usuario" style="border-radius: 100%;">
+                        <% } else { %>
+                                <img class="user-image" src="/img/user/avatar.default.png" alt="Imagen de perfil del usuario" style="border-radius: 100%;">
+                        <% } %>
+                        <p>Hi <%= locals.userLogged.customer_name %></p>
                         </div>
                         
                         <ul class="ul-second" aria-labelledby="navbarDropdown">

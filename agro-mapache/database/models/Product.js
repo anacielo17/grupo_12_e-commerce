@@ -42,8 +42,8 @@ module.exports = (sequelize, DataType) => {
         description: {
             type: DataType.STRING
         },
-        category: {
-            type: DataType.INTEGER,
+        product_category: {
+            type: DataType.INTEGER, 
              references: {
                 model: "categories",
                 key: "category_id"
@@ -66,12 +66,12 @@ module.exports = (sequelize, DataType) => {
          timestamps:false, 
          foreignKey: "brand_code"
         }); 
-         Product.belongsTo(models.Category, {
-            as : "product_category", 
+           /*   Product.belongsTo(models.Category, {
+            as : "category", 
             timestamps:false, 
-            foreingKey: "category_id"
-           });  
-     }
+            foreignKey: "category_id"
+           });  */ 
+     }  
   
     return Product;
 }

@@ -17,9 +17,9 @@
         <div class="container" >
            
                 <div class="col-md-3" >
-                    <h2>Hola <%= customer.customer_firstName %> </h2>
-                    <% if(user.avatar) {%>
-                        <img class="user-image" src="/img/user <%=user.avatar%>" alt="Imagen de perfil del usuario">
+                    <h2>Hola <%= customer.customer_name %> </h2>
+                    <% if(customer.image) {%>
+                        <img class="user-image" src="/img/user/<%=customer.image%>" alt="Imagen de perfil del usuario">
                     <% } else { %>
                             <img class="user-image" src="/img/user/avatar.default.png" alt="Imagen de perfil del usuario">
                     <% } %>
@@ -32,12 +32,12 @@
                     
                     <div class="alert alert-success"><p>Tu pais es:  </p>  <p class="subrayado"> <%= customer.customer_country %></p> </div>
                     
-                    <div class="alert alert-success"><p>Tu género es:  </p>  <p class="subrayado"> <%= customer.customer_user.gender %></p> </div>
+                    <div class="alert alert-success"><p>Tu género es:  </p>  <p class="subrayado"> <%= customer.customer_gender %></p> </div>
                     
                     <div class="alert alert-success"><p>Tu clasificación de usuario es:  </p> <p class="subrayado"> <%= customer.customer_type %> </p></div>
                      
                 <!-- <div class="edit">
-                    <form action="/user/<%= user.id %>/update" class="form">
+                    <form action="/user/////update" class="form">
                         <button class="user-edit" type="submmit">
                             Editar perfil
                         </button>
