@@ -60,17 +60,18 @@ module.exports = (sequelize, DataType) => {
     };
 
     const Product = sequelize.define(alias, cols, config);
+        
         Product.associate = models =>{
         Product.belongsTo(models.Brand, {
          as : "brand", 
          timestamps:false, 
          foreignKey: "brand_code"
         }); 
-           /*   Product.belongsTo(models.Category, {
+        Product.belongsTo(models.Category, {
             as : "category", 
             timestamps:false, 
-            foreignKey: "category_id"
-           });  */ 
+            foreignKey: "product_category"
+           });
      }  
   
     return Product;
