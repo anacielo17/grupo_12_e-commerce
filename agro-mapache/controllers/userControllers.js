@@ -54,7 +54,7 @@ const controllers = {
 
             const id = (req.params.customer_id);
 
-            nuevosDatos.image = req.file.filename/* req.file ? req.file.filename : req.body.oldImag */
+            nuevosDatos.image = req.file?   req.file.filename  : ""  /* req.file ? req.file.filename : req.body.oldImag */
 
             await db.Customer.update(nuevosDatos, {
                 where: {
@@ -122,7 +122,7 @@ const controllers = {
                 customer_gender: newData.customer_gender,
                 customer_type: newData.customer_type,
                 password:newPassword,
-                image: req.file.filename  /*  newData.image *//* '/img/products/' +  req.file.filename  */
+                image: req.file?   req.file.filename  : ""   /*  newData.image *//* '/img/products/' +  req.file.filename  */
 
 
 
@@ -239,56 +239,3 @@ const controllers = {
 }
 module.exports = controllers;
 
-
-
-/*const controllers = {
-    signOut: (req, res) => {
-        res.clearCookie('email');
-
-        req.session.user = {};
-
-        res.redirect('/users/login');
-    },
-
-    getRegister: (req, res) => {
-        res.render('registro');
-    },
-
-
-    getLogin: (req, res) => {
-        const error = req.query.error || '';
-
-        res.render('login', {error});
-    },
-    
-    loginUser: (req, res) => {
-        const searchedUser = userModel.findByEmail(req.body.email);
-
-        
-        if(!searchedUser){
-            return res.redirect('/users/login?error=El mail o la contraseña son incorrectos');
-        }
-        
-        const {password: hashedPw} = searchedUser;
-        const isCorrect = bcrypt.compareSync(req.body.password, hashedPw);
-        
-        if(isCorrect){
-            if(!!req.body.remember){
-                res.cookie('email', searchedUser.email, {
-                    maxAge: 1000 * 60 * 60 * 24 * 360 * 9999
-                });
-            }
-
-            delete searchedUser.password;
-            delete searchedUser.id;
-
-            req.session.user = searchedUser;
-
-            res.redirect('/');
-        } else {
-            return res.redirect('/users/login?error=El mail o la contraseña son incorrectos');
-        }
-    } /*
-}
-
-module.exports = controllers; */

@@ -28,7 +28,7 @@ body{
     align-items: center;
 } */
 .col-md-3{
-    background-color: rgb(227 227 229);
+    background-color:  rgb(227 227 229); 
     border-radius: 10px;
     border: 2px solid black;
 }
@@ -43,7 +43,7 @@ body{
 .alert-success{
     font-family: 'Times New Roman', Times, serif;
     font-size: 15px;
-    display: flex;
+  /*   display: flex; */
     place-items: center;
     border-bottom: 1px solid;
     margin-top: 20px;
@@ -58,4 +58,28 @@ p.subrayado{
     color: rgb(239 70 35);
    /*  text-decoration: underline; */
 }
+.container-list{
+    display: flex;
+  /*   margin-left: 5px; */
+    
+}
+.user-eliminar {
+    font-weight: bold;
+    background-color: red;
+    border: 1px solid red;
+    border-radius: 5px;
+    margin-left: 5px;
+    width: 90px;
+    height: 30px;
+    margin-bottom: 5px;
+} 
+
  
+ .user-edit {
+    font-weight: bold;
+    background-color:orange;
+    border: 1px solid orange;
+    border-radius: 5px;
+    width: 90px;
+    height: 30px;
+} 

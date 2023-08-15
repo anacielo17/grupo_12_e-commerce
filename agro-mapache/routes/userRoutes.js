@@ -4,6 +4,7 @@ const multer = require("multer")
 const path = require("path")
 const validations = require ("../middlewares/userValidations")
 const authMiddleware = require('../middlewares/authMiddleware');
+const listMiddleware = require('../middlewares/listMiddleware');
 const guestMiddleware = require ("../middlewares/guestMiddleware")
 /* const { body } = require("express-validator"); */
 
@@ -33,7 +34,7 @@ const upload = multer({ storage });
 
 userRoutes.get("/login", guestMiddleware, controllers.getLogin);
 userRoutes.get("/registro", guestMiddleware, controllers.getRegistro)
-userRoutes.get("/list", controllers.getList);
+userRoutes.get("/list", authMiddleware, controllers.getList);
 userRoutes.get("/profile/", authMiddleware, controllers.profile);
 userRoutes.get("/sign-out", controllers.signOut);
 userRoutes.get("/:customer_id/update", controllers.getUpdate) // vamos al form de edicion 
@@ -45,3 +46,4 @@ userRoutes.put("/:customer_id/update", upload.single('image'), controllers.updat
 userRoutes.delete("/:customer_id/delete", controllers.deleteUser)
 module.exports = userRoutes;
 
+ 

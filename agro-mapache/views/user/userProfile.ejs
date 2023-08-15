@@ -1,51 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/profile.css">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Tu perfil</title>
 </head>
-    <body >
-        <%- include("../partials/header" ) %>
-        
+
+<body>
+    <%- include("../partials/header" ) %>
+
         <!-- Container -->
-        <div class="container" >
-           
-                <div class="col-md-3" >
-                    <h2>Hola <%= customer.customer_name %> </h2>
-                    <% if(customer.image) {%>
-                        <img class="user-image" src="/img/user/<%=customer.image%>" alt="Imagen de perfil del usuario">
+        <div class="container">
+
+            <div class="col-md-3">
+                <h2>Hola <%= customer.customer_name %>
+                </h2>
+                <% if(customer.image) {%>
+                    <img class="user-image" src="/img/user/<%=customer.image%>" alt="Imagen de perfil del usuario">
                     <% } else { %>
-                            <img class="user-image" src="/img/user/avatar.default.png" alt="Imagen de perfil del usuario">
-                    <% } %>
-                     </div>
-                   
-                    <div class="alert alert-success"><p>Tu apellido es:</p>  <p class="subrayado"> <%= customer.customer_lastName %> </p></div>
-                    <div class="alert alert-success"><p>Tu mail es:  </p>  <p class="subrayado"> <%= customer.customer_email %></p> </div>
-                    
-                    <div class="alert alert-success"><p>Tu número de teléfono es: </p>  <p class="subrayado"> <%= customer.customer_phone %></p> </div>
-                    
-                    <div class="alert alert-success"><p>Tu pais es:  </p>  <p class="subrayado"> <%= customer.customer_country %></p> </div>
-                    
-                    <div class="alert alert-success"><p>Tu género es:  </p>  <p class="subrayado"> <%= customer.customer_gender %></p> </div>
-                    
-                    <div class="alert alert-success"><p>Tu clasificación de usuario es:  </p> <p class="subrayado"> <%= customer.customer_type %> </p></div>
-                     
-                <!-- <div class="edit">
-                    <form action="/user/////update" class="form">
-                        <button class="user-edit" type="submmit">
-                            Editar perfil
-                        </button>
-                </div> -->
-       
-         </div>
-         <%- include("../partials/footer") %>
-        <!-- //Container -->
-       <!--  -->
-    </body>
-    </html>
+                        <img class="user-image" src="/img/user/avatar.default.png" alt="Imagen de perfil del usuario">
+                        <% } %>
+            </div>
+
+            <p class="alert alert-success"> <b> Nombre: </b>
+                <%= customer.customer_name%>
+            </p>
+            <p class="alert alert-success"> <b>Apellido: </b>
+                <%=customer.customer_lastName%>
+            </p>
+            <p class="alert alert-success"> <b>Género: </b>
+                <%=customer.customer_gender%>
+            </p>
+            <p class="alert alert-success"> <b>Email: </b>
+                <%=customer.customer_email%>
+            </p>
+            <p class="alert alert-success"> <b>Fecha de nacimiento: </b>
+                <%=customer.customer_birthdate%>
+            </p>
+            <p class="alert alert-success"> <b>Pais: </b>
+                <%=customer.customer_country%>
+            </p>
+            <p class="alert alert-success"> <b>Telefono: </b>
+                <%=customer.customer_phone%>
+            </p>
+            <p class="alert alert-success"> <b>Condición: </b>
+                <%=customer.customer_type%>
+            </p>
+            <br>
+            <div class="container-list">
+                <form action="/user/<%= customer.customer_id %>/update" class="form">
+                    <button class="user-edit" type="submmit">
+                        Editar perfil
+                    </button>
+                </form>
+                <br>
+                
+                <form action="/user/<%= customer.customer_id %>/delete?_method=DELETE" method="POST" class="form">
+                    <button class="user-eliminar" type="submmit">
+                        Eliminar
+                    </button>
+                </form>
+
+            </div>
+
+        </div>
+        <%- include("../partials/footer") %>
+            <!-- //Container -->
+            <!--  -->
+</body>
+
+</html>

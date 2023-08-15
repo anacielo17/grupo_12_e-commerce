@@ -28,7 +28,7 @@
                         <% } %>
                     </div>
                     <div class="user-detail"> 
-                        <p> <b>Nombre: </b> <%=customer.customer_name%></p>
+                        <p> <b>Nombre: </b> <%= customer.customer_name%></p>
                         <p> <b>Apellido: </b> <%=customer.customer_lastName%></p>
                         <p> <b>Género: </b> <%=customer.customer_gender%></p>
                         <p> <b>Email: </b> <%=customer.customer_email%></p>
@@ -38,7 +38,8 @@
                         <p> <b>Condición: </b> <%=customer.customer_type%></p>
                     </div>
                     <br>
-                    <div class="container-list">
+                    
+                    <!-- <div class="container-list">
                         <form action="/user/<%= customer.customer_id %>/update" class="form">
                             <button class="user-edit" type="submmit">
                                 Editar perfil
@@ -49,8 +50,8 @@
                                     Eliminar
                                 </button>
                             </form> 
-                        
-                    </div>
+                          
+                    </div> -->
                 </article>
             <% }); %>
         </section>
