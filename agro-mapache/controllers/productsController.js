@@ -30,9 +30,9 @@ const productsController = {
                  include: [{
                     association:"brand"
                  },
-                  /* {
-                    association:"categoria"
-                }   */]
+                    {
+                    association: "category"
+                }   ]
                     
                 
                 

@@ -54,7 +54,7 @@ const controllers = {
 
             const id = (req.params.customer_id);
 
-            nuevosDatos.image = req.file ? req.file.filename : req.body.oldImage
+            nuevosDatos.image = req.file.filename/* req.file ? req.file.filename : req.body.oldImag */
 
             await db.Customer.update(nuevosDatos, {
                 where: {
