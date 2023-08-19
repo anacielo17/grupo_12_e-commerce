@@ -1,7 +1,7 @@
 const path = require('path')
 const expressValidator = require("express-validator")
 let db = require("../database/models");
-const userValidations = 
+const userMiddleware = 
 [
         expressValidator.body("customer_name").notEmpty().withMessage("Debes escribir un nombre").isLength({ min: 2, max: 20 }).withMessage("El nombre de tener al menos 2 caracteres"),
         expressValidator.body("customer_lastName").notEmpty().withMessage("Debes escribir un apellido").isLength({ min: 2, max: 20 }).withMessage("El nombre de tener al menos 2 caracteres"),
@@ -15,7 +15,7 @@ const userValidations =
                     throw new Error(`Ese email ya se encuentra registrado!`);
                 };
                 return true;
-            }), ,
+            }), 
         expressValidator.body("password").notEmpty().withMessage("Debes agregar una contraseña").isLength({ min: 8 }).withMessage("Debe tener al menos 8 carcateres").bail(),
         expressValidator.body("confirmPassword").notEmpty().withMessage("Debes confirmar tu contraseña").equals().withMessage("Las contraseñas no coinciden").bail()
             .custom((value, { req }) => {
@@ -23,7 +23,7 @@ const userValidations =
                     throw new Error('Las contraseñas no coinciden');
                 };
                 return true;
-            }), ,
+            }), 
         expressValidator.body("customer_phone").notEmpty().withMessage("Debes escribir un numero telefónico").isNumeric().withMessage("Debe ser numérico"), ,
         expressValidator.body("customer_country").notEmpty().withMessage("Este campo no puede estar vacio"),
         expressValidator.body("customer_gender").notEmpty().withMessage("Este campo no puede estar vacio"),
@@ -43,4 +43,4 @@ const userValidations =
     /* validateLogin: [
         body("customer_email").isEmail().withMessage("Ingrese un correo electrónico valido")
     ] */
-module.exports = userValidations
+module.exports = userMiddleware
