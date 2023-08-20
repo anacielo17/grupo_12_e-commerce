@@ -20,18 +20,20 @@
 
                     <li class="desplegable">
                         <div class="probando">
-                        <!-- <a class="nav-link dropdown-toggle" href="#" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false"> -->
-                        <!-- <img src="/img/user/" style="border-radius: 100%;" href="#"> -->
-                        <% if(userLogged.image) {%>
-                            <img class="user-image" src="/img/user/<%=userLogged.image%>" alt="Imagen de perfil del usuario" style="border-radius: 100%;">
-                        <% } else { %>
-                                <img class="user-image" src="/img/user/avatar.default.png" alt="Imagen de perfil del usuario" style="border-radius: 100%;">
-                        <% } %>
-                        <p>Hi <%= locals.userLogged.customer_name %></p>
+
+                            <% if(userLogged.image) {%>
+                                <img class="user-image" src="/img/user/<%=userLogged.image%>"
+                                    alt="Imagen de perfil del usuario" style="border-radius: 100%;">
+                                <% } else { %>
+                                    <img class="user-image" src="/img/user/avatar.default.png"
+                                        alt="Imagen de perfil del usuario" style="border-radius: 100%;">
+                                    <% } %>
+                                        <p class="saludo">Hi <%= locals.userLogged.customer_name %>
+                                        </p>
                         </div>
-                        
+
                         <ul class="ul-second" aria-labelledby="navbarDropdown">
-                            
+
                             <li><a class="dropdown-item" href="/user/profile">Mi perfil</a></li>
 
                             <li><a class="dropdown-item" href="/user/sign-out">Cerrar sesión</a></li>
@@ -42,17 +44,31 @@
                     <a class="nav-link" href="/user/registro">Registro</a>
                     <a href="/user/login"><i class="fa-solid fa-circle-user"></a></i>
                     <% } %>
-                        <a href="/products/carrito-compra"><i class="fa-solid fa-cart-shopping" ></a></i>
+                        <a href="/products/carrito-compra"><i class="fa-solid fa-cart-shopping"></a></i>
                         <a class="mis-compras"> Mis compras</a>
         </div>
         <!-- </ul> -->
-    </div>
     </div>
 
 
     <nav class="main-navbar">
         <div class="burger-menu">
-            <a href="/products/catalogo"> <i class="fa-solid fa-bars" style="color: #05070b;"></a></i>
+            <ul class="cont-ul">
+                <li class="desplegableMenu">
+
+                    <a href="/products/catalogo"> <i class="fa-solid fa-bars" style="color: #05070b;"></i></a>
+                    <ul class="ul-second2" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/product/newProduct">Nuevos productos</a></li>
+                        <li><a class="dropdown-item" href="/product/offerProduct">Productos en Oferta</a></li>
+                        <li><a class="dropdown-item" href="/product/Jardineria">Forestación</a></li>
+                        <li><a class="dropdown-item" href="/product/Jardineria">Herramientas</a></li>
+                        <li><a class="dropdown-item" href="/product/Jardineria">Jardineria</a></li>
+                        <li><a class="dropdown-item" href="/product/Jardineria">Maquinaria agrícola</a></li>
+                        <li><a class="dropdown-item" href="/product/Jardineria">Movimiento de carga</a></li>
+                        <li><a class="dropdown-item" href="/product/Jardineria">Pulverización</a></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
 
         <ul class="menu">

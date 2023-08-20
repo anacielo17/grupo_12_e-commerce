@@ -5,7 +5,7 @@ const multer = require ("multer");
 const productsRoutes = express.Router();
 
 const productsController = require ("../controllers/productsController");
-const validationMiddlewares= require ("../middlewares/validations")
+const productValidations= require ("../middlewares/productValidations")
 
 const storage = multer.diskStorage({
     destination: (req,file,cb)=> {
@@ -28,5 +28,5 @@ productsRoutes.get("/:product_id/detail", productsController.productDetail) // d
 productsRoutes.get("/:product_id/update", productsController.getUpdate) // vamos al form de edicion 
 productsRoutes.put("/:product_id/update", upload.single('image'), productsController.updateProduct) // put , accion de edicion, enviamos el formulario
 productsRoutes.delete("/:product_id/delete", productsController.deleteProduct)
-productsRoutes.post("/catalogo", upload.single('image'), /* validationMiddlewares.validateCreateProduct, */  productsController.postProduct);   
+productsRoutes.post("/catalogo", upload.single('image'),productValidations, productsController.postProduct);   
 module.exports = productsRoutes;  

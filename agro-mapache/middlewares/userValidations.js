@@ -30,7 +30,7 @@ const userValidations =
         expressValidator.body("customer_type").notEmpty().withMessage("Este campo no puede estar vacio"),
         expressValidator.body("image").optional().custom((value, { req }) => {
             let file = req.file;
-            let acceptedExtensions = ['.jpg', '.png', '.gif'];
+            let acceptedExtensions = ['.jpg','.jpeg', '.png', '.gif'];
             if (file) {
                 let extension = path.extname(file.originalname);
                 if (!acceptedExtensions.includes(extension)) {
@@ -40,7 +40,5 @@ const userValidations =
             return true;
         })
     ]
-    /* validateLogin: [
-        body("customer_email").isEmail().withMessage("Ingrese un correo electrónico valido")
-    ] */
+   
 module.exports = userValidations

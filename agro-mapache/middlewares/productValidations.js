@@ -17,6 +17,9 @@ const productValidations =
             }),
         expressValidator.body('product_price')
             .notEmpty().withMessage('El precio no debe estar vacío'),
+        expressValidator.body('product_discount')
+            .optional(),
+
         expressValidator.body('condition')
             .optional(),
         expressValidator.body('product_price')
@@ -32,16 +35,16 @@ const productValidations =
         expressValidator.body("image")
             /* .notEmpty().withMessage("Tienes que ingresar una imagen").bail() */
             .custom((value, { req }) => {
-            let file = req.file;
-            let acceptedExtensions = ['.jpg', '.png', '.gif'];
-            if (file) {
-                let extension = path.extname(file.originalname);
-                if (!acceptedExtensions.includes(extension)) {
-                    throw new Error(`Tienes que subir una foto en formato ${acceptedExtensions.join(', ')}`);
+                let file = req.file;
+                let acceptedExtensions = ['.jpg', '.png', '.gif'];
+                if (file) {
+                    let extension = path.extname(file.originalname);
+                    if (!acceptedExtensions.includes(extension)) {
+                        throw new Error(`Tienes que subir una foto en formato ${acceptedExtensions.join(', ')}`);
+                    };
                 };
-            };
-            return true;
-        }),
+                return true;
+            }),
         /* expressValidator.body('product_category')
             .notEmpty().withMessage('Debe ingresar una categoria').bail()
             .custom(async (value, { req }) => {

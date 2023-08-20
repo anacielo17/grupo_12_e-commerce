@@ -92,6 +92,9 @@ form .button input{
 form .button input:hover{
 	background: rgb(255, 94, 0);
 }
+.text-danger{
+	color: red;
+}
 
 
 /* form .condición-details .condicón-title{

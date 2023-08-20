@@ -3,8 +3,8 @@ const path = require("path");
 // Sequelize
 let db = require("../database/models")
 
-// Esto creo que despues hay que sacarlo
-expressValidator = require("express-validator")
+
+const { validationResult } = require("express-validator")
 const productModel = require("../models/product");
 const multer = require("multer");
 const { param } = require("express-validator");
@@ -43,9 +43,7 @@ const productsController = {
             console.log(error)
             res.render("catalogo", { title: "catalogo", products: [] })
         }
-        /*  const productos = productModel.findAll();
- 
-         res.render("catalogo", { title: "catalogo", productos }); */
+       
     },
 
 
@@ -62,17 +60,6 @@ const productsController = {
         }
     },
 
-    /* {
-        const id = Number(req.params.id)
-        console.log(id)
-        const productoAModificar = productModel.findById(id)
-        if (!productoAModificar) {
-            return res.send("El id no existe")
-        }
-        res.render("update", {product: productoAModificar});
- 
-    },
-     */
 
     // @GET detalle del producto por el ID
     productDetail: async (req, res) => {
@@ -88,15 +75,6 @@ const productsController = {
         }
     },
 
-    /* {
-        const id = Number(req.params.id)
-        const productoAMostrar = productModel.findById(id)
-        if (!productoAMostrar) {
-            return res.send("El id no existe")
-        }
-        res.render("detail", { title: "detalle", product: productoAMostrar })
-    },
- */
     // @DELETE borrar producto segun ID // 
 
     deleteProduct: async (req, res)  => {
@@ -132,12 +110,13 @@ const productsController = {
                     product_id: id
                 }
             });
-
+            
             res.redirect("/products/catalogo");
 
         }
 
        catch (error) {
+        console.log(error)
             res.send("No se pudo actualizar, intente nuevamente")
         }
 
@@ -150,6 +129,14 @@ const productsController = {
 
     // @POST/ products
     postProduct: async (req, res) => {
+         const resultValidation = validationResult(req);
+        if (resultValidation.errors.length > 0) {
+            return res.render("createProduct", {
+                errors: resultValidation.mapped(),
+                oldData: req.body,
+                oldFile: req.file
+            });
+        } 
 
         try {
 
@@ -159,13 +146,14 @@ const productsController = {
                 name: newData.name,
                 description: newData.description,
                 product_InStock: Number(newData.product_inStock),
-                product_price: newData.product_price,
+                product_price: Number( newData.product_price),
                 product_date: newData.product_date,
                 origin: newData.origin,
                 brand_code: newData.brand_code,
                 product_category: Number(newData.product_category),
                 product_condition: newData.product_condition,
-                image: req.file.filename  /*  newData.image *//* '/img/products/' +  req.file.filename  */
+                image: req.file.filename, 
+                product_discount : newData.product_discount  /*  newData.image *//* '/img/products/' +  req.file.filename  */
 
 
 

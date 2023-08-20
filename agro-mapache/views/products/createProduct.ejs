@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
@@ -8,64 +9,229 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-   <!--  <link rel="stylesheet" href="/css/formularioProduxtos.css">
+    <!--  <link rel="stylesheet" href="/css/formularioProduxtos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <title>Crear producto</title>
 </head>
+
 <body>
-    <%- include("../partials/header") %>  
-    
-    <main>
-        
+    <%- include("../partials/header") %>
+
+        <main>
+
             <div class="container">
                 <div class="title">Crear producto</div>
                 <form action="/products/catalogo" method="post" enctype="multipart/form-data">
                     <div class="user-details">
                         <div class="input-box">
                             <span class="details"> Nombre</span>
-                            <input name="name" type="text" placeholder="Enter name" required value= "<% values.name%>">
+                            <input name="name" 
+                            type="text" 
+                            id="name"
+                            placeholder="Enter name" 
+                            required
+                                class="form-inputs<%= locals.errors && errors.name ? "is-invalid" : null %> "
+                                <% if (locals.oldData) { %>
+                                value="<%=  oldData.name  %> "
+                                <% } %>
+                                >
+                                <% if(locals.errors && errors.name) { %>
+                                <div class="text-danger">
+                                    <%= errors.name.msg %>
+                                </div>
+                                <% } %>
+                                
+                                <p class="error" style="color: red"></p>
                         </div>
                         <div class="input-box">
                             <span class="details"> Descripción</span>
-                            <input name="description" type="text" placeholder="Enter description" required value="<% values.description%>" >
+                            <input name="description" 
+                            type="text" 
+                            id="description"
+                            placeholder="Enter description" 
+                            required
+                                class="<%= locals.errors && errors.description ?  "is-invalid" : null %> "
+                                <% if (locals.oldData) { %>
+                                value="<%=  oldData.description %> "
+                                <% } %>
+                                >
+                                <% if(locals.errors && errors.description) { %>
+                                <div class="text-danger">
+                                    <%= errors.description.msg %>
+                                </div>
+                                <% } %>
+                                
+                                <p class="error" style="color: red"></p>
                         </div>
                         <div class="input-box">
                             <span class="details">Precio</span>
-                            <input name="product_price" type="text" placeholder="Enter price" required value="<% values.product_price%>">
+                            <input name="product_price"
+                            id="product_price"
+                            type="number"
+                            placeholder="Enter price" 
+                            required 
+                                class="form-inputs<%= locals.errors && errors.product_price ? "is-invalid" : null %> "
+                                <% if (locals.oldData) { %>
+                                value="<%=  oldData.product_price  %> "
+                                <% } %>   
+                                >
+                                <% if(locals.errors && errors.product_price) { %>
+                                <div class="text-danger">
+                                    <%= errors.product_price.msg %>
+                                </div>
+                                <% } %>
+                                
+                                <p class="error" style="color: red"></p>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Descuento</span>
+                            <input name="product_discount"
+                            id="product_discount"
+                            type="number"
+                            placeholder="Enter discount" 
+                             
+                                class="form-inputs<%= locals.errors && errors.product_discount ? "is-invalid" : null %> "
+                                <% if (locals.oldData) { %>
+                                value="<%=  oldData.product_discount  %> "
+                                <% } %>   
+                                >
+                                <% if(locals.errors && errors.product_discount) { %>
+                                <div class="text-danger">
+                                    <%= errors.product_discount.msg %>
+                                </div>
+                                <% } %>
+                                
+                                <p class="error" style="color: red"></p>
                         </div>
                         <div class="input-box">
                             <span class="details">Stock</label>
-                            <input name="product_inStock" type="number" placeholder="Enter stock" value="<% values.product_inStock%>">
+                                <input name="product_inStock" 
+                                id="product_inStock"
+                                type="number" 
+                                placeholder="Enter stock"
+                                required
+                                class="form-inputs<%= locals.errors && errors.product_inStock ?  "is-invalid" : null %> "
+                                <% if (locals.oldData) { %>
+                                value="<%=  oldData.product_inStock  %> "
+                                <% } %>
+                                >
+                                <% if(locals.errors && errors.product_inStock) { %>
+                                    <div class="text-danger">
+                                        <%= errors.product_inStock.msg %>
+                                    </div>
+                                    <% } %>
+                                    
+                                    <p class="error" style="color: red"></p>
                         </div>
                         <div class="input-box">
                             <span class="details">Origen</span>
-                            <input name="origin" type="text" placeholder="Enter origin" required value="<% values.origin%>">
+                            <input name="origin" 
+                            type="text" 
+                            id="origin"
+                            placeholder="Enter origin" 
+                            required
+                            class="form-inputs<%= locals.errors && errors.origin ?  "is-invalid" : null %> "
+                                <% if (locals.oldData) { %>
+                                value="<%=  oldData.origin  %> "
+                                <% } %>
+                                >
+                                <% if(locals.errors && errors.origin) { %>
+                                    <div class="text-danger">
+                                        <%= errors.origin.msg %>
+                                    </div>
+                                    <% } %>
+                                    <p class="error" style="color: red"></p>
+                           
                         </div>
                         <div class="input-box">
                             <span class="details">Marca</span>
-                            <input name="brand_code" type="text" placeholder="Enter brand code" required value="<% values.brand_code%>">
+                            <input name="brand_code" 
+                            id="brand_code"
+                            type="text" 
+                            placeholder="Enter brand code" 
+                            required
+                                class="form-inputs<%= locals.errors && errors.brand_code ?  "is-invalid" : null %> "
+                            <% if (locals.oldData) { %>
+                            value="<%=  oldData.brand_code  %> "
+                            <% } %> 
+                            >
+                            <% if(locals.errors && errors.brand_code) { %>
+                                <div class="text-danger">
+                                    <%= errors.brand_code.msg %>
+                                </div>
+                                <% } %>
+                                
+                                <p class="error" style="color: red"></p>
                         </div>
                         <div class="input-box">
                             <span class="details">Condición</span>
-                            <input name="product_condition" type="text" placeholder="Condition" required value="<% values.product_condition%>">
+                            <input name="product_condition"
+                            id="product_condition"
+                            type="text"
+                            placeholder="Can you clarify if it is a new product or if it is on sale" 
+                              
+                                    class="form-inputs<%= locals.errors && errors.product_condition?  "is-invalid" : null %> "
+                                <% if (locals.oldData) { %>
+                                value="<%=  oldData.product_condition  %> "
+                                <% } %>
+                                >
+                                <% if(locals.errors && errors.product_condition) { %>
+                                    <div class="text-danger">
+                                        <%= errors.product_condition.msg %>
+                                    </div>
+                                    <% } %>
+                                    
+                                    <p class="error" style="color: red"></p>
                         </div>
                         <div class="input-box">
                             <span class="details">Categoría</span>
-                            <input name="product_category" type="text" placeholder="Category" value="<% values.category%>">
+                            <input name="product_category" 
+                            id="product_category"
+                            type="text" 
+                            placeholder="Enter category id"
+                            required 
+                                class="form-inputs<%= locals.errors && errors.product_category ? "is-invalid" : null %> "
+                                <% if (locals.oldData) { %>
+                                value="<%= oldData.product_category %> "
+                                <% } %>
+                                >
+                            <% if(locals.errors && errors.product_category) { %>
+                                <div class="text-danger">
+                                    <%= errors.product_category.msg %>
+                                </div>
+                                <% } %>
+                                
+                                <p class="error" style="color: red"></p>
                         </div>
                         <div class="input-box">
                             <span class="details">Ingresa foto</span>
-                            <input type="file" name="image" value="<% values.image%>">
+                            <input type="file" 
+                            name="image" 
+                            id="image"
+                            required
+                                class="form-inputs<%= locals.errors && errors.image ? "is-invalid" : null %> "
+                                <% if (locals.oldData) { %>
+                                value="<%=  oldData.image %> "
+                                <% } %>
+                                >
+                            <% if(locals.errors && errors.image) { %>
+                                <div class="text-danger" > 
+                                    <%= errors.image.msg %>
+                                </div>
+                                <% } %>
+                                
+                                <p class="error" style="color: red"></p>
                         </div>
                     </div>
                     <div class="button">
-                        <input type="submit" value="Crear">
+                        <input type="submit" disabled id="submit-btn" value="Crear">
                     </div>
+                    <script src="/js/createForm.js"></script>
                 </form>
 
-    
- </main>
-  
-</body> 
+
+        </main>
+
+</body>

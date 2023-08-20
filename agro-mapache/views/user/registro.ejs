@@ -22,138 +22,207 @@
                     <div class="user-details">
                         <div class="input-box">
                             <span class="details"> Nombre completo</span>
-                            <input 
-                            name="customer_name" 
+                            <input name="customer_name" id="name" 
                             type="text" 
                             placeholder="Enter your name" 
                             required
-                            class= "<%= locals.errors && errors.customer_name ? "is-invalid" : null  %> "
-                            value="<%= locals.oldData? oldData.customer_name : null %> "
-                            > 
-                            <% if(locals.errors && errors.customer_name) { %>
-                                <div class="text-danger">
-                                    <%= errors.customer_name.msg %> </div>
-                           <% } %>  
+                                class="form-inputs <%= locals.errors && errors.customer_name ? " is-invalid" : null %> "
+                                <% if (locals.oldData) { %>
+                                value="<%= oldData.customer_name %> "
+                                <% } %>
+                                >
+                                <% if(locals.errors && errors.customer_name) { %>
+                                    <div class="text-danger">
+                                        <%= errors.customer_name.msg %>
+                                    </div>
+                                    <% } %>
+                                    <p class="error" style="color: red"></p>
                         </div>
                         <div class="input-box">
                             <span class="details">Apellido</span>
-                            <input 
-                            name="customer_lastName" 
+                            <input name="customer_lastName" id="lastName" 
                             type="text" 
                             placeholder="Enter your surname" 
                             required
-                            class= "<%= locals.errors && errors.customer_lastName ? "is-invalid" : null  %> "
-                            value="<%= locals.oldData? oldData.customer_lastName : null %> "
-                            > 
-                            <% if(locals.errors && errors.customer_lastName) { %>
-                                <div class="text-danger">
-                                    <%= errors.customer_lastName.msg %> </div>
-                           <% } %>  
+                                class="form-inputs<%= locals.errors && errors.customer_lastName ? " is-invalid" : null %> "
+                                <% if (locals.oldData) { %>
+                                value= "<%= oldData.customer_lastName %> "
+                                <% } %>
+                                >
+                                <% if(locals.errors && errors.customer_lastName) { %>
+                                    <div class="text-danger">
+                                        <%= errors.customer_lastName.msg %>
+                                    </div>
+                                    <% } %>
+                                    <p class="error" style="color: red"></p>
                         </div>
                         <div class="input-box">
                             <span class="details">Correo electronico</span>
-                            <input name="customer_email" 
+                            <input name="customer_email"  
+                            id="email"
                             type="email" 
                             placeholder="Enter your email" 
                             required
-                            class= "<%= locals.errors && errors.customer_email ? "is-invalid" : null  %> "
-                            value="<%= locals.oldData? oldData.customer_email : null %> "
-                            > 
-                            <% if(locals.errors && errors.customer_email) { %>
-                                <div class="text-danger">
-                                    <%= errors.customer_email.msg %> </div>
-                           <% } %>  
+                                class="form-inputs<%= locals.errors && errors.customer_email ? " is-invalid" : null %> "
+                                <% if (locals.oldData) { %>
+                                value="<%= oldData.customer_email  %> "
+                                <% } %>
+                                >
+                                <% if(locals.errors && errors.customer_email) { %>
+                                    <div class="text-danger">
+                                        <%= errors.customer_email.msg %>
+                                    </div>
+                                    <% } %>
+                                    <p class="error" style="color: red"></p>
                         </div>
                         <div class="input-box">
                             <span class="details">Teléfono</label>
-                                <input name="customer_phone" 
-                                type="tel" 
-                                placeholder="Enter your phonenumber"
-                                class= "<%= locals.errors && errors.customer_phone ? "is-invalid" : null  %> "
-                                value="<%= locals.oldData? oldData.customer_phone : null %> "> 
-                            <% if(locals.errors && errors.customer_phone) { %>
-                                <div class="text-danger">
-                                    <%= errors.customer_phone.msg %> </div>
-                           <% } %>  
+                            <input name="customer_phone"  id="phone"
+                            type="tel" 
+                            placeholder="Enter your phonenumber"
+                            required
+                                class="form-inputs <%= locals.errors && errors.customer_phone ? " is-invalid" : null %> "
+                                <% if (locals.oldData) { %>
+                                    value="<%= oldData.customer_phone %> "
+                                <% } %>
+                                > 
+
+                                <% if(locals.errors && errors.customer_phone) { %>
+                                        <div class="text-danger">
+                                            <%= errors.customer_phone.msg %>
+                                        </div>
+                                        <% } %>
+                                        <p class="error" style="color: red"></p>
                         </div>
                         <div class="input-box">
                             <span class="details">Contraseña</span>
-                            <input name="password" 
+                            <input name="password"  id="password"
                             type="text" 
                             placeholder="Enter your password" 
                             required
-                            class= "<%= locals.errors && errors.password ? "is-invalid" : null  %> "> 
-                            <% if(locals.errors && errors.password) { %>
+                                class="form-inputs<%= locals.errors && errors.password ? " is-invalid" : null %> "
+                                <% if (locals.oldData) { %>
+                                    value="<%= oldData.password %> "
+                                <% } %>
+                                > 
+
+                                <% if(locals.errors && errors.password) { %>
                                 <div class="text-danger">
-                                    <%= errors.password.msg %> </div>
-                           <% } %>  
+                                    <%= errors.password.msg %>
+                                </div>
+                                <% } %>
+                                <p class="error" style="color: red"></p>
                         </div>
                         <div class="input-box">
                             <span class="details">Confirmar Contraseña</span>
-                            <input name="confirmPassword" 
+                            <input name="confirmPassword"  
+                            id="confirmPassword"
                             type="text" 
                             placeholder="Confirm your password" 
                             required
-                            class= "<%= locals.errors && errors.confirmPassword ? "is-invalid" : null  %> "> 
-                            <% if(locals.errors && errors.confirmPassword) { %>
+                                class="form-inputs<%= locals.errors && errors.confirmPassword ? " is-invalid" : null %> "
+                                <% if (locals.oldData) { %>
+                                    value="<%= oldData.customer_confirmPassword %> "
+                                    <% } %>
+                                    > 
+                                <% if(locals.errors && errors.confirmPassword) { %>
                                 <div class="text-danger">
-                                    <%= errors.confirmPassword.msg %> </div>
-                           <% } %>  
+                                    <%= errors.confirmPassword.msg %>
+                                </div>
+                                <% } %>
+                                <p class="error" style="color: red"></p>
                         </div>
                         <div class="input-box">
                             <span class="details">Ingresa tu foto</span>
-                            <input type="file" name="image" >
+                            <input type="file" 
+                            name="image"  
+                            id="image"
+                                class="form-inputs<%= locals.errors && errors.image ? " is-invalid" : null %> "
+                                <% if (locals.oldData) { %>
+                                    value="<%= oldData.image %> "
+                                <% } %>
+                                > 
+                                <% if(locals.errors && errors.image) { %>
+                                <div class="text-danger">
+                                    <%= errors.image.msg %>
+                                </div>
+                                <% } %> 
+                                <p class="error" style="color: red"></p>
                         </div>
                     </div>
                     <div class="condición-details">
-                        <label> <b>Pais de nacimiento: </b>  </label>
-                        <select name="customer_country">
-                            <option value="Argentina">Argentina</option>
-                            <option value="Bolivia">Bolivia</option>
-                            <option value="Brasil">Brasil</option>
-                            <option value="Colombia">Colombia</option>
-                            <option value="Chile">Chile</option>
-                            <option value="Ecuador">Ecuador</option>
-                            <option value="Paraguay">Paraguay</option>
-                            <option value="Peru">Peru</option>
-                            <option value="Uruguay">Uruguay</option>
-                            <option value="Venezuela">Venezuela</option>
-                            <option value="Otro">Otro</option>
+                        <label> <b>Pais de nacimiento: </b> </label>
+                        <select name="customer_country"  
+                        id="country"
+                            class="form-inputs<%= locals.errors && errors.customer_country ? " is-invalid" : null %> "
+                            <% if (locals.oldData) { %>
+                                value="<%= oldData.customer_country %> "
+                            <% } %>
+                            > 
+                            <% if(locals.errors && errors.customer_country) { %>
+                                <div class="text-danger">
+                                    <%= errors.customer_country.msg %>
+                                </div>
+                                <% } %> 
+                                    <option value="Argentina">Argentina</option>
+                                    <option value="Bolivia">Bolivia</option>
+                                    <option value="Brasil">Brasil</option>
+                                    <option value="Colombia">Colombia</option>
+                                    <option value="Chile">Chile</option>
+                                    <option value="Ecuador">Ecuador</option>
+                                    <option value="Paraguay">Paraguay</option>
+                                    <option value="Peru">Peru</option>
+                                    <option value="Uruguay">Uruguay</option>
+                                    <option value="Venezuela">Venezuela</option>
+                                    <option value="Otro">Otro</option>
                         </select>
-                        
-                        
-                        <label> <b>Sexo: </b>  </label>
-                        <select name="customer_gender">
+
+
+                        <label> <b>Sexo: </b> </label>
+                        <select name="customer_gender" 
+                        id="gender"
+                        class="form-inputs<%= locals.errors && errors.customer_gender ? " is-invalid" : null %> "
+                                <% if (locals.oldData) { %>
+                                    value="<%= oldData.customer_gender %> "
+                                <% } %>
+                                > 
+                                <% if(locals.errors && errors.customer_gender) { %>
+                                <div class="text-danger">
+                                    <%= errors.customer_gender.msg %>
+                                </div>
+                                <% } %> 
+                                
                             <option value="Femenino">Femenino</option>
                             <option value="Masculino">Masculino</option>
                             <option value="Prefiero no decirlo">Prefiero no decirlo</option>
-                            
+
                         </select>
                         <br>
                         <br>
                         <label>
-                             <b>Fecha de Nacimiento: </b>  
-                            </label>
-                        <input type="date" name="customer_birthdate" required>
-                            
-                            
-                        
+                            <b>Fecha de Nacimiento: </b>
+                        </label>
+                        <input type="date" name="customer_birthdate" id="birthdate" required>
+                        <p class="error" style="color: red"></p>
+
+
                     </div>
                     <br>
 
                     <div class="condición-details">
-                        <label> <b> Condición:  </b>  </label>
-                        <select name="customer_type">
+                        <label> <b> Condición: </b> </label>
+                        <select name="customer_type" id="type">
                             <option value="Comprador">Comprador</option>
                             <option value="Vendedor">Vendedor</option>
-                            
+                            <p class="error" style="color: red"></p>
                         </select>
                     </div>
 
                     <div class="button">
-                        <input type="submit" value="Crear Usuario">
+                        <input type="submit" value="Crear Usuario"  class="submit-btn">
                     </div>
                 </form>
+                <script src="/js/registerForm.js"></script>
 
         </main>
 

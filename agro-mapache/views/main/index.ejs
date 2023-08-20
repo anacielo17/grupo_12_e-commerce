@@ -34,21 +34,27 @@
 
                     <h2 class="titulares">Nuestros productos</h2>
                     <section>
-
+                        <% products.forEach(product => { %>
+                            <% if(product.product_condition === "Nuevo" ) { %>
                         <article class="producto">
 
-                            <img src="./img/hacha_de_camping.png" width="300px">
+                            <a href="/products/<%=product.product_id%>/detail">  <img src="/img/products/<%=product.image%>" width="300px"> </a>
                             <div class="detalle-producto">
-                                <p class="nuevo"> Nuevo</p>
+                                <p class="nuevo"><%= product.product_condition %></p>
                                 <div class="valor">
-                                    <p class="precio"> $12.123</p>
+                                    <p class="precio">$<%= product.product_price %></p>
 
                                 </div>
-                                <p class="envio">Envios a todo el pais</p>
-                                <strong class="descripcion">Hacha de camping Bahco</strong>
+                                <% if(product.product_price<= 2000000) { %>
+                                    <p class="envio">Envios a todo el pais</p>
+                                <% }; %>
+                                
+                                <strong class="descripcion"> <%= product.name %></strong>
                                         </div>
                         </article>
-                        <article class="producto">
+                        <% }; %>
+                        <%}) %>  
+                        <!-- <article class="producto">
 
                             <img src="./img/hacha_de_pico.png" width="300px">
                             <div class="detalle-producto">
@@ -139,123 +145,30 @@
                                 <p class="consultar"><a href="#consultar"> Recibir informacion</a></p>
                                 <strong class="descripcion">Casilla 5x2.60mts, 2 ejes, 1 habitación</strong>
                             </div>
-                        </article>
+                        </article> -->
                     </section>
                     <h2 class="titulares">Ofertas</h2>
                     <section>
+                        <% products.forEach(product => { %>
+                            <% if(product.product_condition === "Oferta" ) { %>
                         <article class="producto">
 
-                            <img src="./img/desmalezadora_de_empuje.jpg" width="300px">
+                            <a href="/products/<%=product.product_id%>/detail">  <img src="/img/products/<%=product.image%>" width="300px"> </a>
                             <div class="detalle-producto">
-                                <p class="oferta"> Oferta</p>
-                                <h5 class="precio-anterior">$80.270,4</h5>
+                                <p class="oferta"><%= product.product_condition %></p>
+                                <h5 class="precio-anterior">$<%= product.product_price %></h5><b class="off"> - <%= product.product_discount %>% OFF</b>
                                 <div class="valor">
-                                    <p class="precio"> $76.388 </p>
-                                    <p class="descuento">5%</p>
+                                    <p class="descuento"> $<%= Math.round(((product.product_price)* ((100 - product.product_discount)/100 )), -2) %></p>
+                                    <!-- <p class="descuento">5%</p> -->
                                 </div>
-                                <p class="envio">Envios a todo el pais</p>
-                                <strong class="descripcion">Desmalezadora Motoguadaña Fema de Empuje</strong>
+                                <% if(product.product_price<= 2000000) { %>
+                                    <p class="envio">Envios a todo el pais</p>
+                                <% }; %>
+                                <strong class="descripcion"><%= product.name %></strong>
                             </div>
                         </article>
-                        <article class="producto">
-
-                            <img src="./img/carro_playo.jpg" width="300px">
-                            <div class="detalle-producto">
-                                <p class="oferta"> Oferta</p>
-                                <h5 class="precio-anterior">$1.496.000</h5>
-                                <div class="valor">
-                                    <p class="precio"> $ 1.360.000</p>
-                                    <p class="descuento">10%</p>
-                                </div>
-                                <p class="consultar"><a href="#consultar"> Recibir informacion</a></p>
-                                <strong class="descripcion">Carro Playo 4x2Mts 4 Toneladas </strong>
-                            </div>
-                        </article>
-                        <article class="producto">
-
-                            <img src="./img/soplador.jpeg" width="300px">
-                            <div class="detalle-producto">
-                                <p class="oferta"> Oferta</p>
-                                <h5 class="precio-anterior">$152,212,5</h5>
-                                <div class="valor">
-                                    <p class="precio"> $ 138.375</p>
-                                    <p class="descuento">10%</p>
-                                </div>
-                                <p class="envio">Envios a todo el pais</p>
-                                <strong class="descripcion">Soplador Aspirador Stiga SBC327V </strong>
-                            </div>
-                        </article>
-                        <article class="producto">
-
-                            <img src="./img/cortadora_manual.png" width="300px">
-                            <div class="detalle-producto">
-                                <p class="oferta"> Oferta</p>
-                                <h5 class="precio-anterior">$548.460</h5>
-                                <div class="valor">
-                                    <p class="precio"> $ 498.600</p>
-                                    <p class="descuento">10%</p>
-                                </div>
-                                <p class="envio">Envios a todo el pais</p>
-                                <strong class="descripcion"> Cortadora Manual 14" 73Cc Husqvarna K770 </strong>
-                            </div>
-                        </article>
-                        <article class="producto">
-
-                            <img src="./img/carretilla.jpg" width="300px">
-                            <div class="detalle-producto">
-                                <p class="oferta"> Oferta</p>
-                                <h5 class="precio-anterior">$18.554,8</h5>
-                                <div class="valor">
-                                    <p class="precio"> $ 16.868</p>
-                                    <p class="descuento">10%</p>
-                                </div>
-                                <p class="envio">Envios a todo el pais</p>
-                                <strong class="descripcion"> Carretilla Chapa Rueda Neumática 130Kg Fema </strong>
-                            </div>
-                        </article>
-                        <article class="producto">
-
-                            <img src="./img/elaion_moto.jpg" width="300px">
-                            <div class="detalle-producto">
-                                <p class="oferta"> Oferta</p>
-                                <h5 class="precio-anterior">$1650</h5>
-                                <div class="valor">
-                                    <p class="precio"> $ 1.500</p>
-                                    <p class="descuento">10%</p>
-                                </div>
-                                <p class="envio">Envios a todo el pais</p>
-                                <strong class="descripcion"> Elaion Moto 2T 100cc YPf</strong>
-                            </div>
-                        </article>
-                        <article class="producto">
-
-                            <img src="./img/calefactor_exterior.jpg" width="300px">
-                            <div class="detalle-producto">
-                                <p class="oferta"> Oferta</p>
-                                <h5 class="precio-anterior">$110.576,55</h5>
-                                <div class="valor">
-                                    <p class="precio"> $ 105.311</p>
-                                    <p class="descuento">5%</p>
-                                </div>
-                                <p class="envio">Envios a todo el pais</p>
-                                <strong class="descripcion"> Calefactor Para Exterior Garrafa 10Kg Acero
-                                    Inoxidable</strong>
-                            </div>
-                        </article>
-                        <article class="producto">
-
-                            <img src="./img/calefactor_convector.jpg" width="300px">
-                            <div class="detalle-producto">
-                                <p class="oferta"> Oferta</p>
-                                <h5 class="precio-anterior">$24.996,4</h5>
-                                <div class="valor">
-                                    <p class="precio"> $ 22.724</p>
-                                    <p class="descuento">10%</p>
-                                </div>
-                                <p class="envio">Envios a todo el pais</p>
-                                <strong class="descripcion"> Calefactor Convector Eléctrico Fema </strong>
-                            </div>
-                        </article>
+                        <% }; %>
+                        <%}) %>  
 
                     </section>
                     <h2 class="titulares">Convenios y Servicios</h2>
@@ -288,12 +201,20 @@
                             <h5>Jardineria</h5>
                         </div>
                         <div class="cajita-información">
+                            <img src="./img/hombre-con-motosierra.jpg">
+                            <h5>Forestación</h5>
+                        </div>
+                        <div class="cajita-información">
                             <img src="./img/herramientas.jpg">
                             <h5>Herramientas</h5>
                         </div>
                         <div class="cajita-información">
                             <img src="./img/pulverizador.jpg">
                             <h5>Pulverizacion</h5>
+                        </div>
+                        <div class="cajita-información">
+                            <img src="./img/pulverizador.jpg">
+                            <h5>Productos en oferta</h5>
                         </div>
                     </section>
                 </main>

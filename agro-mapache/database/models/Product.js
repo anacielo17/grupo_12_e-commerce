@@ -30,7 +30,7 @@ module.exports = (sequelize, DataType) => {
             allowNull: false
         },
         product_price: {
-            type: DataType.STRING
+            type: DataType.DECIMAL
         },
         name: {
             type: DataType.STRING
@@ -51,6 +51,9 @@ module.exports = (sequelize, DataType) => {
         },
         product_condition: {
             type: DataType.STRING
+        }, 
+        product_discount :{
+            type : DataType. DECIMAL 
         }
     };
 

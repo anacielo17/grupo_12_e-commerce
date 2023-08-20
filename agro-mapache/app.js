@@ -5,6 +5,8 @@ const methodOverride = require('method-override');
 const cookieParser= require("cookie-parser")
 const expressSession = require ("express-session");
 const userLoggeMiddleware = require("./middlewares/userLoggedMiddleware")
+const userValidations = require("./middlewares/userValidations") 
+const db = require("./database/models")
 
 
 
@@ -41,7 +43,7 @@ app.use((req,res,next)=>{
      req.session.user= user; 
     }
     next()
-} )
+} ) 
 app.use(userLoggeMiddleware);
 // Routes
 app.use(indexRoutes);

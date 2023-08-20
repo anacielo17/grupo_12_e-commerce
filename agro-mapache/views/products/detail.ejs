@@ -22,7 +22,7 @@
                 <h3><%=product.name %></h3>
             </div>
             <div class="container-price">
-                <span><%= product.product_price %></span>
+                <span> $<%= product.product_price %></span>
             </div>
             <div class="container-descrip-productos"> 
                <h3> Carcateristicas del Producto</h3>
@@ -36,8 +36,12 @@
             <button class="b-add-to-cart"> + Añadir al carrito</button>
             </div>
            <div class="container-send">
+            
+           <% if(product.product_price<= 2000000) { %>
             <i class="fa-solid fa-truck-fast"> </i>
            <span> Envios a todo el pais</span>
+            <!-- <p class="envio">Envios a todo el pais</p> -->
+        <% }; %>
         </div>
         <div class="container-price-iva">
             <span> Precios finales Iva incluido</span>

@@ -31,8 +31,8 @@ body {
 .marca {
    display: flex;
    color: white;
-   /* font-family: 'Kalam';
-   font-family: 'Satisfy'; */
+   font-size: inherit;
+
 }
 
 a {
@@ -59,16 +59,16 @@ a {
 }
 
 .barra-busqueda input {
-   padding-left: 10px;
+   padding-left: 5px;
    border: none;
    outline: 0;
    background-color: white;
    border-radius: 10px;
-   
+
 }
 
 .barra-busqueda button {
-   border: none; 
+   border: none;
    background-color: white;
    padding: 10px;
    border-radius: 10px;
@@ -111,51 +111,99 @@ a {
 .site-navbar a {
    transition: 700ms;
 }
-.desplegable img{
+
+.desplegable img {
    width: 30%;
 }
 
-.cont-ul li{
+.cont-ul li {
    list-style: none;
    cursor: pointer;
+   color: black;
 }
 
-.desplegable .probando{
+.desplegable .probando {
+   display: flex;
+   position: relative;
+   align-items: center;
+   margin-bottom: 2px;
+}
+
+.ul-second li {
+   margin-top: 2px;
+}
+
+.usuario .mis-compras {
+   margin-top: 9px;
+   place-items: center;
+}
+
+.fa-cart-shopping {
+   margin-top: 9px;
+
+}
+
+.ul-second {
+   display: none;
+   position: absolute;
+   background-color: rgb(203, 200, 200);
+    width: 120px;
+   border-radius: 6px;
+   padding: 5px;
+}
+
+.desplegable:hover>.ul-second {
+   display: block;
+}
+
+.ul-second a {
+   font-style: normal;
+   transition: none;
+   font-size: 15px;
+
+}
+
+.desplegableMenu .probando {
    display: flex;
    position: relative;
    align-items: center;
    margin-top: 2px;
 }
-.ul-second li{
-   margin-top: 2px;
-}
-.usuario .mis-compras{
-   margin-top: 9px;
-   place-items: center;
-}
-.fa-cart-shopping{
-   margin-top: 9px;
+
+.desplegableMenu:hover>.ul-second2 {
+   display: block;
    
 }
 
-.ul-second{
+.ul-second2 {
    display: none;
    position: absolute;
+   background-color: rgb(203, 200, 200);
+   width: 250px;
+   border-radius: 6px;
+   padding: 5px;
+
 }
-.desplegable:hover > .ul-second{
-   display: block;
-}
-.ul-second a{ 
+
+.ul-second2 a {
    font-style: normal;
    transition: none;
    font-size: 15px;
-   
+   padding: 15px;
+
+
 }
 
-/* .dropdown{
-   display: inline-block;
-   position: relative;
-} */
+.ul-second2 li {
+   margin-top: 2px;
+
+}
+
+.saludo {
+   display: none;
+   color: white;
+}
+
 /* ----------------------------------------------main---------------------------------- */
 
 .fondo {
@@ -179,11 +227,11 @@ a {
 }
 
 .cajita-información {
-   border: 2px solid gray;
+
    width: 40vw;
    font-size: 20px;
    border-radius: 5px;
-   background-color: whitesmoke /* #eaecef */;
+   background-color: whitesmoke;
    margin-bottom: 20px;
 }
 
@@ -198,25 +246,33 @@ a {
 }
 
 .titulares {
-   font-size: 24px;
+   margin-top: 20px;
+   font-size: 20px;
+   font-weight: 550;
    text-align: center;
    font-family: 'Times New Roman', Times, serif;
-   font-style: italic;
-   padding: 20px;
-   color: white;
-   background-color: #214566;
+   padding: 10px;
+   color: #214566;
+   background-color: rgb(203, 200, 200)
 }
 
 .precio {
    font-size: 18px;
    font-family: 'Roboto', sans-serif;
+   color: green;
    font-weight: bold;
 }
 
 .descuento {
-   font-size: 16px;
+   font-size: 18px;
    padding-left: 10px;
    font-family: 'Roboto', sans-serif;
+   color: green;
+   font-weight: bold;
+}
+
+.off {
+   font-size: 12px;
    color: green
 }
 
@@ -292,7 +348,7 @@ div.valor {
 }
 
 .envio {
-   color: green;
+   color: #788578;
    font-size: 20px;
    text-align: left;
    padding-bottom: 10px;
@@ -308,8 +364,9 @@ section article a {
 }
 
 .cajita-información img {
-   width: 50px;
+   width: 70px;
    height: 50px;
+   border-radius: 5px;
 }
 
 /*          footer          */
@@ -320,37 +377,48 @@ footer {
    color: white;
    display: flex;
    flex-wrap: wrap;
-   flex-direction: column; 
+   flex-direction: column;
    align-self: center;
 }
 
-footer h2{
+footer h2 {
    padding: 10px;
 }
 
-.probando{
+.probando {
    display: flex;
    flex-direction: column;
-   justify-content: space-around; 
+   justify-content: space-around;
 }
 
- .redes {
+.redes {
    flex-direction: column;
    font-size: 16px;
    margin: 10px;
 
- } 
- .redes i {
+}
+
+.redes i {
    margin-right: 10px;
    margin-bottom: 20px;
- }
+}
+
+.nav-link {
+   margin-top: 9px;
+}
+
+.fa-circle-user {
+   margin-top: 9px;
+}
+
+
 
 /* ----------------------------------------------visualizacion---------------------------------- */
 @media(min-width:768px) {
 
    .main-header-top-bar {
       justify-content: space-around;
-      /* font-size: 20px; */
+
    }
 
    .usuario {
@@ -362,7 +430,7 @@ footer h2{
       right: 0;
    }
 
-   .usuario a{
+   .usuario a {
       padding: 10px;
    }
 
@@ -378,17 +446,17 @@ footer h2{
       justify-content: space-around;
    }
 
-   .menu li{
+   .menu li {
       padding-right: 20px;
    }
 
-   .burger-menu{
+   .burger-menu {
       margin-left: 10px;
    }
 
    header img {
       width: 200px;
-      height: 46px;
+
       margin-top: 8px;
    }
 
@@ -397,7 +465,7 @@ footer h2{
    }
 
    .cajita-información {
-      width: 20vw;
+      width: 16vw;
       font-size: 20px;
    }
 
@@ -406,12 +474,27 @@ footer h2{
       width: 40vw;
    }
 
-   .probando{
+   .probando {
       flex-direction: row;
+   }
+
+   .dropdown-item {
+      color: #214566;
    }
 }
 
+
 @media(min-width:1024px) {
+   .saludo {
+      display: block;
+      margin-bottom: 4px;
+   }
+
+   div .probando {
+      width: 140px;
+
+   }
+
    header img {
       width: 280px;
 
@@ -419,7 +502,7 @@ footer h2{
 
    .main-header-top-bar {
       max-width: 2000px;
-      /* font-size: 22px; */
+
    }
 
    .main-navbar {
@@ -428,7 +511,7 @@ footer h2{
       margin-top: 20px;
    }
 
-   .barra-busqueda{
+   .barra-busqueda {
       width: 30vw;
    }
 
@@ -441,7 +524,7 @@ footer h2{
       font-size: 20px;
    }
 
-   .menu li{
+   .menu li {
       padding-right: 30px;
    }
 
@@ -467,12 +550,14 @@ footer h2{
       color: black;
       font-size: 30px;
    }
-   .ul-second a:hover{ 
+
+   .ul-second a:hover {
       color: black;
-      
+
       font-size: 15px;
-      
- }
+
+   }
+
    .site-navbar a:hover {
       color: black;
       font-size: 30px;
