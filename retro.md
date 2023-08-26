@@ -23,3 +23,8 @@ Se debe limpiar el codigo para mejor comprensión del mismo.
 Se debe pensar mejor y abarcar todas las posibilidades antes de crear la base de datos para no tener que realizar multiples cambios a posteriori. 
 Se continua mejorando las vistas, simplificando código e investigando alternativas por fuera del material establecido para la cursada.
 Hacer menos: complejizar la estrcutura del proyecto. Ejemplo: en las vistas se colocó como name = " lastName" y en la base de datos la columna se llamo "customer_lastName", lo cual implicó el cambio en todas las vistas.  
+
+<!-- Septimo Sprint  -->
+Se debe limpiar el codigo para mejor comprensión del mismo y buscar una correcta organizacion de archivos en carpetas para más prolijidad.   
+Se continua mejorando las vistas, simplificando código e investigando alternativas por fuera del material establecido para la cursada.
+Evitar complejizar la estrcutura del proyecto sin antes entender la resolución o, almenos, tener posbiles soluciones de los objetivos planteados.
