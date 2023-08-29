@@ -14,6 +14,7 @@ const db = require("./database/models")
 const indexRoutes = require("./routes/indexRoutes.js");
 const productsRoutes = require("./routes/productsRoutes.js");
 const userRoutes = require("./routes/userRoutes.js");
+const apiRoutes = require("./routes/api")
 
 
 app.set("view engine", "ejs") ;
@@ -49,6 +50,7 @@ app.use(userLoggeMiddleware);
 app.use(indexRoutes);
 app.use("/user",userRoutes);
 app.use("/products",productsRoutes);
+app.use('/api', apiRoutes)
 
 
 app.listen(2000, () =>{
