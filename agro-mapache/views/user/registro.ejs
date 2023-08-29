@@ -26,9 +26,9 @@
                             type="text" 
                             placeholder="Enter your name" 
                             required
-                                class="form-inputs <%= locals.errors && errors.customer_name ? " is-invalid" : null %> "
+                                class="form-inputs <%= locals.errors && errors.customer_name ? " is-invalid" : null %>"
                                 <% if (locals.oldData) { %>
-                                value="<%= oldData.customer_name %> "
+                                value="<%= oldData.customer_name %>"
                                 <% } %>
                                 >
                                 <% if(locals.errors && errors.customer_name) { %>
@@ -44,9 +44,9 @@
                             type="text" 
                             placeholder="Enter your surname" 
                             required
-                                class="form-inputs<%= locals.errors && errors.customer_lastName ? " is-invalid" : null %> "
+                                class="form-inputs<%= locals.errors && errors.customer_lastName ? " is-invalid" : null %>"
                                 <% if (locals.oldData) { %>
-                                value= "<%= oldData.customer_lastName %> "
+                                value= "<%= oldData.customer_lastName %>"
                                 <% } %>
                                 >
                                 <% if(locals.errors && errors.customer_lastName) { %>
@@ -63,9 +63,9 @@
                             type="email" 
                             placeholder="Enter your email" 
                             required
-                                class="form-inputs<%= locals.errors && errors.customer_email ? " is-invalid" : null %> "
+                                class="form-inputs<%= locals.errors && errors.customer_email ? " is-invalid" : null %>"
                                 <% if (locals.oldData) { %>
-                                value="<%= oldData.customer_email  %> "
+                                value="<%= oldData.customer_email  %>"
                                 <% } %>
                                 >
                                 <% if(locals.errors && errors.customer_email) { %>
@@ -81,9 +81,9 @@
                             type="tel" 
                             placeholder="Enter your phonenumber"
                             required
-                                class="form-inputs <%= locals.errors && errors.customer_phone ? " is-invalid" : null %> "
+                                class="form-inputs <%= locals.errors && errors.customer_phone ? " is-invalid" : null %>"
                                 <% if (locals.oldData) { %>
-                                    value="<%= oldData.customer_phone %> "
+                                    value="<%= oldData.customer_phone %>"
                                 <% } %>
                                 > 
 
@@ -96,13 +96,14 @@
                         </div>
                         <div class="input-box">
                             <span class="details">Contraseña</span>
-                            <input name="password"  id="password"
+                            <input name="password"  
+                            id="password"
                             type="text" 
                             placeholder="Enter your password" 
                             required
-                                class="form-inputs<%= locals.errors && errors.password ? " is-invalid" : null %> "
+                                class="form-inputs<%= locals.errors && errors.password ? " is-invalid" : null %>"
                                 <% if (locals.oldData) { %>
-                                    value="<%= oldData.password %> "
+                                    value="<%= oldData.password %>"
                                 <% } %>
                                 > 
 
@@ -120,9 +121,9 @@
                             type="text" 
                             placeholder="Confirm your password" 
                             required
-                                class="form-inputs<%= locals.errors && errors.confirmPassword ? " is-invalid" : null %> "
+                                class="form-inputs<%= locals.errors && errors.confirmPassword ? " is-invalid" : null %>"
                                 <% if (locals.oldData) { %>
-                                    value="<%= oldData.customer_confirmPassword %> "
+                                    value="<%= oldData.confirmPassword %>"
                                     <% } %>
                                     > 
                                 <% if(locals.errors && errors.confirmPassword) { %>
@@ -137,9 +138,9 @@
                             <input type="file" 
                             name="image"  
                             id="image"
-                                class="form-inputs<%= locals.errors && errors.image ? " is-invalid" : null %> "
+                                class="form-inputs<%= locals.errors && errors.image ? " is-invalid" : null %>"
                                 <% if (locals.oldData) { %>
-                                    value="<%= oldData.image %> "
+                                    value="<%= oldData.image %>"
                                 <% } %>
                                 > 
                                 <% if(locals.errors && errors.image) { %>
@@ -154,9 +155,9 @@
                         <label> <b>Pais de nacimiento: </b> </label>
                         <select name="customer_country"  
                         id="country"
-                            class="form-inputs<%= locals.errors && errors.customer_country ? " is-invalid" : null %> "
+                            class="form-inputs<%= locals.errors && errors.customer_country ? " is-invalid" : null %>"
                             <% if (locals.oldData) { %>
-                                value="<%= oldData.customer_country %> "
+                                value="<%= oldData.customer_country %>"
                             <% } %>
                             > 
                             <% if(locals.errors && errors.customer_country) { %>
@@ -181,9 +182,9 @@
                         <label> <b>Sexo: </b> </label>
                         <select name="customer_gender" 
                         id="gender"
-                        class="form-inputs<%= locals.errors && errors.customer_gender ? " is-invalid" : null %> "
+                        class="form-inputs<%= locals.errors && errors.customer_gender ? " is-invalid" : null %>"
                                 <% if (locals.oldData) { %>
-                                    value="<%= oldData.customer_gender %> "
+                                    value="<%= oldData.customer_gender %>"
                                 <% } %>
                                 > 
                                 <% if(locals.errors && errors.customer_gender) { %>

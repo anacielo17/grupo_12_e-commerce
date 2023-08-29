@@ -52,8 +52,6 @@ module.exports = {
             total: productCollection.length,
             productsByCategory,
             productsByBrand,
-
-
         })
         console.log(products, productsByCategory, productsByBrand, productCollection)
     },
@@ -69,7 +67,7 @@ module.exports = {
 
             const productImageURL = `/api/user/${product.product_id}/image`;
 
-            product.productImage = productImageURL; // Cambio 'user' a 'customer'
+            product.productImage = productImageURL; 
 
             res.json(product);
         } else {
@@ -129,13 +127,21 @@ module.exports = {
     },
 
     userImage: async (req, res) => {
-        const customer = await db.Customer.findByPk(req.params.customer_id, {
-            attributes: ["image"],
-            raw: true
-        })
-        res.json(customer)
-    },
-}
+        const customer = await db.Customer.findByPk(req.params.customer_id);
+    
+        if (customer && customer.image) {
+            // Si el cliente y la propiedad 'image' existen, redirige a la URL de la imagen
+            res.redirect("/api/user/:customer_id"+customer.image);
+        } else {
+            return res.status(404).json({ error: 'Imagen no encontrada' });
+        } 
+    } 
+    }
+    
+    
+    
+    
+    
 
 // No salio :( 
 /* usersList: async (req, res) => {
