@@ -7,6 +7,8 @@ const expressSession = require ("express-session");
 const userLoggeMiddleware = require("./middlewares/userLoggedMiddleware")
 const userValidations = require("./middlewares/userValidations") 
 const db = require("./database/models")
+const cors = require("cors");
+
 
 
 
@@ -27,7 +29,7 @@ app.set("views", [
 
 //Middlewares
 app.use(express.static("public"));
-
+app.use(cors());
 app.use(express.urlencoded({extended:false}));
 app.use(express.json());
 app.use(methodOverride('_method'));
@@ -53,6 +55,6 @@ app.use("/products",productsRoutes);
 app.use('/api', apiRoutes)
 
 
-app.listen(2000, () =>{
+app.listen(3001, () =>{
     console.log("Servidor corriendo en el puerto 3000");
 });  

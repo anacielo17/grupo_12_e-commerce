@@ -54,6 +54,10 @@ module.exports = (sequelize, DataType) => {
         }, 
         product_discount :{
             type : DataType. DECIMAL 
+        },
+        quantity :{
+            type :DataType.SMALLINT,
+            allowNull: false
         }
     };
 

@@ -11,8 +11,6 @@ module.exports = {
             attributes: ['product_id', 'name', 'description'],
             raw: true,
 
-
-
         });
         //Se inicia un objeto vacío para almacenar la información sobre el recuento de productos por categoría
         //forEach itera a través de cada producto en el arreglo products. Para cada producto se obtiene el ID 
@@ -58,16 +56,15 @@ module.exports = {
     productDetail: async (req, res) => {
         const product = await db.Product.findByPk(req.params.product_id, {
             include: [{ association: 'category', attributes: ["category_name"] }, { association: 'brand', attributes: ["brand_name"] }],
-            attributes: ['product_id', 'name', 'description', 'image'],
+            attributes: ['product_id', 'name',"product_price","quantity", 'description', 'image'],
             raw: true
         })
 
         if (product) {
-            const ecommerce = "http://localhost:2000/"
+            const ecommerce = "http://localhost:3001/"
             if (product) {
-            
-                res.json({product, 
-                        image : `${ecommerce}img/products/${product.image}`});
+                product.imageUrl=  `${ecommerce}img/products/${product.image}`
+                res.json(product);
             } else {
                 return res.status(404).json({ error: `El producto no existe` });
             }
@@ -106,7 +103,7 @@ module.exports = {
             attributes: ['customer_id', 'customer_name', 'customer_lastName', "customer_phone", "customer_email", "customer_gender", "image", "customer_birthdate", "customer_country"],
             raw: true
         })
-        const ecommerce = "http://localhost:2000/"
+        const ecommerce = "http://localhost:3001/"
         if (customer) {
         
             res.json({customer, 

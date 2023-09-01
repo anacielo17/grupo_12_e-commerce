@@ -15,82 +15,39 @@
 <body>
 
     <%- include("../partials/header") %>
-
-        <main>
-
-            <div class="carro-completo">
-                <div class="items">
-
-                    <article>
-
-                        <img src="/img/fumigadora.jpg">
-                        <div>
-                            <h3 class="nombre-articulo"> Fumigadora 210 Litros</h3>
-                            <button id="menos" type="button">-</button>
-
-                            <input type="text" id="contador" class="form-control" value="1" min="1" />
-
-                            <button id="mas" type="button">+</button>
-                            <p class="precio">$400.000</p>
-                            <button class="delete-product" id='' type="button"><i class="fa-solid fa-trash-can"></i></button>
-                        </div>
-
-                    </article>
-
-                    <article>
-
-                        <img src= '/img/desmalezadora.png'>
-                        <div>
-                            <h3 class="nombre-articulo">APACHE 54000</h3>
-                            <button id="menos" type="button">-</button>
-
-                            <input type="text" id="contador" class="form-control" value="1" min="1" />
-
-                            <button id="mas" type="button">+</button>
-                            <p class="precio">$500.000</p>
-                            <button class="delete-product" id='' type="button"><i class="fa-solid fa-trash-can"></i></button>
-                        </div>
-
-                    </article>
-
-                    <article>
-
-                        <img src="/img/casa-rodante.jpg">
-                        <div>
-                            <h3 class="nombre-articulo">Casilla Rural CR-455</h3>
-                            <button id="menos" type="button">-</button>
-
-                            <input type="text" id="contador" class="form-control" value="1" min="1" />
-
-                            <button id="mas" type="button">+</button>
-                            <p class="precio">$700.000</p>
-                            <button class="delete-product" id='' type="button"><i class="fa-solid fa-trash-can"></i></button>
-                        </div>
-
-                    </article>
-
-                    
-
-                </div>
-
-                <section class="buy">
-                    <h3> RESUMEN DE COMPRA </h3>
-                    <div>
-                        <p> TOTAL</p>
-                        <p> $1.600.000 </p>
-                    </div>
-                    <div class="botones">
-                    <button type="submit" class="boton-compra"> Finalizar compra</button>
-                    <button type="submit" class="seguir-compra">Seguir comprando</button>
-                </div>
-                </section>
-
-            </div>
+    <main>
+        <h2>Productos en mi carrito</h2>
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th style="width: 50px;">
+                        <strong>#</strong>
+                    </th>
+                    <th>Imagen</th>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Eliminar</th>
+                </tr>
+            </thead>
+            <tbody class="cartRows">
+                
+            </tbody>
+        </table>
+        
+        <div class="cart-total">
+            <p>Total: 0</p>
+            <button class="checkout">Pagar</button>
+        </div>
+    </main>
 
         </main>
 
         <%- include("../partials/footer") %>
+        
 </body>
+<script src="/js/script.js"></script>
+<script src="/js/cart.js"></script>
 
 
 </html>
