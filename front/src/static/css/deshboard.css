@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+
 .footer{
     background-color: rgb(162 176 187);
     width: 100%;
@@ -58,7 +61,7 @@
     background-color:#C6AFB1
 }
 .TopBar{
-    background-color: rgb(162 176 187);
+    background-color: #ada2bb;
     text-align: right;   
     height: 50px;
 }

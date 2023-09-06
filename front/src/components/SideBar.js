@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function SideBar() {
     return (
@@ -12,21 +13,13 @@ function SideBar() {
                 <hr className="sidebar-divider my-0" />
 
                 {/*<!-- Nav Item - Dashboard -->*/}
-                <li className="nav-item active">
-                    <a className="nav-link" href="/">
-                        <i className="fas fa-fw fa-tachometer-alt"></i>
-                        <span> Products</span></a>
-                </li>
 
+                <Link to ="/products">Products </Link>
 
                 <hr className="sidebar-divider my-0" />
 
                 {/*<!-- Nav Item - Dashboard -->*/}
-                <li className="nav-item active">
-                    <a className="nav-link" href="/">
-                        <i className="fas fa-fw fa-tachometer-alt"></i>
-                        <span> Usuarios</span></a>
-                </li>
+                <Link to ="/userList">Usuarios </Link>
                 <hr className="sidebar-divider my-0" />
 
                 

@@ -1,11 +1,8 @@
 import React from 'react';
-/* import {Route, Switch, Link} from "react-router-dom";  */
-
 import Footer from './Footer';
 
 import ContentWrapper from './ContentWrapper';
-import Products from './Products'
-import UserList from './Users';
+
 import LastCreatedProduct from './LastCreatedProduct';
 import Categories from './Categories';
 import '../static/css/deshboard.css'
@@ -25,8 +22,6 @@ function Dashboard(){
     <Categories/>
     </div>
     <div className='contenedorList'>  
-    <UserList/>
-    <Products/>
    
     </div>
     

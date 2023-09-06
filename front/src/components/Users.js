@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import TopBar from './TopBar';
+import Footer from './Footer';
 
 function UserList() {
   const [users, setUsers] = useState([]);
@@ -18,6 +20,9 @@ function UserList() {
   }, []); 
 
   return (
+    
+    <> 
+    <TopBar/>
     <div className='listUser'>
       <h2>Listado de Usuarios</h2>
       <ul>
@@ -30,6 +35,8 @@ function UserList() {
         ))}
       </ul>
     </div>
+    <Footer/>
+    </>  
   );
 }
 

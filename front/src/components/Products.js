@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import TopBar from './TopBar';
+import Footer from './Footer';
 
 function ProductList() {
   const [products, setProducts] = useState([]);
@@ -18,6 +20,9 @@ function ProductList() {
   }, []); 
 
   return (
+    
+    <> 
+    <TopBar/>
     <div className='listProduct'>
       <h2>Listado de Productos</h2>
       <ul>
@@ -25,12 +30,14 @@ function ProductList() {
           <p key={product.id} className='product'>
             <h3>{product.name}</h3>
             <p>{product.description}</p>
-            <img src={product.image} alt={product.name} />
+            <img src='http://localhost:3001/img/products/{product.ImageUrl}' alt={product.ImageUrl}  />
             
           </p>
         ))}
       </ul>
     </div>
+    <Footer/>
+    </>
   );
 }
 
