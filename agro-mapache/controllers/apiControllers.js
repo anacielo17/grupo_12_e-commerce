@@ -112,6 +112,25 @@ module.exports = {
             return res.status(404).json({ error: `El cliente no existe` });
         }
     },
+    categories: async (req, res) => {
+        const categories = await db.Category.findAll({
+            attributes: ['category_id','category_name'],
+            raw: true,
+
+        })
+        
+        const categoryCollection = categories.map(category => ({
+            name: category.category_name,
+            id: category.category_id
+            
+        }))
+
+        console.log(categories, categoryCollection)
+        res.json({
+            categories: categoryCollection,
+            total: categoryCollection.length,
+        })
+    },
 
     }
     

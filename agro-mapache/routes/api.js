@@ -5,6 +5,7 @@ const apiControllers = require('../controllers/apiControllers')
 
 router.get('/products', apiControllers.productAll)
 router.get('/product/:product_id',apiControllers.productDetail) 
+router.get('/categories', apiControllers.categories)
 
 router.get('/users/', apiControllers.usersAll)
 router.get('/user/:customer_id', apiControllers.userDetail)

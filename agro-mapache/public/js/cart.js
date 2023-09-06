@@ -1,4 +1,4 @@
-
+/* 
 
 function removeItem(index) { 
   let carrito = JSON.parse(localStorage.carrito); 
@@ -20,9 +20,9 @@ function removeItem(index) {
 
 function vaciarCarrito() {
   localStorage.removeItem("carrito");
-}
+} */
 
-
+/* 
 
 function calcularTotal(products){
 
@@ -48,7 +48,7 @@ function calcularTotal(products){
                           <td class="imagen"><img src=${product.imageUrl}></td>
                           <td>${product.name}</td>
                           <td>$ ${product.product_price}</td>
-                          <td>$ ${product.quantity}</td>
+                          /* <td>$ ${product.quantity}</td>
                           <td><button class="btn btn-danger btn-sm" onclick=removeItem(${index})><i class="fas fa-trash"></i></button></td>
                       </tr>            
                       `;
@@ -73,7 +73,7 @@ function calcularTotal(products){
                 
             });
             }
-
+ */
  
          
         
