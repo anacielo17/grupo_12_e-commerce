@@ -26,7 +26,10 @@ function LastCreatedProduct() {
         <div>
           <h3>{lastCreatedProduct.name}</h3>
           <p>{lastCreatedProduct.description}</p>
-          <img src={lastCreatedProduct.image} alt={lastCreatedProduct.name} />
+          <img
+                src={lastCreatedProduct.imageUrl} // Usa la URL de la imagen directamente desde los detalles del producto
+                alt={lastCreatedProduct.name}
+              /> 
         
         </div>
       ) : (

@@ -5,6 +5,7 @@ const multer = require ("multer");
 const productsRoutes = express.Router();
 
 const productsController = require ("../controllers/productsController");
+const authMiddleware = require ('../middlewares/authMiddleware')
 const productValidations= require ("../middlewares/productValidations")
 
 const storage = multer.diskStorage({
@@ -21,7 +22,7 @@ const storage = multer.diskStorage({
 const upload = multer({storage});
 
 
-productsRoutes.get("/carrito-compra", productsController.getCarrito)
+productsRoutes.get("/carrito-compra", /* authMiddleware, */ productsController.getCarrito)
 productsRoutes.get("/catalogo", productsController.getCatalogo); // si catalogo no es lo mismo que lista de productos, hacer nueva ruta
 productsRoutes.get("/createProduct", productsController.getCreate)  
 productsRoutes.get("/:product_id/detail", productsController.productDetail) // detalle de producto, falta realizar la vista

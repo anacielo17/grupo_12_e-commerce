@@ -1,6 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 
+    .producto {
+        background-color: white;
+        width: 90vw;
+        display: inline-block;
+        margin: 10px;
+        border-top: 1px solid #ccc;
+        transition: 700ms
+     }
+     .producto img {
+        background-color: white;
+        border-bottom: solid 5px whitesmoke;
+     }
 .footer{
     background-color: rgb(162 176 187);
     width: 100%;
@@ -46,12 +58,7 @@
     grid-template-columns: 1fr 1fr 1fr; 
     gap: 16px;
 }
-/* .LastCreatedProduct{
-    padding: 16px
-}
-.Categories{
-    padding: 16px
-} */
+
 .contenedorList{
     display: grid; 
     grid-template-columns: 1fr 1fr; 

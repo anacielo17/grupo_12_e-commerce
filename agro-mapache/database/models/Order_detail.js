@@ -28,7 +28,11 @@ module.exports = (sequelize, DataType) => {
         },
         discount: {
             type: DataType.DECIMAL
-        }
+        },
+        quantity :{
+            type :DataType.INTEGER,
+            allowNull: false
+        } 
     };
     const config = {
         tableName: "order_details",
@@ -36,6 +40,14 @@ module.exports = (sequelize, DataType) => {
     };
 
     const Order_detail = sequelize.define(alias, cols, config);
+    Order_detail.associate = (models) => {
+        Order_detail.belongsTo(models.Order, {
+          as: "order",
+          timestamps:false, 
+          foreignKey: "order_code"
+        });
+    
+      };
 
     return Order_detail;
 }

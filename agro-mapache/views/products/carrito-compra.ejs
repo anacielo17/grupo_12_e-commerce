@@ -39,6 +39,40 @@
             <p>Total: 0</p>
             <button class="checkout">Pagar</button>
         </div>
+        <div class="card">
+           
+            <form class="card-body" id="checkoutCart">
+                <div class="row">
+                    <div class=" col-md-6 mb-4">
+                        <label for="country">Tipo Envio</label>
+                        <select class="custom-select d-block w-100" id="shippingMethod" name=" shippingMethod"
+                            required="">
+                            <option value="">Elegir...</option>
+                            <option value="Cadete">Cadete</option>
+                            <option value="Correo">Correo Argentino</option>
+                            <option value="Andreani">Andreani</option>
+                            <option value="DHL">DHL</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Elija un tipo de envio.
+                        </div>
+
+                    </div>
+                    <div class=" col-md-6 mb-4">
+                        <label for="country">Pago</label>
+                        <select class="custom-select d-block w-100" id="paymentMethod" name="paymentMethod"
+                            required="">
+                            <option value="">Elegir...</option>
+                            <option value="Efectivo">Efectivo</option>
+                            <option value="Débito">Tarjeta Débito</option>
+                            <option value="Crédito">Tarjeta Crédito</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Elija un tipo de envio.
+                        </div>
+
+                    </div>
+                </div>
     </main>
 
         </main>

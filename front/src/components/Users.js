@@ -30,7 +30,10 @@ function UserList() {
           <p key={user.id}>
             <h3>{user.name}</h3>
             <p>Email: {user.customer_email}</p>
-           
+            <img
+                src={user.image} // Usa la URL de la imagen directamente desde los detalles del producto
+                alt={user.name}
+              />
           </p>
         ))}
       </ul>
