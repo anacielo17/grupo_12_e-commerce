@@ -46,55 +46,43 @@
                 </div>
 
             </div>
-
-            <form class="form" action="/contacto" method="get">
-
-                <div class="control-form">
-                    <i class="fa-solid fa-paper-plane"></i>
-                    <select>
-                        <option value="cg">Consulta (General)</option>
-                        <option value="at">Asesoramiento técnico</option>
-                        <option value="sdr">Solicitud de repuestos</option>
-                        <option value="ex">Exportaciones</option>
-                        <option value="vta">Ventas</option>
-                    </select>
+            <section class="contact">
+                <div class="u-wrapper">
+                  <div class="contact-content">
+            
+                    <form id="form" action="" class="form">
+                      <h3 class="tag"><span>Podemos resolver todas tus dudas</span></h3>
+                      <label for="name">Nombre Completo <span>*</span></label>
+                      <input name="name" required type="text" id="name" placeholder="Juan Seidel">
+                      <label for="email">Correo electrónico <span>*</span></label>
+                      <input name="email" type="text" id="email" required placeholder="juan@gmail.com">
+                      <label for="message">Mensaje</label>
+                      <textarea id="message" name="message" id="" cols="30" rows="10"></textarea>
+                      <button type="submit" class="btn primary full">Enviar mensaje</button>
+                    </form>
+                    <a href="anacieloseidel@gmail.com" id="send"></a>
+                  </div>
                 </div>
-
-                <div class="contact-form">
-                    <div>
-                        <i class="fa-solid fa-user"></i>
-                        <input type="text" name="nombreRazonSocial" placeholder="Ingrese Nombre o Razón Social*"
-                            required>
-                    </div>
-
-                    <div>
-                        <i class="fa-solid fa-envelope"></i>
-                        <input type="email" name="correoElectronico" placeholder="Ingrese Email*" required>
-                    </div>
-
-                    <div>
-                        <i class="fa-solid fa-phone"></i>
-                        <input type="text" name="númeroTeléfono" placeholder="Ingrese Teléfono*" required>
-                    </div>
-
-                </div>
-
-                <div class="coment">
-                    <textarea name="textarea" rows="10" placeholder="Ingrese Consulta / Comentario"></textarea>
-                    <p>* Campo Obligatorio</p>
-                </div>
-
-                <div class="boton-cierre">
-                    <button type="reset">Borrar</button>
-                    <button type="submit">Enviar</button>
-
-                </div>
-            </form>
+              </section>
+           
 
         </main>
 
         <%- include("../partials/footer") %>
 
 </body>
-<script src="/js/script.js"></script>
+<script>
+    const $form = document.querySelector('#form')
+    const $buttonMailto = document.querySelector('#send')
+
+    $form.addEventListener('submit', handleSubmit)
+
+    function handleSubmit(event) {
+      event.preventDefault()
+      const form = new FormData(this)
+      $buttonMailto.setAttribute('href', `mailto:anacieloseidel@gmail.com?subject=nombre ${form.get('name')}  correo ${form.get('email')}&body=${form.get('message')}`)
+      $buttonMailto.click()
+    }
+  </script>
+
 </html>

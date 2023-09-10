@@ -12,7 +12,6 @@ const cors = require("cors");
 
 
 
-
 const indexRoutes = require("./routes/indexRoutes.js");
 const productsRoutes = require("./routes/productsRoutes.js");
 const userRoutes = require("./routes/userRoutes.js");
