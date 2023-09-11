@@ -1,18 +1,4 @@
 
-
-/* const product = document.querySelector(".catalogo-main")
-let barra = document.querySelector(".barra-busqueda")
-barra.addEventListener("keyup",(e)=>{ 
-    console.log(e.target.value)
-    if(e.target.matches(".barra-busqueda")){
-        product =>{
-
-            product.textContent.toLowerCase().includes(e.target.value.toLowerCase())
-              ?product.classList.remove("filtro")
-              :product.classList.add("filtro")
-
-    }
-} }) */
  let botonesComprar= document.querySelectorAll(".agregar_carrito");
 
 let cartNumber = document.querySelector(".cart-number");
@@ -36,22 +22,25 @@ botonesComprar.forEach((boton)=>{
      
 
         if(localStorage.carrito){
-     
+            //
             let carrito = JSON.parse(localStorage.carrito);
+            //Busca en el array si hay prodcuto.id que corresponda con el click, si lo encuentra debe dar el id del producto pero de lo contrario, debe dar -1. 
             let index = carrito.findIndex((prod)=>(prod.id === e.target.dataset.id));
             if (index != -1) {
-                carrito[index].quantity ++;
-            }
+                carrito[index].quantity++;
+            } //
             else{
                 carrito.push({id:e.target.dataset.id,quantity:1})
-            }
+            } 
+            
             localStorage.setItem("carrito",JSON.stringify(carrito))
         }
 
         else{
-            localStorage.setItem("carrito",
-            JSON.stringify([{id:e.target.dataset.id,quantity:1}]))
+            // si no hay carrito, debemos crear el carrito y le pasamos el array con el primer producto al que se le hace click. 
+            localStorage.setItem("carrito", JSON.stringify([{id:e.target.dataset.id,quantity:1}]))
         }
+        
 
         cartNumber.innerText = productosEnElCarrito();
         

@@ -15,70 +15,66 @@
 <body>
 
     <%- include("../partials/header") %>
-    <main>
-        <h2>Productos en mi carrito</h2>
-        <table class="cart-table">
-            <thead>
-                <tr>
-                    <th style="width: 50px;">
-                        <strong>#</strong>
-                    </th>
-                    <th>Imagen</th>
-                    <th>Producto</th>
-                    <th>Precio</th>
-                    <th>Cantidad</th>
-                    <th>Eliminar</th>
-                </tr>
-            </thead>
-            <tbody class="cartRows">
+        <main>
+            <h2>Productos en mi carrito</h2>
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th style="width: 50px;">
+                            <strong>#</strong>
+                        </th>
+                        <th>Imagen</th>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Subtotal</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody class="cartRows">
+
+                </tbody>
+            </table>
+
+            <div>
+                <p>Total: <span class="cart-total">0</span></p>
                 
-            </tbody>
-        </table>
-        
-        <div class="cart-total">
-            <p>Total: 0</p>
-            <button class="checkout">Pagar</button>
-        </div>
-        <div class="card">
-           
-            <form class="card-body" id="checkoutCart">
-                <div class="row">
-                    <div class=" col-md-6 mb-4">
-                        <label for="country">Tipo Envio</label>
-                        <select class="custom-select d-block w-100" id="shippingMethod" name=" shippingMethod"
-                            required="">
-                            <option value="">Elegir...</option>
-                            <option value="Cadete">Cadete</option>
-                            <option value="Correo">Correo Argentino</option>
-                            <option value="Andreani">Andreani</option>
-                            <option value="DHL">DHL</option>
-                        </select>
-                        <div class="invalid-feedback">
-                            Elija un tipo de envio.
-                        </div>
-
-                    </div>
-                    <div class=" col-md-6 mb-4">
-                        <label for="country">Pago</label>
-                        <select class="custom-select d-block w-100" id="paymentMethod" name="paymentMethod"
-                            required="">
-                            <option value="">Elegir...</option>
-                            <option value="Efectivo">Efectivo</option>
-                            <option value="Débito">Tarjeta Débito</option>
-                            <option value="Crédito">Tarjeta Crédito</option>
-                        </select>
-                        <div class="invalid-feedback">
-                            Elija un tipo de envio.
-                        </div>
-
-                    </div>
+            </div>
+            <div class="card">
+                <div class="card-header text-center">
+                    Terminar la compra
                 </div>
-    </main>
+                <form  action="/api/checkout" method="post" class="card-body" id="checkoutCart">
+                    <input type="hidden" id="customer_id" name="customer_id" value="<%= userLogged.customer_id %>">
+                   <!--  <input type="hidden" id="customer_id" name="customer_id" > -->
+                    <div class="row">
+                        <div class=" col-md-6 mb-4">
+                            <label>Especifique dirección</label>
+                            <input type="text" id="ship_adress" name="ship_adress">
+                        </div>
+                        <div class=" col-md-6 mb-4">
+                            <label for="country">Pago</label>
+                            <select class="custom-select d-block w-100" id="paymentMethod" name="paymentMethod"
+                                required="">
+                                <option value="">Elegir...</option>
+                                <option value="Efectivo">Efectivo</option>
+                                <option value="Débito">Tarjeta Débito</option>
+                                <option value="Crédito">Tarjeta Crédito</option>
+                            </select>
 
+
+                        </div>
+                    </div>
+                    <button class="checkout"
+                            type="submit">Comprar</button>
+                </form>
+                <!-- <button class="checkout">Pagar</button> -->
         </main>
 
+
+
         <%- include("../partials/footer") %>
-        
+
 </body>
 <script src="/js/script.js"></script>
 <script src="/js/cart.js"></script>

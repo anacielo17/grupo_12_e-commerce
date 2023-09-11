@@ -1,57 +1,74 @@
 module.exports = (sequelize, DataType) => {
     const alias = "Order";
 
-    const cols ={
-        order_code:{
-            type:DataType.BIGINT,
-            allowNull: false,
+    const cols = {
+        order_id: {
+            type:DataType.INTEGER,
+            autoIncrement: true,
+            primaryKey: true,
+            allowNull: false    
         },
+        
         customer_id:{
             type:DataType.STRING,
             allowNull:false,
             reference:{
                 model:"customers",
                 key:"customer_id"
+            },
+       
+        },
+        product_id: {
+            type: DataType.INTEGER,
+            allowNull: false,
+            reference: {
+                model: "products",
+                key: "product_id"
             }
         },
-        order_date:{
-            type:DataType.DATE,
+        unit_price: {
+            type: DataType.DECIMAL,
+           
         },
-        ship_date:{
-            type:DataType.DATE,
+        quantity :{
+            type :DataType.INTEGER,
+           
+        },
+        subtotal: {
+            type: DataType.DECIMAL
+        }, 
+        
+        discount: {
+            type: DataType.DECIMAL
+        },
+        total_price: {
+            type: DataType.DECIMAL,
+            
         },
         ship_adress:{
-            type:DataType.STRING,
-            allowNull:false,
+            type: DataType.STRING
         },
-        ship_city:{
-            type:DataType.STRING,
-            allowNull:false
-        },
-        ship_PC:{
-            type:DataType.STRING,
-            allowNull:false,
-        },
-        ship_province:{
-            type:DataType.STRING,
-            allowNull:false
-        },
-        name_addresse:{
-            type:DataType.STRING,
-            allowNull:false,
-        },
-        DNI_addresse:{
-            type:DataType.BIGINT,
-            allowNull:false,
+        paymentMethod:{
+            type: DataType.STRING
         }
-        };
-        const config = {
-            tableName: "orders",
-            timestamps: false
-        };
-    
-        const Order = sequelize.define(alias, cols, config);
-    
-        return Order;
+        
+    };
+    const config = {
+        tableName: "orders",
+        timestamps: false
+    };
 
-    }
+    const Order = sequelize.define(alias, cols, config);
+    Order.associate = (models) => {
+        Order.hasMany(models.Product, {
+            as: 'products',
+            foreignKey: 'product_id'
+        });
+            Order.belongsTo(models.Customer, {
+            as: 'customer',
+            foreignKey: 'customer_id'
+        })
+    };
+
+    return Order;
+}

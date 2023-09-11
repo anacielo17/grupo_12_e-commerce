@@ -72,10 +72,56 @@ module.exports = {
             }
         }
     },
-
-
-
-
+    createOrder: async (req, res) => {
+        console.log("Recibiendo solicitud POST a /checkout en el controlador");
+        try {
+          // Obtener los datos necesarios del formulario de checkout
+          const { paymentMethod, ship_adress, customer_id, cart } = req.body;
+          console.log(req.body);
+          console.log(cart);
+      
+          // Crear la orden en la base de datos
+          const order = await db.Order.create({
+            customer_id: customer_id,
+            paymentMethod: paymentMethod,
+            ship_adress: ship_adress,
+          });
+      
+          // Recorrer el carrito de compras y agregar los productos a la orden
+          if (cart && cart.length > 0) {
+            for (const item of cart) {
+              const product = await db.Product.findByPk(item.id);
+      
+              if (product) {
+                await db.Order.update(
+                  {
+                    product_id: item.id,
+                    quantity: item.quantity,
+                    unit_price: product.product_price,
+                    subtotal: product.product_price * item.quantity,
+                    total_price: item.quantity * product.product_price,
+                    // Puedes agregar más campos si es necesario
+                  },
+                  {
+                    where: { order_id: order.order_id }, // Filtrar por ID de orden
+                  }
+                );
+              }
+            }
+          }
+      
+          // Limpiar el carrito de compras del usuario
+          localStorage.removeItem("carrito");
+      
+          // Enviar una respuesta JSON indicando que la orden se creó correctamente
+          res.json({ ok: true, status: 200, order: order });
+        } catch (error) {
+          console.error(error);
+          res
+            .status(500)
+            .json({ ok: false, status: 500, error: "Error al procesar la compra" });
+        }
+      },
 
     // User------------------------------------------------
 

@@ -17,8 +17,7 @@ const productsController = {
 
         res.render("carrito-compra", { title: "carrito" })
     },
-
-
+ 
 
     // Muestra todos los productos
     getCatalogo: async (req, res) => {
