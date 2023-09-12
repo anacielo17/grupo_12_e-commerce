@@ -56,10 +56,13 @@ div.coment {
 
 textarea {
     resize: none;
-    width: 100%;
+    width: 400px;
+}
+input{
+    width: 400px;
 }
 
-.boton-cierre {
+/* .boton-cierre {
     display: flex;
     justify-content: space-around;
     margin-top: 10px;
@@ -68,8 +71,17 @@ textarea {
 
 .boton-cierre button {
     padding: 5px 10px 5px 10px;
-}
+} */
+.full{
+    background-color:#5bc0de;
+    width: 400px;
+    height: 35px;
+    border-radius: 2px;
+    color: white;
+    border: 1px; 
+    margin-top: 10px;
 
+}
 @media(min-width:768px) {
 
     .seccion-contacto {
@@ -77,14 +89,15 @@ textarea {
         flex-direction: row;
     }
 
-    .contact {
+   /*  .contact {
         width: 70vw;
-    }
+    } */
 }
 
 @media(min-width:768px) {
 
     .form {
+        margin-bottom: 200px;
         width: 40vw;
     }
 

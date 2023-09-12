@@ -134,14 +134,14 @@ a {
 }
 
 .usuario .mis-compras {
-   margin-top: 9px;
+  /*  margin-top: 9px; */
    place-items: center;
 }
 
-.fa-cart-shopping {
+/* .fa-cart-shopping {
    margin-top: 9px;
 
-}
+} */
 
 .ul-second {
    display: none;

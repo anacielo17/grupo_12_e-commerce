@@ -18,6 +18,7 @@
 
         <main>
             <!--    <section class="filter-menu">
+                
             <h2>Filtro</h2>
 
             <form action="">
@@ -53,8 +54,9 @@
 
             </form> 
          </section> -->
-        <a href="/products/createProduct" class="nuevos-productos"> Agregar producto </a>
-
+         <% if (isLogged  && userLogged.type === "Vendedor"   ) {  %>
+         <a href="/products/createProduct" class="nuevos-productos"> Agregar producto </a>
+            <% } %>
 
             <section class="catalogo-main">
                 <div id="resultados">
