@@ -8,7 +8,9 @@
    margin: 0px;
    padding: 0px;
 }
-
+#buscar{
+   cursor: pointer;
+}
 body {
    background-color: whitesmoke;
 }

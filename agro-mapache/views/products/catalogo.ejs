@@ -54,7 +54,7 @@
 
             </form> 
          </section> -->
-         <% if (isLogged  && userLogged.type === "Vendedor"   ) {  %>
+         <% if (userLogged  && userLogged.customer_type === "Vendedor"   ) {  %>
          <a href="/products/createProduct" class="nuevos-productos"> Agregar producto </a>
             <% } %>
 

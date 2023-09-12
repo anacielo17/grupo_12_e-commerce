@@ -11,8 +11,6 @@ function productosEnElCarrito() {
           return 0;
         }
       }
-
-    
       cartNumber.innerText = productosEnElCarrito();
 
 
@@ -41,8 +39,9 @@ botonesComprar.forEach((boton)=>{
             localStorage.setItem("carrito", JSON.stringify([{id:e.target.dataset.id,quantity:1}]))
         }
         
-
         cartNumber.innerText = productosEnElCarrito();
+
+       
         
     })
 })

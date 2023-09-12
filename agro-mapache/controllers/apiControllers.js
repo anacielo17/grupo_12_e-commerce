@@ -76,26 +76,30 @@ module.exports = {
         console.log("Recibiendo solicitud POST a /checkout en el controlador");
         try {
           // Obtener los datos necesarios del formulario de checkout
-          const { paymentMethod, ship_adress, customer_id, cart } = req.body;
+          const { paymentMethod, ship_adress, cart } = req.body;
+          let userId =req.session.userLogged.customer_id
           console.log(req.body);
           console.log(cart);
       
           // Crear la orden en la base de datos
           const order = await db.Order.create({
-            customer_id: customer_id,
+            customer_id: userId,
             paymentMethod: paymentMethod,
             ship_adress: ship_adress,
-          });
+          }
+          );
       
           // Recorrer el carrito de compras y agregar los productos a la orden
+          //Hay error en traer el ID del producto
+          // y si creamos la orden de una sin el if ta mal?
           if (cart && cart.length > 0) {
             for (const item of cart) {
-              const product = await db.Product.findByPk(item.id);
+              const product = await db.Product.findByPk(item.product_id);
       
               if (product) {
                 await db.Order.update(
                   {
-                    product_id: item.id,
+                    product_id: item.product_id,
                     quantity: item.quantity,
                     unit_price: product.product_price,
                     subtotal: product.product_price * item.quantity,

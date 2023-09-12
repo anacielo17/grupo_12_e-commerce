@@ -72,7 +72,7 @@ if (localStorage.carrito && localStorage.carrito != "[]") {
   });
 }
 console.log(localStorage.carrito)
-const cart = JSON.parse(localStorage.carrito);
+const cart = JSON.parse(localStorage.carrito.value);
 console.log(cart);
 // Realizar una solicitud POST al servidor con los datos del carrito
 fetch('/checkout', {
@@ -100,17 +100,5 @@ fetch('/checkout', {
 
 
 
-/* 
- const checkoutForm = document.querySelector('#checkoutCart'); */
 
-// Agrega un escuchador de eventos para el envío del formulario
-/* checkoutForm.addEventListener('submit', async (event) => {
-  event.preventDefault(); */
-
-  // Aquí puedes agregar un console.log para verificar los datos antes de enviar la solicitud POST.
- /*  console.log('Datos del formulario antes de enviar la solicitud POST:', {
-    customer_id: document.querySelector('#customer_id').value, 
-    ship_adress: document.querySelector('#ship_adress').value,
-    paymentMethod: document.querySelector('#paymentMethod').value,
-  });
-});  */
+ 
