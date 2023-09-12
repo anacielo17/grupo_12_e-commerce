@@ -9,8 +9,11 @@ body{
     margin: 0 auto;
 }
  img{
-    width: 600px;
+    width: 270px;
 } 
+div .container-info-product{
+    margin: 10px;
+ }
 .container-name{
     padding:30px;
     background-color: #eee;
@@ -23,21 +26,9 @@ body{
     margin-bottom:50px;
     color: #222
 }
-main{
-    display:flex; 
-    gap:30px; 
-    margin-bottom:80px
-}
-.container.img{
-    flex:1;
-}
-.container-info-product{
-    flex:1;
-    display: flex;
-    flex-direction: column;
-}
+
 .container-price{
-    padding-bottom: 20px;
+    padding: 30px;
     border-bottom: 1px solid #e4e4e4;
     display: flex;
     align-items: center;
@@ -50,19 +41,21 @@ main{
 }
 .container-descrip-productos p{
     margin-top: 10px;
-    padding-bottom: 20px;
+    padding: 20px;
     border-bottom: 1px solid #e4e4e4;
     display: flex;
     font-size: 20px;
+    text-align: justify
 }
 .container-descrip-productos h3{
     color: #242424;
+    padding: 20px;
 }
 .container-add-cart{
     margin-top: 10px;
     display: flex;
     gap:20px;
-    padding-bottom: 30px;
+    padding: 20px;
     border-bottom: 1px solid #e4e4e4;
 }
 
@@ -86,6 +79,7 @@ main{
     background-color: #76767e ;
 }
 .container-send{
+    padding-left: 20px;
     color: green;
     font-size: 20px;
 }
@@ -93,10 +87,52 @@ main{
     color: #76767e;
     font-size: 20px;
     margin-top: 10px;
+    padding: 20px;
 }
 .contact p{
+    padding-left: 20px;
     color: #76767e;
     text-align:left; 
     font-style: normal;
     margin-bottom: 20px;
+    
 }
+.eliminate{
+    width: 180px;
+    background-color:orangered;
+    height: 30px;
+    color: white;
+   
+    border: 1px;
+     }
+button{
+    width: 180px;
+    height: 30px;
+    background-color: #5bc0de;
+    color: white;
+    margin-bottom: 10px;
+    border: 1px;
+}
+
+ @media(min-width:768px) {
+    img{
+        width: 500px;
+    } 
+    main{
+    display:flex; 
+/*     gap:30px;  */
+    margin-bottom:80px
+}
+.container.img{
+    flex:1;
+}
+.container-info-product{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+}
+ } 
+ @media(min-width:1100px) {
+    img{
+        width: 600px;
+    }  }

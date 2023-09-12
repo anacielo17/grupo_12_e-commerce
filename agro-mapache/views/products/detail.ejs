@@ -48,8 +48,9 @@
         </div>
         <br>
         <div class="contact">
-        <a href="/home/contact"><p>Para más información, contáctanos!</p></a>
+        <a href="/contact"><p>Para más información, contáctanos!</p></a>
         </div>
+        <% if (isLogged  && userLogged.customer_type === "Vendedor"   ) {  %>
         <form action="/products/<%= product.product_id %>/delete?_method=delete" method="post">
             <input type="submit" value="Eliminar producto" class="eliminate"></input>
           </form>
@@ -57,7 +58,8 @@
           <a href="/products/<%= product.product_id %>/update">
             <button >Editar producto</button> 
           </a>
-        </div> 
+        </div>
+        <% } %> 
         
     </main>
     <%- include("../partials/footer")  %>
