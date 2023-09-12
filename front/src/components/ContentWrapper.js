@@ -58,15 +58,15 @@ function ContentWrapper() {
         <div className="content">Products in Data Base</div>
         <div className="quantity">{totalProducts}</div>
       </div>
-
+<div className="col mr-2">
+        <div className="content">Total Usuers</div>
+        <div className="quantity">{totalUsers}</div>
+      </div>
       <div className="col mr-2">
         <div className="content">Total Categories</div>
         <div className="quantity">{totalCategories} </div>
       </div>
-      <div className="col mr-2">
-        <div className="content">Total Usuers</div>
-        <div className="quantity">{totalUsers}</div>
-      </div>
+      
     </div>
   );
 }

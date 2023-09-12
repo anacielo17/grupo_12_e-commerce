@@ -27,14 +27,14 @@ function UserList() {
       <h2>Listado de Usuarios</h2>
       <ul>
         {users.map((user) => (
-          <p key={user.id}>
+          <div key={user.id} className='user'>
             <h3>{user.name}</h3>
             <p>Email: {user.customer_email}</p>
             <img
                 src={user.image} // Usa la URL de la imagen directamente desde los detalles del producto
                 alt={user.name}
               />
-          </p>
+          </div>
         ))}
       </ul>
     </div>

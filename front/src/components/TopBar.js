@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 					<div className="TopBar"> 
 					 
                      
-                    <Link to="/">Home </Link>
+                    <Link to="/"><img src='./img/logo-removebg-preview.png' alt='Logo' ></img> </Link>
 
                     <i class="fa-solid fa-circle-user"> Bienvenido</i>
                     

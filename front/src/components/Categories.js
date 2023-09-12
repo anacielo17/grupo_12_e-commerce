@@ -22,10 +22,10 @@ function Categories() {
       <h2>Categorias</h2>
       <ul>
         {categories.map((category) => (
-          <p key={category.id}>
-            <h3>{category.name}</h3>
+          <li key={category.id}>
+            <h4>{category.name}</h4>
             
-          </p>
+          </li>
         ))}
       </ul>
     </div>

@@ -1,74 +1,193 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 
-    .producto {
-        background-color: white;
-        width: 90vw;
-        display: inline-block;
-        margin: 10px;
-        border-top: 1px solid #ccc;
-        transition: 700ms
-     }
-     .producto img {
-        background-color: white;
-        border-bottom: solid 5px whitesmoke;
-     }
-.footer{
-    background-color: rgb(162 176 187);
+
+.producto {
+    background-color: white;
+    width: 90vw;
+    display: inline-block;
+    margin: 10px;
+    border-top: 1px solid #ccc;
+    transition: 700ms
+}
+
+.producto img {
+    background-color: white;
+    border-bottom: solid 5px whitesmoke;
+    width: 100px;
+}
+
+.footer {
+    background-color:#001e4e;
+    ;
     width: 100%;
     height: 40px;
     text-align: center;
 }
-.row{
-    background-color:#767482;
+
+.footer-text {
+    color: white;
+}
+
+.row {
+    background-color: white;
     display: flex;
-    text-align: center;   
+    text-align: center;
     justify-content: space-around;
+    font-family: 'Roboto', sans-serif;
 }
 
 
-.lastProductCreat{
-    background-color:  #CEBACF;
+.lastProductCreat {
+    background-color: rgb(162 176 187);
     border-radius: 5px;
     width: 100%;
     padding: 5px;
+    font-family: 'Roboto', sans-serif;  
+    align-items: center;
 }
-.listProduct{
-    background-color: #CEBACF/* rgb(203, 200, 200) */;
+.lastProductCreat h2,h3,p{
+    color: black;
+    font-weight: normal;
+}
+.lastProductCreat h2{
+    border-bottom: 2px solid #ffffff;
+}
+.lastProductCreat img{
+    margin: 10px;
+}
+
+
+.listProduct ul {
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+.product {
+    width: calc(25% - 20px); 
+    background-color: white; 
+   margin-bottom: 20px;
+   box-sizing: border-box;
+   padding: 10px;
+   border: 1px solid #ccc;
+   text-align: center;
+  }
+  
+  .product img {
+    max-width: 100%;
+    height: auto;
+  }
+.product h3{
+    font-weight: bold;
+}
+.categories {
+    background-color: rgb(162 176 187);
+    ;
     border-radius: 5px;
     width: 100%;
     padding: 5px;
+    font-family: 'Roboto', sans-serif;
 }
-.categories{
-    background-color: #C6AFB1/*  rgb(159, 193, 252)  */;
+.categories h2,h4 {
+    color: black;
+    font-weight: normal;
+}
+.categories h2{
+    border-bottom: 2px solid #ffffff;
+}
+
+#accordionSidebar {
+    background-color: rgb(162 176 187);
     border-radius: 5px;
-    width:100%;
+    width: 100%;
     padding: 5px;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 0%;
+    margin-bottom: 90%;
 }
-.listUser{
-    
-        background-color:#C6AFB1/* rgb(203, 200, 200) */;
-        border-radius: 5px;
-        width: 100%;
-        padding: 5px;
-     
+
+.sidebar a {
+    display: block;
+    padding: 10px 20px;
+    color: #000; 
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .sidebar a:hover {
+    color: #fff; 
+  }
+  
+  .sidebar-divider {
+    border-top: 1px solid #ffffff; 
+  }
+
+.listUser ul {
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+
 }
-.contenedor-flex{
-    display: grid; 
-    grid-template-columns: 1fr 1fr 1fr; 
+.user {
+    width: calc(25% - 20px); 
+    background-color: #f9f9f9; 
+   margin-bottom: 20px;
+   box-sizing: border-box;
+   padding: 10px;
+   border: 1px solid #ccc;
+   text-align: center;
+  }
+  .user img {
+    max-width: 100%;
+    height: auto;
+  }
+
+
+
+.contenedor-flex {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 16px;
+    background-color: white;
 }
 
-.contenedorList{
-    display: grid; 
-    grid-template-columns: 1fr 1fr; 
+.contenedorList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 16px
 }
-.deshboard{
-    background-color:#C6AFB1
+
+.deshboard {
+    background-color: #C6AFB1
 }
-.TopBar{
-    background-color: #ada2bb;
-    text-align: right;   
+
+.TopBar {
+    background-color:#001e4e;
+    display: flex;
+    align-items: center;
     height: 50px;
+    padding: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.TopBar img {
+    max-width: 200px;
+
+}
+
+.fa-circle-user {
+    margin: 0 10px;
+    color: white;
 }
