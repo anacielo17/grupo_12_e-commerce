@@ -14,7 +14,7 @@ main{
 	background-color: whitesmoke;
 }
  .container {
-	margin-top: 270px;
+	margin-top: 0px;
 	
 	max-width: 500px;
 	width: 100%;
@@ -88,6 +88,7 @@ form .button input{
 	border-radius: 5px;
 	letter-spacing: 1px;
 	background:#5bc0de;
+	cursor: pointer;
 }
 form .button input:hover{
 	background: rgb(255, 94, 0);

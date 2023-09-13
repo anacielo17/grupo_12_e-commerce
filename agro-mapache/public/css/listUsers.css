@@ -17,11 +17,13 @@
 
  
  .user-edit {
-    background-color:orange;
-    border: 1px solid orange;
+    background-color: #5bc0de;
+    border: 1px solid #5bc0de;
     border-radius: 5px;
     width: 70px;
     height: 30px;
+    cursor: pointer;
+    margin-left: 4px;
 } 
  .user-detail {
     margin-left: 10px;

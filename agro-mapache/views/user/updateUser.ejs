@@ -94,7 +94,9 @@
                         <label> <b> Condición: </b> </label>
                         <select name="customer_type" id="type" value="<%= customer.customer_%>">
                             <option value="Comprador">Comprador</option>
-                            <option value="Vendedor">Vendedor</option>
+                            <% if (isLogged && userLogged.customer_type === "Vendedor"    ) {  %>
+                                <option value="Vendedor">Vendedor</option>
+                                <% } %>
                         </select>
                         <p class="error" style="color: red"></p>
                     </div>
