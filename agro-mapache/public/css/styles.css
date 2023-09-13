@@ -5,8 +5,15 @@
 * {
    box-sizing: border-box;
    font-family: 'Times New Roman', Times, serif;
-   margin: 0px;
-   padding: 0px;
+   margin: 0;
+   padding: 0;
+   border: 0;
+}
+body {
+   background-color: whitesmoke;
+   margin:0;
+   padding: 0;
+   width: 100vw;
 }
 
 .slider-frame {
@@ -49,11 +56,7 @@
 #buscar{
    cursor: pointer;
 }
-body {
-   background-color: whitesmoke;
-   margin:0;
-   padding: 0;
-}
+
 
 .main-header {
    background-color: #144e0d;
@@ -529,6 +532,10 @@ footer h2 {
 
 
 @media(min-width:1024px) {
+
+   body{
+      width: 100vw;
+   }
    .saludo {
       display: block;
       margin-bottom: 4px;
