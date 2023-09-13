@@ -22,7 +22,7 @@ header {
 
 
 main {
-    max-width: 800px;
+   /*  max-width: 800px; */
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
@@ -74,20 +74,33 @@ h2 {
     background-color: #c9302c;
 }
 
-.cart-total {
+.total {
     margin-top: 20px;
     text-align: right;
-}
-
-.cart-total p {
+    margin-right: 10px;
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
+
 .cart-total #cart-total-value {
     font-size: 24px;
     color: #d9534f;
+}
+label{
+    font-weight: bold;
+    
+}
+input#ship_adress{
+    margin: 10px;
+}
+select#paymentMethod.custom-select.d-block.w-100{
+    margin: 10px;
+}
+div.card-header.text-center{
+    font-weight: bold;
+    font-size: 25px;
 }
 
 
@@ -106,6 +119,13 @@ h2 {
 .cart-table td:nth-child(4) {
     width: 80px; /* You can adjust this value as needed */
     white-space: nowrap; /* Prevent text from wrapping */
+}
+div.card-header.text-center{
+    align-items: center;
+}
+.row{
+    display: flex;
+    
 }
 
 @media(min-width:768px){

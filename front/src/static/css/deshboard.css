@@ -14,7 +14,9 @@
 .producto img {
     background-color: white;
     border-bottom: solid 5px whitesmoke;
-    width: 100px;
+    width: 160px;
+    height: 160px;
+    border-radius: 5px;
 }
 
 .footer {
@@ -29,12 +31,15 @@
     color: white;
 }
 
+
 .row {
     background-color: white;
+    color: cadetblue;
     display: flex;
     text-align: center;
     justify-content: space-around;
     font-family: 'Roboto', sans-serif;
+    font-size: 25px;
 }
 
 
@@ -43,18 +48,27 @@
     border-radius: 5px;
     width: 100%;
     padding: 5px;
-    font-family: 'Roboto', sans-serif;  
+    font-family: 'Times New Roman', Times, serif;  
     align-items: center;
 }
-.lastProductCreat h2,h3,p{
-    color: black;
-    font-weight: normal;
+.lastProductCreat h2,h3{
+    font-size: 22px;
+    color: #393d7d;
+    /* font-weight: normal; */
+    text-align:center;
 }
+.lastProductCreat p{
+    text-align: justify;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(78, 78, 78)
+ }
 .lastProductCreat h2{
     border-bottom: 2px solid #ffffff;
 }
 .lastProductCreat img{
     margin: 10px;
+    width: 350px
 }
 
 
@@ -86,29 +100,35 @@
 }
 .categories {
     background-color: rgb(162 176 187);
-    ;
+    
     border-radius: 5px;
     width: 100%;
     padding: 5px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-decoration: none; 
+    color: #393d7d; 
+
 }
-.categories h2,h4 {
-    color: black;
-    font-weight: normal;
-}
+
 .categories h2{
-    border-bottom: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff; 
+    text-align:center;
+}
+ul{
+    text-decoration: none;
 }
 
 #accordionSidebar {
     background-color: rgb(162 176 187);
     border-radius: 5px;
     width: 100%;
+    /* padding-bottom: 0px; */
     padding: 5px;
     align-items: center;
     font-family: 'Roboto', sans-serif;
     margin-top: 0%;
-    margin-bottom: 90%;
+    margin-bottom: 0%; 
 }
 
 .sidebar a {
@@ -147,8 +167,11 @@
    text-align: center;
   }
   .user img {
-    max-width: 100%;
-    height: auto;
+    width: 160px;
+    height: 160px;
+    border-radius: 5px;
+   /*  max-width: 100%; */
+   /*  height: auto; */
   }
 
 

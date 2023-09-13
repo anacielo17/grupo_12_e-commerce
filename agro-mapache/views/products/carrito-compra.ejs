@@ -35,15 +35,17 @@
 
                 </tbody>
             </table>
-
-            <div>
+            <br>
+            <div class="total">
                 <p>Total: <span class="cart-total">0</span></p>
                 
             </div>
+            <br>
             <div class="card">
                 <div class="card-header text-center">
                     Terminar la compra
                 </div>
+                <br>
                 <form   action="/api/checkout" method="post" class="card-body" id="checkoutCart">
                     <input type="hidden" id="customer_id" name="customer_id">
                    <!--  <input type="hidden" id="customer_id" name="customer_id" > -->
@@ -52,6 +54,7 @@
                             <label>Especifique dirección</label>
                             <input type="text" id="ship_adress" name="ship_adress">
                         </div>
+                        <br>
                         <div class=" col-md-6 mb-4">
                             <label for="country">Pago</label>
                             <select class="custom-select d-block w-100" id="paymentMethod" name="paymentMethod"
@@ -62,12 +65,13 @@
                                 <option value="Crédito">Tarjeta Crédito</option>
                             </select>
 
-
                         </div>
+                        <br>
                     </div>
+                </form>
                     <button class="checkout"
                             type="submit">Comprar</button>
-                </form>
+                
                 <!-- <button class="checkout">Pagar</button> -->
         </main>
 

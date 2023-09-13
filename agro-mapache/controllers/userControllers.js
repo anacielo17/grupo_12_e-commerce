@@ -62,7 +62,7 @@ const controllers = {
                 }
             });
 
-            res.redirect("/user/list");
+            res.redirect("/user/profile");
 
         }
         catch (error) {

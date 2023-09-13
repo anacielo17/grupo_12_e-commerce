@@ -54,17 +54,18 @@ function ContentWrapper() {
 
   return (
     <div className="row">
-      <div className="col mr-2">
-        <div className="content">Products in Data Base</div>
-        <div className="quantity">{totalProducts}</div>
-      </div>
-<div className="col mr-2">
+      
+<div className="quantity">
         <div className="content">Total Usuers</div>
-        <div className="quantity">{totalUsers}</div>
+        <div className="">{totalUsers}</div>
       </div>
-      <div className="col mr-2">
+      <div className="quantity">
+        <div className="content">Products in Data Base</div>
+        <div className="">{totalProducts}</div>
+      </div>
+      <div className="quantity">
         <div className="content">Total Categories</div>
-        <div className="quantity">{totalCategories} </div>
+        <div className="">{totalCategories} </div>
       </div>
       
     </div>

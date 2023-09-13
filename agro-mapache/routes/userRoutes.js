@@ -7,7 +7,7 @@ const controllers = require("../controllers/userControllers");
 const userValidations = require("../middlewares/userValidations") 
 
 const authMiddleware = require('../middlewares/authMiddleware');
-
+const sellerMiddleware = require ("../middlewares/updateMiddleware")
 const guestMiddleware = require("../middlewares/guestMiddleware")
 
 
@@ -26,7 +26,7 @@ const upload = multer({ storage });
 
 userRoutes.get("/login", guestMiddleware, controllers.getLogin);
 userRoutes.get("/registro", guestMiddleware, controllers.getRegistro)
-userRoutes.get("/list", authMiddleware, controllers.getList);
+userRoutes.get("/list", [authMiddleware,sellerMiddleware], controllers.getList);
 userRoutes.get("/profile/", authMiddleware, controllers.profile);
 userRoutes.get("/sign-out", controllers.signOut);
 userRoutes.get("/:customer_id/update", controllers.getUpdate) // vamos al form de edicion 
