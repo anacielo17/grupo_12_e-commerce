@@ -77,8 +77,8 @@ p.subrayado{
  
  .user-edit {
     font-weight: bold;
-    background-color:orange;
-    border: 1px solid orange;
+    background-color:#5bc0de;
+    border: 1px solid #5bc0de;
     border-radius: 5px;
     width: 90px;
     height: 30px;

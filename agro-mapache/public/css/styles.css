@@ -8,15 +8,55 @@
    margin: 0px;
    padding: 0px;
 }
+
+.slider-frame {
+	width: 100%;
+   height: auto;
+	margin:auto 0;
+   margin-bottom: 0;
+	overflow: hidden;
+}
+
+.slider-frame ul {
+	display: flex;
+	padding: 0;
+	width: 400%;
+	animation: slide 10s infinite alternate ease-in-out;
+}
+
+.slider-frame li {
+	width: 100%;
+	list-style: none;
+}
+
+.slider-frame img {
+	width: 100%;
+}
+
+@keyframes slide {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+	
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+	
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
+}
 #buscar{
    cursor: pointer;
 }
 body {
    background-color: whitesmoke;
+   margin:0;
+   padding: 0;
 }
 
 .main-header {
-   background-color: #214566;
+   background-color: #144e0d;
    padding: 10px;
    color: black;
 }
@@ -240,11 +280,11 @@ a {
 .cajita-información i {
    margin-top: 12px;
    font-size: 30px;
-   color: #214566;
+   color: black;
 }
 
 .cajita-información h5 {
-   color: #214566;
+   color:black;
 }
 
 .titulares {
@@ -254,7 +294,7 @@ a {
    text-align: center;
    font-family: 'Times New Roman', Times, serif;
    padding: 10px;
-   color: #214566;
+   color: black;
    background-color: rgb(203, 200, 200)
 }
 
@@ -375,7 +415,7 @@ section article a {
 
 footer {
    width: 100vw;
-   background-color: #214566;
+   background-color:  #144e0d;
    color: white;
    display: flex;
    flex-wrap: wrap;
@@ -385,6 +425,7 @@ footer {
 
 footer h2 {
    padding: 10px;
+   color: white;
 }
 
 .probando {
@@ -424,6 +465,7 @@ footer h2 {
    }
 
    .usuario {
+      align-items: self-end;
       display: flex;
       position: relative;
       top: 0;
