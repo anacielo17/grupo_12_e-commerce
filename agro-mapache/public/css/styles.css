@@ -151,6 +151,9 @@ a {
    display: none;
    list-style: none;
 }
+.menu li{
+   transition: 700ms
+}
 
 .site-navbar a {
    transition: 700ms;
@@ -180,6 +183,7 @@ a {
 .usuario .mis-compras {
   /*  margin-top: 9px; */
    place-items: center;
+   cursor: pointer;
 }
 
 /* .fa-cart-shopping {
@@ -222,7 +226,7 @@ a {
 .ul-second2 {
    display: none;
    position: absolute;
-   background-color: rgb(203, 200, 200);
+   background-color: white;
    width: 250px;
    border-radius: 6px;
    padding: 5px;
@@ -231,11 +235,10 @@ a {
 
 .ul-second2 a {
    font-style: normal;
+   color: black;
    transition: none;
    font-size: 15px;
    padding: 15px;
-
-
 }
 
 .ul-second2 li {

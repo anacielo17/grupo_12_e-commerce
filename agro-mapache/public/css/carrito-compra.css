@@ -108,7 +108,16 @@ h2 {
     white-space: nowrap; /* Prevent text from wrapping */
 }
 
-
+@media(min-width:768px){
+    .cart-table{
+        width: 100vw;
+    }
+}
+@media(min-width:1024px){
+    .cart-table{
+        width: 100vw;
+    }
+}
 
 /* h2{
     text-align: center;
